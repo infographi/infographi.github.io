@@ -32,8 +32,9 @@ nav ul {
     color: var(--color-before-after);
 }
 
+html,
 body {
-	overflow-x: hidden;
+	overflow-x: hidden !important;
 }
 
 article,
