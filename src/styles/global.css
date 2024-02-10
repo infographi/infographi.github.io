@@ -18,7 +18,6 @@
     /* BLOCKS */
         /* CELLS */
         @import "./components/cells-cover.css";
-        @import "./components/cells-footer";
         @import "./components/cells-header";
         @import "./components/cells-sidebar.css";
 
@@ -65,8 +64,3 @@
 
 /* LAZY CSS */
 @import "global-lazy.css";
-
-/* DEV DEBUG */
-/* @import "./dev/dev-debug.css"; */
-/* @import "dev-diagnostic.css";  */
-/* @import "./dev/dev-revenge.css"; */
