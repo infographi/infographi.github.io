@@ -6,7 +6,6 @@ import sitemap from '@astrojs/sitemap';
 // https://astro.build/config
 export default defineConfig({
 	site: 'https://infographi.github.io',
-	base: '/infographi',
 	integrations: [mdx(), sitemap()],
 	i18n: {
 		defaultLocale: "en",
