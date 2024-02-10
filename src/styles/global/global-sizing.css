@@ -1,0 +1,50 @@
+/* GLOBAL */
+:root {
+  --ratio: 1.5;
+
+  --base-max-block-size: 100%;
+  --base-max-inline-size: 75ch;
+  --base-mesure: calc(1rem + 0.5vw);
+  --base-line-height: calc(var(--base-mesure) * var(--ratio));
+
+  --max-block-size-xxxx-small: calc(var(--max-block-size-xxx-small) / var(--ratio));
+  --max-block-size-xxx-small: calc(var(--max-block-size-xx-small) / var(--ratio));
+  --max-block-size-xx-small: calc(var(--max-block-size-x-small) / var(--ratio));
+  --max-block-size-x-small: calc(var(--max-block-size-small) / var(--ratio));
+  --max-block-size-small: calc(var(--max-block-size-medium) / var(--ratio));
+  --max-block-size-medium: var(--base-max-block-size);
+  --max-block-size-large: calc(var(--base-max-block-size) * var(--ratio));
+  --max-block-size-x-large: calc(var(--max-block-size-large) * var(--ratio));
+  --max-block-size-xx-large: calc(var(--max-block-size-x-large) * var(--ratio));
+  --max-block-size-xxx-large: calc(var(--max-block-size-xx-large) * var(--ratio));
+  --max-block-size-xxxx-large: calc(var(--max-block-size-xxx-large) * var(--ratio));
+
+  --max-inline-size-xxxx-small: calc(var(--max-inline-size-xxx-small) / var(--ratio));
+  --max-inline-size-xxx-small: calc(var(--max-inline-size-xx-small) / var(--ratio));
+  --max-inline-size-xx-small: calc(var(--max-inline-size-x-small) / var(--ratio));
+  --max-inline-size-x-small: calc(var(--max-inline-size-small) / var(--ratio));
+  --max-inline-size-small: calc(var(--max-inline-size-medium) / var(--ratio));
+  --max-inline-size-medium: var(--base-max-inline-size);
+  --max-inline-size-large: calc(var(--base-max-inline-size) * var(--ratio));
+  --max-inline-size-x-large: calc(var(--max-inline-size-large) * var(--ratio));
+  --max-inline-size-xx-large: calc(var(--max-inline-size-x-large) * var(--ratio));
+  --max-inline-size-xxx-large: calc(var(--max-inline-size-xx-large) * var(--ratio));
+  --max-inline-size-xxxx-large: calc(var(--max-inline-size-xxx-large) * var(--ratio));
+
+  --mesure-xxxxxx-small: calc(var(--mesure-xxxxx-small) / var(--ratio));
+  --mesure-xxxxx-small: calc(var(--mesure-xxxx-small) / var(--ratio));
+  --mesure-xxxx-small: calc(var(--mesure-xxx-small) / var(--ratio));
+  --mesure-xxx-small: calc(var(--mesure-xx-small) / var(--ratio));
+  --mesure-xx-small: calc(var(--mesure-x-small) / var(--ratio));
+  --mesure-x-small: calc(var(--mesure-small) / var(--ratio));
+  --mesure-small: calc(var(--mesure-medium) / var(--ratio));
+  --mesure-medium: var(--base-mesure);
+  --mesure-large: calc(var(--base-mesure) * var(--ratio));
+  --mesure-x-large: calc(var(--mesure-large) * var(--ratio));
+  --mesure-xx-large: calc(var(--mesure-x-large) * var(--ratio));
+  --mesure-xxx-large: calc(var(--mesure-xx-large) * var(--ratio));
+  --mesure-xxxx-large: calc(var(--mesure-xxx-large) * var(--ratio));
+  --mesure-xxxxx-large: calc(var(--mesure-xxxx-large) * var(--ratio));
+  --mesure-xxxxxx-large: calc(var(--mesure-xxxxx-large) * var(--ratio));
+  --mesure-xxxxxxx-large: calc(var(--mesure-xxxxxx-large) * var(--ratio));
+}

@@ -1,0 +1,8 @@
+[href="#main"] {
+    background-color: var(--background-color-inversed) !important;
+    color: var(--monochrome-illumination-inversed) !important;
+    display: inline-block !important;
+    padding: var(--mesure-medium) !important;
+    position: absolute !important;
+    top: -10rem !important;
+}

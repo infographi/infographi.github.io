@@ -1,0 +1,9 @@
+.inverted,
+.inverted * {
+	background-color: var(--background-color-inverted) !important;
+	color: var(--color-inverted) !important;
+}
+
+.inverted {
+    filter: invert(100%) !important;
+}

@@ -1,0 +1,15 @@
+.center,
+the-center {
+	box-sizing: content-box !important;
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	margin-inline: auto;
+	max-inline-size: var(--max-inline-size-xxx-large);
+	max-inline-size: fit-content;
+	padding-block-end: 5%;
+	padding-block-start: 5%;
+	padding-inline-end: 5%;
+	padding-inline-start: 5%;
+}

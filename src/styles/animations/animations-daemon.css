@@ -1,0 +1,49 @@
+@-webkit-keyframes nothing {
+    from {
+        visibility: hidden;
+        width:0;
+        height:0;
+    }
+    to {
+        visibility: visible;
+        width:initial;
+        height:initial;
+    }
+}
+
+@keyframes nothing {
+    from {visibility: hidden;}
+    to {visibility: visible;}
+}
+
+#nothing {
+    animation: nothing;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-delay: 0s;
+    visibility: hidden;
+}
+
+#does-it {
+    animation: nothing;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-delay: 10s;
+    visibility: hidden;
+}
+
+#virtue {
+    animation: nothing;
+    animation-duration: 4s;
+    animation-timing-function: linear;
+    animation-delay: 4s;
+    visibility: hidden;
+}
+
+#more {
+    animation: nothing;
+    animation-duration: 4s;
+    animation-timing-function: linear;
+    animation-delay: 10s;
+    visibility: hidden;
+}

@@ -1,0 +1,18 @@
+/* GENERAL */
+:root {
+    --border-style-dashed: dashed;
+    --border-style-dotted: dotted;
+    --border-style-hidden: hidden;
+    --border-style-none: none;
+    --border-style-solid: solid;
+}
+
+*,
+*::before,
+*::after {
+    border: none;
+}
+
+[class^="border-gradient"] {
+    border-image-slice: 1;
+}

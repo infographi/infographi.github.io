@@ -1,0 +1,14 @@
+/* GENERAL */
+:root {
+    --shadow-style-dashed: dashed;
+    --shadow-style-dotted: dotted;
+    --shadow-style-hidden: hidden;
+    --shadow-style-none: none;
+    --shadow-style-solid: solid;
+}
+
+*,
+*::before,
+*::after {
+    box-shadow: none;
+}

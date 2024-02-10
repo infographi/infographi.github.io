@@ -1,0 +1,39 @@
+---
+import '../styles/global.css';
+import type { HTMLAttributes } from "astro/types";
+
+interface SplitterProps extends HTMLAttributes<"div"> {
+    borderColor?: string;
+    borderStyle?: string;
+    borderWidth?: string;
+    boxPadding?: string;
+    classes?: string;
+	gap?: string;
+	outlineColor?: string;
+    outlineOffset?: string;
+    outlineWidth?: string;
+    textColor?: string;
+    thumbColor?: string;
+    trackColor?: string;
+}
+
+const {
+    borderColor,
+    borderStyle,
+    borderWidth,
+    boxPadding,
+    classes,
+	gap,
+	outlineColor,
+    outlineOffset,
+    outlineWidth, 
+    textColor,
+    thumbColor,
+    trackColor,
+    ...rest
+} = Astro.props as SplitterProps;
+---
+
+<the-splitter>
+    <slot />
+</the-splitter>

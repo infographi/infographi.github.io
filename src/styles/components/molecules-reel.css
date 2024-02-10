@@ -1,0 +1,53 @@
+.reel,
+the-reel {
+    --itemWidth: auto;
+    --height: auto;
+    --trackColor: var(--monochrome-dark);
+    --thumbColor: var(--monochrome-illumination);
+    display: flex;
+    height: var(--height);
+    overflow-x: auto;
+    overflow-y: hidden;
+    scrollbar-color: var(--thumbColor) var(--trackColor);
+}
+
+.reel::-webkit-scrollbar,
+the-reel::-webkit-scrollbar {
+    height: 1rem;
+}
+
+.reel::-webkit-scrollbar-track,
+the-reel::-webkit-scrollbar-track {
+    background-color: var(--trackColor);
+}
+
+.reel::-webkit-scrollbar-thumb,
+the-reel::-webkit-scrollbar-thumb {
+    background-color: var(--trackColor);
+    background-image: linear-gradient(var(--trackColor) 0,
+            var(--trackColor) 0.25rem,
+            var(--thumbColor) 0.25rem,
+            var(--thumbColor) 0.75rem,
+            var(--trackColor) 0.75rem);
+}
+
+.reel>*,
+the-reel>* {
+    flex: 0 0 var(--itemWidth);
+}
+
+.reel>img,
+the-reel>img {
+    height: 100%;
+    flex-basis: auto;
+    width: auto;
+}
+
+.reel>*+*,
+the-reel>*+* {
+    margin-left: var(--mesure-medium);
+}
+
+.reel.overflowing {
+    padding-bottom: var(--mesure-medium);
+}

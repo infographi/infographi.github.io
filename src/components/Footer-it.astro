@@ -1,0 +1,57 @@
+---
+import { SITE_TITLE } from "../consts";
+const today = new Date();
+import "../styles/global.css";
+import Link from "./Link.astro";
+import { getRelativeLocaleUrl } from 'astro:i18n';
+
+const brandingURL=getRelativeLocaleUrl("it", "branding");
+---
+
+<footer class="box stack" role="contentinfo">
+
+	<ul class="cluster">
+
+		<li>
+			<Link href="https://astro.build">
+				<span>🚀</span>
+				<span>Astro Inside</span>
+			</Link>
+		</li>
+		<li>
+			<Link href="https://github.com/PowerShell/PowerShell">
+				<span>🦾</span>
+				<span>PowerShell Inside</span>
+			</Link>
+		</li>
+
+		<li>
+			<Link href="https://www.openbsd.org">
+				<span>🐡</span>
+				<span>OpenBSD Squib</span>
+			</Link>
+		</li>
+
+		<li>
+			<Link href="https://blender.org">
+				<span>🐒</span>
+				<span>Blender Inside</span>
+			</Link>
+		</li>
+
+		<li>
+			Identità Visuale, sito web e tutto il contenuto visuale create da <Link  href={brandingURL}>{SITE_TITLE}</Link>.
+		</li>
+
+		<li>
+			&copy; 2009-{today.getFullYear()} {SITE_TITLE}. Tutti i diritti riservati.
+		</li>
+	</ul>
+
+	<Link
+		id="footer-back-to-top"
+		href="#skip-content"
+	>
+		&#8593;&#8593;&#8593; Torna all'inizio &#8593;&#8593;&#8593;
+	</Link>
+</footer>

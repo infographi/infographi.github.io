@@ -1,0 +1,34 @@
+/* Hide only visually, but have it available for screen readers (https://snook.ca/archives/html_and_css/hiding-content-for-accessibility and https://medium.com/@matuzo/writing-css-with-accessibility-in-mind-8514a0007939) */
+.visually-hidden {
+	/* Remove the item from normal flow */
+	position: absolute !important;
+	/* Workaround for falsely pronounced, smushed text */
+	white-space: nowrap !important;
+	/* Set it to the smallest possible size (some screen readers ignore elements with zero height and width) */
+	width: 1px !important;
+	height: 1px !important;
+	/* Hide overflowing content after resizing */
+	overflow: hidden !important;
+	/* Reset any property that may change the elements size */
+	border: 0 !important;
+	padding: 0 !important;
+	/* Clipping defines what part of an element should be displayed. */
+	/* Deprecated clip property for older browsers */
+	clip: rect(0 0 0 0) !important;
+	/* clip-path for newer browsers. inset(50%) defines an inset rectangle that makes the content disappear.  */
+	clip-path: inset(50%) !important;
+	/* It seems like at the moment nobody is quite sure why margin: -1px is there. On top of that it seems to cause issues (see: https://github.com/h5bp/html5-boilerplate/issues/1985). */
+	margin: -1px !important;
+}
+
+/* Extends the .visually-hidden class to allow the element to be focusable when navigated to via the keyboard (https://www.drupal.org/node/897638). */
+.visually-hidden.focusable:active,
+.visually-hidden.focusable:focus {
+	clip: auto !important;
+	height: auto !important;
+	margin: 0 !important;
+	overflow: visible !important;
+	position: static !important;
+	white-space: inherit !important;
+	width: auto !important;
+}

@@ -1,0 +1,34 @@
+---
+import '../styles/global.css';
+import type { HTMLAttributes } from "astro/types";
+
+interface GridProps extends HTMLAttributes<"div">{
+    borderColor?: string;
+    borderStyle?: string;
+    borderWidth?: string;
+    boxPadding?: string;
+    classes?: string;
+    gridGap?: string;
+    outlineColor?: string;
+    outlineOffset?: string;
+    outlineWidth?: string;
+    textColor?: string;
+}
+
+const {
+    borderColor,
+    borderStyle,
+    borderWidth,
+    boxPadding,
+    classes,
+    gridGap,
+    outlineColor,
+    outlineOffset,
+    outlineWidth, 
+    textColor,
+    ...rest
+} = Astro.props as GridProps;
+---
+<the-grid classList?:{classes} {...rest}>
+    <slot />
+</the-grid>

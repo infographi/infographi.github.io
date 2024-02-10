@@ -1,0 +1,161 @@
+:root {
+    --background-color-inverted: var(--color-clear-light);
+    --background-color: var(--color-void);
+    --border-color-inverted: var(--color-glare);
+    --border-color: var(--color-dark);
+    --color-before-after: var(--color-dark);
+    --color-inverted: var(--color-void);
+    --color: var(--color-glare);
+}
+
+/* @media screen and (prefers-color-scheme:light) {
+    :root {
+        --background-color-inverted: var(--color-void);
+        --background-color: var(--color-glare);
+        --border-color-inverted: var(--color-dark);
+        --border-color: var(--color-clear-light);
+        --color-before-after: var(--color-clear-light);
+        --color-inverted: var(--color-glare);
+        --color: var(--color-void);
+    }
+} */
+
+html,
+body,
+nav ul {
+    background-color: var(--background-color);
+    color: var(--color);
+}
+
+*::after,
+*::before {
+    color: var(--color-before-after);
+}
+
+article,
+footer,
+header > *,
+main,
+nav {
+    border: var(--mesure-xx-small) dashed var(--border-color);
+}
+
+a:hover,
+a:focus:not(#menu-button),
+a:hover:not(#menu-button),
+:focus:not(#menu-button) {
+    color: var(--accent-color) !important;
+    cursor: help;
+    outline-offset: var(--mesure-xx-small);
+    outline: var(--mesure-xxx-small) var(--accent-color) dashed;
+}
+
+h1::before,
+h2::before,
+h3::before,
+h4::before,
+h5::before,
+h6::before,
+ul li:not(footer ul li):not(.no-before):not(nav a)::before {
+    content: "#";
+}
+
+h1::before,
+h2::before,
+h3::before,
+h4::before,
+h5::before,
+h6::before {
+    color: var(--accent-color-shade);
+}
+
+h1 span {
+    color: var(--color);
+}
+
+h1 span:hover {
+    transform: scale(1.5);
+}
+
+h2 {
+    gap: 0%;
+    justify-content: flex-start;
+}
+
+h3 {
+    gap: var(--mesure-xxx-small) !important;
+}
+
+.separator-span {
+    color: var(--color-dark-shade) !important;
+}
+
+section dfn {
+    color: var(--accent-color-shade);
+    font-size: var(--mesure-small);
+}
+
+@media only screen and (max-width: 130ch) {
+
+    #let-me-solo-her:hover {
+        color: var(--accent-color);
+    }
+
+    nav #menu {
+        padding: 2.5ch !important;
+    }
+
+    nav>*+* {
+        margin-block-start: var(--mesure-xxx-large) !important;
+    }
+
+    nav ul li a {
+        color: var(--color) !important;
+        font-size: var(--mesure-large) !important;
+        z-index: 66666666666;
+    }
+}   
+
+.skip-content {
+    background-color: var(--background-color-inversed);
+    bottom: calc(100% + 1rem);
+    color: var(--monochrome-illumination-inversed);
+    display: inline-block;
+    padding: var(--mesure-medium);
+    position: absolute;
+    top: -10rem;
+}
+
+header nav h5 {
+    color: var(--accent-color-shade);
+    margin-top: var(--mesure-large);
+    text-align: right;
+}
+
+header nav h5::before {
+    color: var(--color-dark-shade);
+}
+
+ul li:not(nav ul li):before {
+    color: var(--color-dark-shade);
+    margin-inline-end: 1ch;
+}
+
+article h3::before {
+    color: var(--color-medium);
+}
+
+
+footer ul {
+    gap: var(--mesure-x-small) !important;
+}
+
+footer * {
+    color: var(--color-medium);
+    font-size: var(--mesure-small);
+}
+
+.title-explanation li {
+    font-size: var(--mesure-large) !important;
+    gap: var(--mesure-x-small);
+}

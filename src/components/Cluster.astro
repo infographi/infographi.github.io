@@ -1,0 +1,33 @@
+---
+import '../styles/global.css';
+import type { HTMLAttributes } from "astro/types";
+
+export interface ClusterProps extends HTMLAttributes<"div"> {
+    borderColor?: string;
+    borderStyle?: string;
+    borderWidth?: string;
+    clusterPadding?: string;
+    outlineColor?: string;
+    outlineOffset?: string;
+    outlineWidth?: string;
+    textColor?: string;
+    classes?: string;
+}
+
+const {
+    borderColor,
+    borderStyle,
+    borderWidth,
+    clusterPadding,
+    classes,
+    outlineColor,
+    outlineOffset,
+    outlineWidth, 
+    textColor,
+    ...rest
+} = Astro.props as ClusterProps;
+---
+
+<the-cluster classList?:{classes} {...rest}>
+	<slot />
+</the-cluster>

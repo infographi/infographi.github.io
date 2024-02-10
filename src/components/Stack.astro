@@ -1,0 +1,32 @@
+---
+import '../styles/global.css';
+import type { HTMLAttributes } from "astro/types";
+
+interface StackProps extends HTMLAttributes<"div"> {
+	borderColor?: string;
+	borderStyle?: string;
+	borderWidth?: string;
+	boxPadding?: string;
+	classes?: string;
+	outlineColor?: string;
+	outlineOffset?: string;
+	outlineWidth?: string;
+	textColor?: string;
+	}
+
+	const {
+	borderColor,
+	borderStyle,
+	borderWidth,
+	boxPadding,
+	classes,
+	outlineColor,
+	outlineOffset,
+	outlineWidth,
+	textColor,
+	...rest
+	} = Astro.props as StackProps;
+---
+<the-stack classList?:{classes} {...rest}>
+	<slot />
+</the-stack>

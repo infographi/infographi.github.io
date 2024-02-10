@@ -1,0 +1,39 @@
+---
+import '../styles/global.css';
+import type { HTMLAttributes } from "astro/types";
+
+export interface ImposterProps extends HTMLAttributes<"div"> {
+	backgroundColor?: string;
+	borderColor?: string;
+	borderStyle?: string;
+	borderWidth?: string;
+	classes?: string;
+	color?: string;
+	fontWeight?: string;
+	maxBlockSize?: string;
+	maxInlineSize?: string;
+	mesure?: string;
+	opacity?: string;
+	position?: string;
+}
+
+const {
+	backgroundColor,
+	borderColor,
+	borderStyle,
+	borderWidth,
+	classes,
+	color,
+	fontWeight,
+	maxBlockSize,
+	maxInlineSize,
+	mesure,
+	opacity,
+	position,
+	...rest
+} = Astro.props as ImposterProps;
+---
+
+<the-imposter classList?:{classes} {...rest}>
+	<slot />
+</the-imposter>

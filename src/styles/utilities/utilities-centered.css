@@ -1,0 +1,23 @@
+.centered {
+    width: auto;
+    margin-left: calc(50% - 50vw);
+}
+
+.inner-wrapper {
+    max-width: 50rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*or*/
+
+.full-bleed > * {
+    max-width: 50rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*if Max-Width is 100%, apply this to the body*/
+.body-max-100 {
+    overflow-x: hidden;
+}

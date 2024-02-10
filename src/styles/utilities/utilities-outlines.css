@@ -1,0 +1,115 @@
+.outline-accent-color-glare {
+    outline-color: var(--accent-color-glare) !important;
+}
+
+.outline-accent-color-shade {
+    outline-color: var(--accent-color-shade) !important;
+}
+
+.outline-accent-color {
+    outline-color: var(--accent-color) !important;
+}
+
+.outline-color-clear-light {
+    outline-color: var(--color-clear-light) !important;
+}
+
+.outline-color-dark {
+    outline-color: var(--color-dark) !important;
+}
+
+.outline-color-dark-shade {
+    outline-color: var(--color-dark-shade) !important;
+}
+
+.outline-color-dark-void {
+    outline-color: var(--color-dark-void) !important;
+}
+
+.outline-color-glare {
+    outline-color: var(--color-glare) !important;
+}
+
+.outline-color-illumintation {
+    outline-color: var(--color-illumination) !important;
+}
+
+.outline-color-light {
+    outline-color: var(--color-light) !important;
+}
+
+.outline-color-medium {
+    outline-color: var(--color-medium) !important;
+}
+
+.outline-color-shade {
+    outline-color: var(--color-shade) !important;
+}
+
+.outline-color-void {
+    outline-color: var(--color-void) !important;
+}
+
+.outline-style-dashed {
+    outline-style: dashed !important;
+}
+
+.outline-style-dotted {
+    outline-style: dotted !important;
+}
+
+.outline-style-hidden {
+    outline-style: hidden !important;
+}
+
+.outline-style-none {
+    outline-style: none !important;
+}
+
+.outline-style-solid {
+    outline-style: solid !important;
+}
+
+.outline-width-large {
+    outline-width: var(--mesure-large) !important;
+}
+
+.outline-width-medium {
+    outline-width: var(--mesure-medium) !important;
+}
+
+.outline-width-small {
+    outline-width: var(--mesure-small) !important;
+}
+
+.outline-width-x-small {
+    outline-width: var(--mesure-x-small) !important;
+}
+
+.outline-width-x-large {
+    outline-width: var(--mesure-x-large) !important;
+}
+
+.outline-width-xx-large {
+    outline-width: var(--mesure-xx-large) !important;
+}
+
+.outline-width-xx-small {
+    outline-width: var(--mesure-xx-small) !important;
+}
+
+.outline-width-xxx-large {
+    outline-width: var(--mesure-xxx-large) !important;
+}
+
+.outline-width-xxx-small {
+    outline-width: var(--mesure-xxx-small) !important;
+}
+
+.outline-width-xxxx-large {
+    outline-width: var(--mesure-xxxx-large) !important;
+}
+
+.outline-width-xxxx-small {
+    outline-width: var(--mesure-xxxx-small) !important;
+}

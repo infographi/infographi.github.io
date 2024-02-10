@@ -1,0 +1,158 @@
+/*Smooth scrolling IF user doesn't have a preference due to motion sensitivities*/
+@media screen and (prefers-reduced-motion: no-preference) {
+    html,
+    body {
+        scroll-behavior: smooth;
+    }
+}
+
+/* General smooth scroll */
+html:focus-within {
+    scroll-behavior: smooth;
+}
+
+:root {
+    --animate-duration: 1s;
+    --animate-delay: 1s;
+    --animate-repeat: 1;
+}
+
+.animated {
+    -moz-animation-duration: var(--animate-duration);
+    -moz-animation-fill-mode: both;
+    -o-animation-duration: var(--animate-duration);
+    -o-animation-fill-mode: both;
+    -webkit-animation-duration: var(--animate-duration);
+    -webkit-animation-fill-mode: both;
+    animation-duration: var(--animate-duration);
+    animation-fill-mode: both;
+}
+
+.animated.infinite {
+    -moz-animation-iteration-count: infinite;
+    -o-animation-iteration-count: infinite;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+}
+
+.animated.repeat-1 {
+    -moz-animation-iteration-count: var(--animate-repeat);
+    -o-animation-iteration-count: var(--animate-repeat);
+    -webkit-animation-iteration-count: var(--animate-repeat);
+    animation-iteration-count: var(--animate-repeat);
+}
+
+.animated.repeat-2 {
+    -webkit-animation-iteration-count: -webkit-calc(var(--animate-repeat) * 2);
+    -moz-animation-iteration-count: -moz-calc(var(--animate-repeat) * 2);
+    -o-animation-iteration-count: calc(var(--animate-repeat) * 2);
+    animation-iteration-count: calc(var(--animate-repeat) * 2);
+}
+
+.animated.repeat-3 {
+    -webkit-animation-iteration-count: -webkit-calc(var(--animate-repeat) * 3);
+    -moz-animation-iteration-count: -moz-calc(var(--animate-repeat) * 3);
+    -o-animation-iteration-count: calc(var(--animate-repeat) * 3);
+    animation-iteration-count: calc(var(--animate-repeat) * 3);
+}
+
+.animated.delay-1s {
+    -webkit-animation-delay: var(--animate-delay);
+    -moz-animation-delay: var(--animate-delay);
+    -o-animation-delay: var(--animate-delay);
+    animation-delay: var(--animate-delay);
+}
+
+.animated.delay-2s {
+    -webkit-animation-delay: -webkit-calc(var(--animate-delay) * 2);
+    -moz-animation-delay: -moz-calc(var(--animate-delay) * 2);
+    -o-animation-delay: calc(var(--animate-delay) * 2);
+    animation-delay: calc(var(--animate-delay) * 2);
+}
+
+.animated.delay-3s {
+    -webkit-animation-delay: -webkit-calc(var(--animate-delay) * 3);
+    -moz-animation-delay: -moz-calc(var(--animate-delay) * 3);
+    -o-animation-delay: calc(var(--animate-delay) * 3);
+    animation-delay: calc(var(--animate-delay) * 3);
+}
+
+.animated.delay-4s {
+    -webkit-animation-delay: -webkit-calc(var(--animate-delay) * 4);
+    -moz-animation-delay: -moz-calc(var(--animate-delay) * 4);
+    -o-animation-delay: calc(var(--animate-delay) * 4);
+    animation-delay: calc(var(--animate-delay) * 4);
+}
+
+.animated.delay-5s {
+    -webkit-animation-delay: -webkit-calc(var(--animate-delay) * 5);
+    -moz-animation-delay: -moz-calc(var(--animate-delay) * 5);
+    -o-animation-delay: calc(var(--animate-delay) * 5);
+    animation-delay: calc(var(--animate-delay) * 5);
+}
+
+.animated.faster {
+    -webkit-animation-duration: -webkit-calc(var(--animate-duration) / 2);
+    -moz-animation-duration: -moz-calc(var(--animate-duration) / 2);
+    -o-animation-duration: calc(var(--animate-duration) / 2);
+    animation-duration: calc(var(--animate-duration) / 2);
+}
+
+.animated.fast {
+    -webkit-animation-duration: -webkit-calc(var(--animate-duration) * 0.8);
+    -moz-animation-duration: -moz-calc(var(--animate-duration) * 0.8);
+    -o-animation-duration: calc(var(--animate-duration) * 0.8);
+    animation-duration: calc(var(--animate-duration) * 0.8);
+}
+
+.animated.slow {
+    -webkit-animation-duration: -webkit-calc(var(--animate-duration) * 2);
+    -moz-animation-duration: -moz-calc(var(--animate-duration) * 2);
+    -o-animation-duration: calc(var(--animate-duration) * 2);
+    animation-duration: calc(var(--animate-duration) * 2);
+}
+
+.animated.slower {
+    -webkit-animation-duration: -webkit-calc(var(--animate-duration) * 3);
+    -moz-animation-duration: -moz-calc(var(--animate-duration) * 3);
+    -o-animation-duration: calc(var(--animate-duration) * 3);
+    animation-duration: calc(var(--animate-duration) * 3);
+}
+
+/* Remove all animations, transitions and smooth scroll
+for people that prefer not to see them */
+/* @media (prefers-reduced-motion: reduce) {
+    html:focus-within {
+        scroll-behavior: auto;
+    }
+    
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+} */
+
+/* @media print, (prefers-reduced-motion: reduce) {
+    .animated {
+        -webkit-animation-duration: 1ms !important;
+        -moz-animation-duration: 1ms !important;
+        -o-animation-duration: 1ms !important;
+        animation-duration: 1ms !important;
+        -webkit-transition-duration: 1ms !important;
+        -moz-transition-duration: 1ms !important;
+        -o-transition-duration: 1ms !important;
+        transition-duration: 1ms !important;
+        -webkit-animation-iteration-count: 1 !important;
+        -moz-animation-iteration-count: 1 !important;
+        -o-animation-iteration-count: 1 !important;
+        animation-iteration-count: 1 !important;
+    }
+    
+    .animated[class*='Out'] {
+        opacity: 0;
+    }
+} */

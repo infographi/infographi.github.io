@@ -1,0 +1,60 @@
+---
+import "../styles/global.css";
+import { getRelativeLocaleUrl } from 'astro:i18n';
+import Link from "./Link.astro";
+
+const aboutURL=getRelativeLocaleUrl("it", "about");
+const brandingURL=getRelativeLocaleUrl("it", "branding");
+const educationURL=getRelativeLocaleUrl("it", "education");
+const homeURL=getRelativeLocaleUrl("it", "/");
+const nothingURL=getRelativeLocaleUrl("it","404");
+---
+
+<nav class="box" role="navigation" aria-label="menu">
+
+	<div id="menuToggle">
+
+		<input type="checkbox" />
+
+		<span></span>
+		<span></span>
+		<span></span>
+
+		<ul id="menu" class="box stack-small">
+
+			<li>
+				<Link href={homeURL}>SERVIZI IT</Link>
+			</li>
+	
+			<li>
+				<Link href={brandingURL}>WEB & BRANDING</Link>
+			</li>
+	
+			<li>
+				<Link href={educationURL}>EDUCAZIONE</Link>
+			</li>
+	
+			<li>
+				<Link href={aboutURL}>CHI SIAMO</Link>
+			</li>
+	
+			<li>
+				<Link id="menu-back-to-top" href="#skip-content">&#8593;&#8593;&#8593;</Link>
+			</li>
+	
+			<li id="nothing"  style="visibility: hidden;">
+				<Link class="glitch" href={nothingURL} data-text="&#8713;">&#8713;</Link>
+			</li>
+	
+			<li class="no-before">
+				<h5>Menu</h5>
+			</li>
+		</ul>
+	</div>
+</nav>
+
+<style>
+	#menuToggle input:checked ~ span:nth-last-child(2)::before {
+		content: "chiudi";
+}
+</style>

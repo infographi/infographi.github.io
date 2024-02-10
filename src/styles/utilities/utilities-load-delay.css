@@ -1,0 +1,66 @@
+:root {
+	--lazy-delay-base: 1s;
+	--lazy-delay-second: calc(var(--lazy-delay-base) + var(--lazy-delay-base));
+	--lazy-delay-third: calc(var(--lazy-delay-second) + var(--lazy-delay-base));
+	--lazy-delay-fourth: calc(var(--lazy-delay-third) + var(--lazy-delay-base));
+	--lazy-delay-fifth: calc(var(--lazy-delay-fourth) + var(--lazy-delay-base));
+	--lazy-delay-sixth: calc(var(--lazy-delay-fifth) + var(--lazy-delay-base));
+	--lazy-delay-seventh: calc(var(--lazy-delay-sixth) + var(--lazy-delay-base));
+	--lazy-delay-eighth: calc(var(--lazy-delay-seventh) + var(--lazy-delay-base));
+	--lazy-delay-ninth: calc(var(--lazy-delay-eighth) + var(--lazy-delay-base));
+	--lazy-delay-tenth: calc(var(--lazy-delay-ninth) + var(--lazy-delay-base));
+}
+
+.lazy-delay-base {
+	animation-delay: var(--lazy-delay-base) !important;
+}
+.lazy-delay-second {
+	animation-delay: var(--lazy-delay-second) !important;
+}
+.lazy-delay-third {
+	animation-delay: var(--lazy-delay-third) !important;
+}
+.lazy-delay-fourth {
+	animation-delay: var(--lazy-delay-fourth) !important;
+}
+.lazy-delay-fifth {
+	animation-delay: var(--lazy-delay-fifth) !important;
+}
+.lazy-delay-sixth {
+	animation-delay: var(--lazy-delay-sixth) !important;
+}
+.lazy-delay-seventh {
+	animation-delay: var(--lazy-delay-seventh) !important;
+}
+.lazy-delay-eighth {
+	animation-delay: var(--lazy-delay-eighth) !important;
+}
+.lazy-delay-ninth {
+	animation-delay: var(--lazy-delay-ninth) !important;
+}
+.lazy-delay-tenth {
+	animation-delay: var(--lazy-delay-tenth) !important;
+}
+
+[class^="lazy-delay"] {
+	animation-name: lazy !important;
+	animation-direction: normal !important;
+	animation-duration: 1s !important;
+	animation-fill-mode: none !important;
+	animation-iteration-count: 1 !important;
+	animation-play-state: running !important;
+	animation-timing-function: ease-in !important;
+}
+
+.class-example:nth-of-type(0) {
+	animation-delay: var(--lazy-delay-third) !important;
+}
+
+@keyframes lazy {
+	from {
+		visibility: hidden !important;
+	}
+	to {
+		visibility: visible !important;
+	}
+}

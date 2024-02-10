@@ -1,0 +1,93 @@
+.circular {
+	border-radius: 50% !important;
+	background: var(--color) !important;
+	border-color: var(--color) !important;
+	border-style: var(--border-style-solid) !important;
+	border-width: var(--mesure-small) !important;
+}
+
+.left-arrow {
+	background-color: var(--color) !important;
+	clip-path: polygon(40% 0%,
+			40% 20%,
+			100% 20%,
+			100% 80%,
+			40% 80%,
+			40% 100%,
+			0% 50%) !important;
+}
+
+.right-arrow {
+	background-color: var(--color) !important;
+	clip-path: polygon(0% 20%,
+			60% 20%,
+			60% 0%,
+			100% 50%,
+			60% 100%,
+			60% 80%,
+			0% 80%) !important;
+}
+
+.message {
+	background-color: var(--color) !important;
+	clip-path: polygon(0% 0%,
+			100% 0%,
+			100% 75%,
+			75% 75%,
+			75% 100%,
+			50% 75%,
+			0% 75%) !important;
+}
+
+.oval {
+	background-color: var(--color) !important;
+	clip-path: ellipse(35% 50% at 50% 50%) !important;
+}
+
+.parallelogram {
+	background-color: var(--color) !important;
+	clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%) !important;
+}
+
+.pentagon {
+	background-color: var(--color) !important;
+	clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%) !important;
+}
+
+.rectangle {
+	background-color: var(--color) !important;
+	aspect-ratio: var(--numerator) / var(--denominator) !important;
+}
+
+.rhombus {
+	background-color: var(--color) !important;
+	clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%) !important;
+}
+
+.square {
+	background-color: var(--color) !important;
+}
+
+.star {
+	background-color: var(--color) !important;
+	clip-path: polygon(50% 0%,
+			61% 35%,
+			98% 35%,
+			68% 57%,
+			79% 91%,
+			50% 70%,
+			21% 91%,
+			32% 57%,
+			2% 35%,
+			39% 35%) !important;
+}
+
+.trapezoidal {
+	background-color: var(--color) !important;
+	clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%) !important;
+}
+
+.triangular {
+	background-color: var(--color) !important;
+	clip-path: polygon(50% 0%, 0% 100%, 100% 100%) !important;
+}

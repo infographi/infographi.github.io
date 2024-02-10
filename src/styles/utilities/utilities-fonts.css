@@ -1,0 +1,287 @@
+/*Font Family*/
+.font-base {
+    font-family: monospace, BlinkMacSystemFont, avenir next, avenir, helvetica neue, helvetica, Ubuntu, roboto, noto, segoe ui, Arial, sans-serif !important;
+}
+
+.font-sans {
+    font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif !important;
+}
+
+.font-serif {
+    font-family: ui-serif, serif !important;
+}
+
+.font-mono {
+    font-family: monospace, 'Courier New', Courier, Dank Mono, Operator Mono, Inconsolata, Fira Mono, ui-monospace, SF Mono, Monaco, Droid Sans Mono, Source Code Pro, monospace !important;
+}
+
+.font-mono-cursive {
+    font-family: 'Courier New', Courier, monospace !important;
+    font-feature-settings: "ss01", "ss02" !important;
+}
+
+.font-mono-italic,
+it {
+    font-family: "CascadiaCodePlItalic", 'Courier New', Courier, monospace !important;
+}
+
+/* Font Feature Settings */
+.font-capitals-to-small-caps {
+    font-variant-caps: all-small-caps !important;
+    -moz-font-feature-settings: "c2sc", "smcp" !important;
+    -webkit-font-feature-settings: "c2sc", "smcp" !important;
+    font-feature-settings: "c2sc"on, "smcp"on !important;
+}
+
+.font-case-sensitive-forms {
+    text-transform: uppercase !important;
+    -moz-font-feature-settings: "case" !important;
+    -webkit-font-feature-settings: "case" !important;
+    font-feature-settings: "case"on !important;
+}
+
+.font-contextual-alternates {
+    font-variant-alternates: contextual !important;
+    -moz-font-feature-settings: "calt" !important;
+    -webkit-font-feature-settings: "calt" !important;
+    font-feature-settings: "calt"on !important;
+}
+
+.font-discretionary-ligatures {
+    font-variant-ligatures: discretionary-ligatures !important;
+    -moz-font-feature-settings: "dlig" !important;
+    -webkit-font-feature-settings: "dlig" !important;
+    font-feature-settings: "dlig"on !important;
+}
+
+.font-fractions {
+    font-variant-numeric: diagonal-fractions !important;
+    -moz-font-feature-settings: "frac" !important;
+    -webkit-font-feature-settings: "frac" !important;
+    font-feature-settings: "frac"on !important;
+}
+
+.font-historical-forms {
+    font-variant-alternates: historical-forms !important;
+    -moz-font-feature-settings: "hist" !important;
+    -webkit-font-feature-settings: "hist" !important;
+    font-feature-settings: "hist"on !important;
+}
+
+.font-historical-ligatures {
+    font-variant-ligatures: historical-ligatures !important;
+    -moz-font-feature-settings: "hlig" !important;
+    -webkit-font-feature-settings: "hlig" !important;
+    font-feature-settings: "hlig"on !important;
+}
+
+.font-lining-figures {
+    font-variant-numeric: lining-nums !important;
+    -moz-font-feature-settings: "lnum" !important;
+    -webkit-font-feature-settings: "lnum" !important;
+    font-feature-settings: "lnum"on !important;
+}
+
+.font-oldstyle-figures {
+    font-variant-numeric: oldstyle-nums !important;
+    -moz-font-feature-settings: "onum" !important;
+    -webkit-font-feature-settings: "onum" !important;
+    font-feature-settings: "onum"on !important;
+}
+
+.font-ordinals {
+    font-variant-numeric: ordinal !important;
+    -moz-font-feature-settings: "ordn" !important;
+    -webkit-font-feature-settings: "ordn" !important;
+    font-feature-settings: "ordn"on !important;
+}
+
+.font-small-caps {
+    font-variant-caps: small-caps !important;
+    -moz-font-feature-settings: "smcp" !important;
+    -webkit-font-feature-settings: "smcp" !important;
+    font-feature-settings: "smcp"on !important;
+}
+
+.font-standard-ligatures {
+    -moz-font-feature-settings: "liga" !important;
+    -moz-font-variant-ligatures: common-ligatures !important;
+    -ms-font-feature-settings: "liga" !important;
+    -o-font-feature-settings: "liga" !important;
+    -webkit-font-variant-ligatures: common-ligatures !important;
+    -webkit-font-feature-settings: "liga" !important;
+    font-feature-settings: "liga"on !important;
+    font-variant-ligatures: common-ligatures !important;
+}
+
+.font-subscripts {
+    font-variant-position: sub !important;
+    -moz-font-feature-settings: "subs" !important;
+    -webkit-font-feature-settings: "subs" !important;
+    font-feature-settings: "subs"on !important;
+}
+
+.font-superscripts {
+    font-variant-position: super !important;
+    -moz-font-feature-settings: "sups" !important;
+    -webkit-font-feature-settings: "sups" !important;
+    font-feature-settings: "sups"on !important;
+}
+
+.font-swash {
+    -moz-font-feature-settings: "swsh" !important;
+    -webkit-font-feature-settings: "swsh" !important;
+    font-feature-settings: "swsh"on !important;
+}
+
+.font-tabular-figures {
+    font-variant-numeric: tabular-nums !important;
+    -moz-font-feature-settings: "tnum" !important;
+    -webkit-font-feature-settings: "tnum" !important;
+    font-feature-settings: "tnum"on !important;
+}
+
+/* Kerning */
+.font-kerning-normal {
+    -moz-font-feature-settings: "kern" 1 !important;
+    -ms-font-feature-settings: "kern" 1 !important;
+    -o-font-feature-settings: "kern" 1 !important;
+    -webkit-font-feature-settings: "kern" 1 !important;
+    font-feature-settings: "kern" 1 !important;
+    font-kerning: normal !important;
+}
+
+.font-kerning-auto {
+    font-kerning: auto !important;
+}
+
+/*Letter Spacing*/
+.font-letterspacing-0 {
+    letter-spacing: -0.05em !important;
+}
+
+.font-letterspacing-1 {
+    letter-spacing: 0.025em !important;
+}
+
+.font-letterspacing-2 {
+    letter-spacing: 0.050em !important;
+}
+
+.font-letterspacing-3 {
+    letter-spacing: 0.075em !important;
+}
+
+.font-letterspacing-4 {
+    letter-spacing: 0.150em !important;
+}
+
+.font-letterspacing-5 {
+    letter-spacing: 0.500em !important;
+}
+
+.font-letterspacing-6 {
+    letter-spacing: 0.750em !important;
+}
+
+.font-letterspacing-7 {
+    letter-spacing: 1em !important;
+}
+
+/* Font Weight */
+.font-weight-thin {
+    font-weight: 100 !important;
+}
+
+.font-weight-extra-light {
+    font-weight: 200 !important;
+}
+
+.font-weight-light {
+    font-weight: 300 !important;
+}
+
+.font-weight-regular {
+    font-weight: 400 !important;
+}
+
+.font-weight-medium {
+    font-weight: 500 !important;
+}
+
+.font-weight-semi-bold {
+    font-weight: 600 !important;
+}
+
+.font-weight-bold {
+    font-weight: 700 !important;
+}
+
+.font-weight-extra-bold {
+    font-weight: 800 !important;
+}
+
+.font-weight-black {
+    font-weight: 900 !important;
+}
+
+/* Font Size */
+.font-xxx-small {
+    font-size: var(--mesure-xxx-small) !important;
+    line-height: var(--mesure-xxx-small) !important;
+}
+
+.font-xx-small {
+    font-size: var(--mesure-xx-small) !important;
+    line-height: var(--mesure-xx-small) !important;
+}
+
+.font-x-small {
+    font-size: var(--mesure-x-small) !important;
+    line-height: var(--mesure-x-small) !important;
+}
+
+.font-small {
+    font-size: var(--mesure-small) !important;
+    line-height: var(--mesure-small) !important;
+}
+
+.font-medium {
+    font-size: var(--base-mesure) !important;
+    line-height: var(--base-mesure) !important;
+}
+
+.font-large {
+    font-size: var(--mesure-large) !important;
+    line-height: var(--mesure-large) !important;
+}
+
+.font-x-large {
+    font-size: var(--mesure-x-large) !important;
+    line-height: var(--mesure-x-large) !important;
+}
+
+.font-xx-large {
+    font-size: var(--mesure-xx-large) !important;
+    line-height: var(--mesure-xx-large) !important;
+}
+
+.font-xxx-large {
+    font-size: var(--mesure-xxx-large) !important;
+    line-height: var(--mesure-xxx-large) !important;
+}
+
+.font-xxxx-large {
+    font-size: var(--mesure-xxxx-large) !important;
+    line-height: var(--mesure-xxxx-large) !important;
+}
+
+.font-xxxxx-large {
+    font-size: var(--mesure-xxxxx-large) !important;
+    line-height: var(--mesure-xxxxx-large) !important;
+}
+
+.font-xxxxxx-large {
+    font-size: var(--mesure-xxxxxx-large) !important;
+    line-height: var(--mesure-xxxxxx-large) !important;
+}

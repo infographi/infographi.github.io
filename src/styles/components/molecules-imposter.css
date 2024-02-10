@@ -1,0 +1,30 @@
+the-imposter,
+.imposter {
+    position: absolute;
+    inset-block-start: 50%;
+    inset-inline-start: 50%;
+    transform: translate(-50%, -50%);
+    border-color: var(--monochrome-illumination);
+    border-style: var(--border-style-dashed);
+    border-width: var(--mesure-x-small);
+    background-color: var(--background-color-inverted);
+    opacity: 1;
+    z-index: 10000;
+}
+
+the-imposter.contain,
+.imposter.contain {
+    --margin: 0px;
+    overflow: auto;
+    max-inline-size: calc(100% - (var(--margin) * 2));
+    max-block-size: calc(100% - (var(--margin) * 2));
+}
+
+the-imposter *,
+.imposter * {
+    background-color: var(--background-color-inverted);
+    color: var(--accent-color) !important;
+    font-weight: 700;
+    opacity: 1;
+    text-align: center;
+}

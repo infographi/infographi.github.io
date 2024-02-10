@@ -1,0 +1,103 @@
+.accent-color-glare {
+    color: var(--accent-color-glare) !important;
+}
+
+.accent-color-shade {
+    color: var(--accent-color-shade) !important;
+}
+
+.accent-color {
+    color: var(--accent-color) !important;
+}
+
+.color-clear-light {
+    color: var(--color-clear-light) !important;
+}
+
+.color-dark {
+    color: var(--color-dark) !important;
+}
+
+.color-dark-shade {
+    color: var(--color-dark-shade) !important;
+}
+
+.color-dark-void {
+    color: var(--color-dark-void) !important;
+}
+
+.color-glare {
+    color: var(--color-glare) !important;
+}
+
+.color-illumintation {
+    color: var(--color-illumination) !important;
+}
+
+.color-light {
+    color: var(--color-light) !important;
+}
+
+.color-medium {
+    color: var(--color-medium) !important;
+}
+
+.color-shade {
+    color: var(--color-shade) !important;
+}
+
+.color-void {
+    color: var(--color-void) !important;
+}
+
+.backgroundaccent-color-glare {
+    background-color: var(--accent-color-glare) !important;
+}
+
+.backgroundaccent-color-shade {
+    background-color: var(--accent-color-shade) !important;
+}
+
+.backgroundaccent-color {
+    background-color: var(--accent-color) !important;
+}
+
+.backgroundcolor-clear-light {
+    background-color: var(--color-clear-light) !important;
+}
+
+.backgroundcolor-dark {
+    background-color: var(--color-dark) !important;
+}
+
+.backgroundcolor-dark-shade {
+    background-color: var(--color-dark-shade) !important;
+}
+
+.backgroundcolor-dark-void {
+    background-color: var(--color-dark-void) !important;
+}
+
+.backgroundcolor-glare {
+    background-color: var(--color-glare) !important;
+}
+
+.backgroundcolor-illumintation {
+    background-color: var(--color-illumination) !important;
+}
+
+.backgroundcolor-light {
+    background-color: var(--color-light) !important;
+}
+
+.backgroundcolor-medium {
+    background-color: var(--color-medium) !important;
+}
+
+.backgroundcolor-shade {
+    background-color: var(--color-shade) !important;
+}
+
+.backgroundcolor-void {
+    background-color: var(--color-void) !important;
+}

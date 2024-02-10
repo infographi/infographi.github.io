@@ -1,0 +1,87 @@
+.max-block-size-large {
+	max-block-size: var(--max-block-size-large)!important;
+}
+
+.max-block-size-medium {
+	max-block-size: var(--max-block-size-medium)!important;
+}
+
+.max-block-size-small {
+	max-block-size: var(--max-block-size-small)!important;
+}
+
+.max-block-size-x-large {
+	max-block-size: var(--max-block-size-x-large)!important;
+}
+
+.max-block-size-x-small {
+	max-block-size: var(--max-block-size-x-small)!important;
+}
+
+.max-block-size-xx-large {
+	max-block-size: var(--max-block-size-xx-large)!important;
+}
+
+.max-block-size-xx-small {
+	max-block-size: var(--max-block-size-xx-small)!important;
+}
+
+.max-block-size-xxx-large {
+	max-block-size: var(--max-block-size-xxx-large)!important;
+}
+
+.max-block-size-xxx-small {
+	max-block-size: var(--max-block-size-xxx-small)!important;
+}
+
+.max-block-size-xxxx-large {
+	max-block-size: var(--max-block-size-xxxx-large)!important;
+}
+
+.max-block-size-xxxx-small {
+	max-block-size: var(--max-block-size-xxxx-small)!important;
+}
+
+.max-inline-size-large {
+	max-inline-size: var(--max-inline-size-large)!important;
+}
+
+.max-inline-size-medium {
+	max-inline-size: var(--max-inline-size-medium)!important;
+}
+
+.max-inline-size-small {
+	max-inline-size: var(--max-inline-size-small)!important;
+}
+
+.max-inline-size-x-large {
+	max-inline-size: var(--max-inline-size-x-large)!important;
+}
+
+.max-inline-size-x-small {
+	max-inline-size: var(--max-inline-size-x-small)!important;
+}
+
+.max-inline-size-xx-large {
+	max-inline-size: var(--max-inline-size-xx-large)!important;
+}
+
+.max-inline-size-xx-small {
+	max-inline-size: var(--max-inline-size-xx-small)!important;
+}
+
+.max-inline-size-xxx-large {
+	max-inline-size: var(--max-inline-size-xxx-large)!important;
+}
+
+.max-inline-size-xxx-small {
+	max-inline-size: var(--max-inline-size-xxx-small)!important;
+}
+
+.max-inline-size-xxxx-large {
+	max-inline-size: var(--max-inline-size-xxxx-large)!important;
+}
+
+.max-inline-size-xxxx-small {
+	max-inline-size: var(--max-inline-size-xxxx-small)!important;
+}

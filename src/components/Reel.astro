@@ -1,0 +1,37 @@
+---
+import '../styles/global.css';
+import type { HTMLAttributes } from "astro/types";
+
+interface ReelProps extends HTMLAttributes<"div"> {
+    borderColor?: string;
+    borderStyle?: string;
+    borderWidth?: string;
+    boxPadding?: string;
+    classes?: string;
+    outlineColor?: string;
+    outlineOffset?: string;
+    outlineWidth?: string;
+    textColor?: string;
+    thumbColor?: string;
+    trackColor?: string;
+}
+
+const {
+    borderColor,
+    borderStyle,
+    borderWidth,
+    boxPadding,
+    classes,
+    outlineColor,
+    outlineOffset,
+    outlineWidth, 
+    textColor,
+    thumbColor,
+    trackColor,
+    ...rest
+} = Astro.props as ReelProps;
+---
+
+<the-reel classList?:{classes} {...rest}>
+    <slot />
+</the-reel>

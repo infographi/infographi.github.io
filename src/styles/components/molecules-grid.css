@@ -1,0 +1,14 @@
+.grid,
+the-grid {
+    display: grid;
+    grid-gap: var(--mesure-small);
+    --minimum: var(--mesure-xxx-large);
+}
+
+@supports (width: min(var(--minimum), 100%)) {
+
+    .grid,
+    the-grid {
+        grid-template-columns: repeat(auto-fit, minmax(min(var(--minimum), 100%), 1fr));
+    }
+}

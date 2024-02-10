@@ -1,0 +1,7 @@
+.sticky {
+	position: sticky !important;
+	display: block !important;
+	block-size: auto !important;
+	z-index: 2 !important;
+	top: 5ch !important;
+}

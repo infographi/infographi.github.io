@@ -1,0 +1,42 @@
+.button,
+button,
+the-button {
+    background: var(--monochrome-dark);
+    border: 1ch solid var(--monochrome-dark);
+    color: var(--monochrome-illumination) !important;
+    display: inline-block;
+    font-weight: bold;
+    font: inherit;
+    line-height: 1;
+    padding: 0.6rem 1.5rem;
+    position: relative;
+    text-decoration: none;
+}
+
+.button[data-variant='ghost'],
+button[data-variant='ghost'],
+the-button[data-variant='ghost'] {
+    background: transparent;
+    border-color: currentColor;
+}
+
+.button:focus,
+button:focus,
+the-button:focus {
+    outline-offset: -0.4rem;
+    outline: 1px solid;
+}
+
+.button:hover,
+button:hover,
+the-button:hover {
+    background: var(--monochrome-light);
+    border: 1ch solid var(--monochrome-dark);
+    color: var(--monochrome-dark) !important;
+}
+
+.button:active,
+button:active,
+the-button:active {
+    transform: scale(0.95);
+}

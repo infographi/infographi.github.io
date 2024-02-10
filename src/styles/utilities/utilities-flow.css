@@ -1,0 +1,7 @@
+.flow > * + * {
+    margin-top: var(--mesure-small) !important;
+}
+
+.flow-recurse * + * {
+    margin-top: var(--mesure-small) !important;
+}

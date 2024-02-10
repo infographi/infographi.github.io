@@ -1,0 +1,9 @@
+.break-word,
+.break-word * {
+    overflow-wrap: break-word !important;
+}
+
+.break-anywhere,
+.break-anywhere * {
+    overflow-wrap: anywhere !important;
+}

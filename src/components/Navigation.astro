@@ -1,0 +1,56 @@
+---
+import "../styles/global.css";
+import { getRelativeLocaleUrl } from 'astro:i18n';
+import Link from "./Link.astro";
+
+const aboutURL = getRelativeLocaleUrl("en", "about");
+const brandingURL = getRelativeLocaleUrl("en", "branding");
+const educationURL = getRelativeLocaleUrl("en", "education");
+const itURLit = getRelativeLocaleUrl("en", "it");
+const nothingURL = getRelativeLocaleUrl("en", "404");
+---
+
+<nav class="box" role="navigation" aria-label="menu">
+
+	<div id="menuToggle">
+
+		<input type="checkbox" />
+
+		<span class="color-void">.</span>
+		<span class="color-void">.</span>
+		<span class="color-void">.</span>
+
+		<ul id="menu" class="box stack-small">
+
+			<li>
+				<Link href={itURLit}>IT SERVICES</Link>
+			</li>
+
+			<li>
+				<Link href={brandingURL}>WEB & BRANDING</Link>
+			</li>
+
+			<li>
+				<Link href={educationURL}>EDUCATION</Link>
+			</li>
+
+			<li>
+				<Link href={aboutURL}>ABOUT</Link>
+			</li>
+
+			<li>
+				<Link id="menu-back-to-top" href="#skip-content">
+					&#8593;&#8593;&#8593;
+				</Link>
+			</li>
+
+			<li id="nothing" style="visibility: hidden;">
+				<Link class="glitch" href={nothingURL} data-text="&#8713;">&#8713;</Link>
+			</li>
+
+			<li class="no-before">
+				<h5>Menu</h5>
+			</li>
+		</ul>
+	</div>
+</nav>

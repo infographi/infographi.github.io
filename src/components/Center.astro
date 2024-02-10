@@ -1,0 +1,33 @@
+---
+import '../styles/global.css';
+import type { HTMLAttributes } from "astro/types";
+
+export interface CenterProps extends HTMLAttributes<"div"> {
+    borderColor?: string;
+    borderStyle?: string;
+    borderWidth?: string;
+    centerPadding?: string;
+    outlineColor?: string;
+    outlineOffset?: string;
+    outlineWidth?: string;
+    textColor?: string;
+    classes?: string;
+}
+
+const {
+    borderColor,
+    borderStyle,
+    borderWidth,
+    centerPadding,
+    classes,
+    outlineColor,
+    outlineOffset,
+    outlineWidth, 
+    textColor,
+    ...rest
+} = Astro.props as CenterProps;
+---
+
+<the-center class:list={[classes]} {...rest}>
+    <slot />
+</the-center>

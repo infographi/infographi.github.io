@@ -1,0 +1,7 @@
+:root {
+    --outline-style-dashed: dashed;
+    --outline-style-dotted: dotted;
+    --outline-style-hidden: hidden;
+    --outline-style-none: none;
+    --outline-style-solid: solid;
+}

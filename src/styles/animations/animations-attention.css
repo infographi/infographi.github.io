@@ -1,0 +1,16 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.3.6,
+* Autoprefixer: v10.3.1
+* Browsers: last 20 version
+*/
+
+@-webkit-keyframes Attention {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+@keyframes Attention {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}

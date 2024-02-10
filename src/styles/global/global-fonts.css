@@ -1,0 +1,56 @@
+html {
+	font-family: monospace, BlinkMacSystemFont, avenir next,
+		avenir, helvetica neue, helvetica, Ubuntu, roboto, noto, segoe ui, arial,
+		sans-serif;
+	-moz-text-size-adjust: none;
+	-webkit-text-size-adjust: none;
+	text-size-adjust: none;
+}
+
+*:not(h1, h2, h3, h4),
+*::before:not(h1, h2, h3, h4),
+*::after:not(h1, h2, h3, h4) {
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-font-smoothing: antialiased;
+	text-rendering: optimizeLegibility;
+}
+
+h1, h2, h3, h4 {
+	word-break: break-all;
+	hyphens: auto;
+}
+
+small {
+	font-size: var(--mesure-x-small);
+	line-height: var(--mesure-x-small);
+}
+
+dfn {
+	font-size: var(--mesure-medium) !important;
+}
+
+li,
+p {
+	font-size: var(--mesure-medium);
+	line-height: var(--base-line-height);
+}
+
+h1::before,
+h1 span {
+	font-size:  var(--mesure-large);
+	line-height: var(--mesure-medium);
+}
+
+h2 {
+	font-size: var(--mesure-xxxxx-large);
+	line-height: var(--mesure-xxxx-large);
+}
+
+h3 {
+	font-size: var(--mesure-xx-large) ;
+	line-height: var(--mesure-xx-large);}
+
+h4 {
+	font-size: var(--mesure-large) ;
+	line-height: var(--mesure-small);
+}

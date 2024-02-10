@@ -1,0 +1,208 @@
+---
+import "../styles/global.css";
+import { getRelativeLocaleUrl } from "astro:i18n";
+import HeaderLink from "../components/Link.astro";
+import type { HTMLAttributes } from "astro/types";
+
+const itURL = getRelativeLocaleUrl("en", "it");
+const itURLIT = getRelativeLocaleUrl("it", "/");
+
+interface CoverProps extends HTMLAttributes<"div"> {
+    borderColor?: string;
+    borderStyle?: string;
+    borderWidth?: string;
+    boxPadding?: string;
+    classes?: string;
+    outlineColor?: string;
+    outlineOffset?: string;
+    outlineWidth?: string;
+    textColor?: string;
+    thumbColor?: string;
+    trackColor?: string;
+}
+const {
+    borderColor,
+    borderStyle,
+    borderWidth,
+    boxPadding,
+    classes,
+    outlineColor,
+    outlineOffset,
+    outlineWidth,
+    textColor,
+    thumbColor,
+    trackColor,
+    ...rest
+} = Astro.props as CoverProps;
+---
+
+<the-cover {classes} {...rest}>
+
+    <main>
+
+        <section class="box stack">
+
+            <h4 class="center">
+
+                <span class="sentence">Welcome</span>
+                
+                <span class="sentence">da</span>
+
+                <span class="sentence cluster title">
+
+                    <span class="diese accent-color">#</span>
+                    <span>I</span>
+                    <span>N</span>
+                    <span>F</span>
+                    <span>O</span>
+                    <span>G</span>
+                    <span>R</span>
+                    <span>A</span>
+                    <span>P</span>
+                    <span>H</span>
+                    <span>I</span>
+                </span>
+            </h4>
+            
+            <ul class="switcher">
+                <li>
+                    <HeaderLink class="cover-link english cluster" href={itURL}>
+                        <span>En</span>
+                        <span>gli</span>
+                        <span>sh</span>
+                    </HeaderLink>
+                </li>
+                <li>
+                    <HeaderLink class="cover-link italian cluster" href={itURLIT}>
+                        <span>Ita</span>
+                        <span>lia</span>
+                        <span>no</span>
+                    </HeaderLink>
+                </li>
+            </ul>
+        </section>
+    </main>
+    
+    <slot />
+    
+</the-cover>
+
+<style>
+    
+.title {
+    gap: var(--mesure-xxxx-small);
+    text-decoration:wavy;
+}
+
+h4::before {
+    content: "";
+}
+
+.diese {
+    animation: diese-entrance;
+}
+
+.sentence {
+    animation: entrance;
+}
+
+.diese,
+.sentence {
+    animation-direction: alternate;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;
+    background-color: transparent;
+    color: var(--color-void);
+    line-height: var(--mesure-xx-large) !important;
+    overflow-wrap: break-word;
+    text-align: center;
+}
+.sentence:nth-child(2) {
+    animation-delay: 0.5s;
+}
+.diese,
+.sentence:nth-child(3) {
+    animation-delay: 1s;
+    flex-shrink: 1;
+    gap: var(--mesure-xxxx-small);
+}
+.sentence:nth-child(4) {
+    animation-delay: 1.5s;
+}
+.sentence:nth-child(5) {
+    animation-delay: 2s;
+}
+
+@keyframes entrance {
+    from {
+        color: var(--color-void);
+    }
+    to {
+        color: var(--color);
+    }
+}
+
+@keyframes diese-entrance {
+    from {
+        color: var(--color-void);
+    }
+    to {
+        color: var(--accent-color);
+    }
+}
+
+ul {
+    gap: var(--mesure-xxxx-small);
+}
+
+section ul li::before {
+    color: var(--color-medium);
+}
+
+.cover-link {
+    border: var(--mesure-xx-small) dashed var(--color-dark);
+    padding: var(--mesure-large);
+    gap: var(--mesure-xxx-small) !important;
+    justify-content: center;
+    text-decoration: none;
+
+}
+
+ul li::before,
+.cover-link::before {
+    content: "";
+}
+.cover-link:hover,
+.cover-link:focus {
+    border-color:var(--color-void) !important;
+    font-weight: 700 !important;
+    color: var(--color) !important;
+    outline-width: var(--mesure-xx-small) !important;
+    outline-color: var(--accent-color) !important;
+    z-index: 9999999 !important;
+}
+
+.cover-link span {
+    font-size: var(--mesure-large);
+}
+
+.english span:first-child {
+    color: red;
+}
+.english span:nth-child(2) {
+    color: white;
+}
+.english span:nth-child(3) {
+    color: blue;
+}
+.italian span:first-child {
+    color: green;
+}
+.italian span:nth-child(2) {
+    color: white;
+}
+.italian span:nth-child(3) {
+    color: red;
+}
+</style>

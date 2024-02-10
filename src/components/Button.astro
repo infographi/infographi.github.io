@@ -1,0 +1,33 @@
+---
+import '../styles/global.css';
+import type { HTMLAttributes } from "astro/types";
+
+interface ButtonProps extends HTMLAttributes<"button"> {
+    borderColor?: string;
+    borderStyle?: string;
+    borderWidth?: string;
+    boxPadding?: string;
+    classes?: string;
+    outlineColor?: string;
+    outlineOffset?: string;
+    outlineWidth?: string;
+    textColor?: string;
+}
+
+const {
+    borderColor,
+    borderStyle,
+    borderWidth,
+    boxPadding,
+    classes,
+    outlineColor,
+    outlineOffset,
+    outlineWidth, 
+    textColor,
+    ...rest
+} = Astro.props as ButtonProps;
+
+---
+<the-button classList?:{classes} {...rest}>
+    <slot />
+</the-button>

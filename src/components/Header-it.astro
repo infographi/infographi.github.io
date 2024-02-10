@@ -1,0 +1,64 @@
+---
+import "../styles/global.css";
+import { EMAIL_ADDRESS, TELEPHONE_NUMBER } from "../consts";
+import { getRelativeLocaleUrl } from "astro:i18n";
+import { Image } from "astro:assets";
+import Center from "./Center.astro";
+import Link from "./Link.astro";
+import logo from "../img/INFOGRAPHI-LOGO.png";
+import Navigation from "./Navigation-it.astro";
+import Box from "./Box.astro";
+
+const aboutURL = getRelativeLocaleUrl("it", "about");
+---
+
+<header class="" role="banner">
+	<a id="home-link" class="frame" href="/">
+		<Image id="logo" src={logo} alt="INFOGRAPHI logo." />
+	</a>
+
+	<a href={aboutURL} class="box">
+		<Center>
+			<span id="let-me-solo-her" class="color-accent font-x-large">#</span
+			>
+
+			<h1 id="title">
+				<span>I</span>
+				<span>N</span>
+				<span>F</span>
+				<span>O</span>
+				<span>G</span>
+				<span>R</span>
+				<span>A</span>
+				<span>P</span>
+				<span>H</span>
+				<span>I</span>
+			</h1>
+		</Center>
+	</a>
+
+	<Box class="box contact-ul">
+		<Center>
+			<ul class="stack">
+				<li class="no-before">
+					<Link
+						class="contact-link with-icon"
+						href={TELEPHONE_NUMBER}
+					>
+						<span class="icon-span icon">&#9743;</span>
+						Telefono
+					</Link>
+				</li>
+
+				<li class="no-before">
+					<Link class="contact-link with-icon" href={EMAIL_ADDRESS}>
+						<span class="icon-span icon">&#9993;</span>
+						Email
+					</Link>
+				</li>
+			</ul>
+		</Center>
+	</Box>
+
+	<Navigation />
+</header>

@@ -1,0 +1,70 @@
+img {
+    max-width: min(55rem, 100%);
+}
+
+p,
+li {
+    max-width: 60ch;
+}
+
+h1 {
+    max-width: 15ch;
+}
+
+h2,
+h3 {
+    max-width: 25ch;
+}
+
+.post {
+    --flow-space: var(--size-700);  
+    width: 90vw;
+    width: clamp(16rem, 90vw, 70rem);
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+}
+.post time {
+    --flow-space: var(--size-400);
+    display: block;
+}
+
+.post :is(h2, h3) {
+    --flow-space: var(--size-900);
+}
+
+.post :is(h2, h3) + * {
+    --flow-space: var(--size-400);
+}
+
+.post figure,
+.post figure + * {
+    --flow-space: var(--size-900);
+}
+@media (min-width: 45em) {
+    h1 {
+        font-size: var(--size-900);
+    }
+    
+    h2 {
+        font-size: var(--size-700);
+    }
+    
+    p {
+        font-size: var(--size-500);
+    }
+    
+    figcaption {
+        font-size: var(--size-400);
+    }
+    
+    blockquote p {
+        font-size: var(--size-600);
+        max-width: 40ch;
+    }
+    
+    .post time {
+        font-size: var(--size-600);
+    }
+}

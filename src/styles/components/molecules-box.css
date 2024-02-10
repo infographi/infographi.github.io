@@ -1,0 +1,8 @@
+the-box,
+.box {
+    display: block;
+    outline-color: transparent;
+    outline-offset: calc(var(--mesure-small) * -1);
+    outline-width: var(--mesure-small);
+    padding: var(--mesure-medium);
+}

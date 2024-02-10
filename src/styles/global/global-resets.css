@@ -1,0 +1,191 @@
+*,
+*::before,
+*::after {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    border-width: 0;
+    box-sizing: border-box;
+    font-kerning: auto;
+    margin: 0;
+    outline: none;
+    padding: 0;
+}
+
+html {
+    height: auto;
+    min-block-size: 100%;
+}
+
+/* Set core root defaults */
+html:focus-within {
+    scroll-behavior: smooth;
+}
+
+body {
+	min-block-size: 100vh;
+}
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	vertical-align: baseline;
+}
+
+
+a {
+    -moz-text-decoration-style: underline;
+    -webkit-text-decoration-skip-ink: auto;
+    -webkit-text-decoration-skip: edges;
+    -webkit-text-decoration-skip: ink;
+    -webkit-text-decoration-style: underline;
+    -webkit-text-decoration-thickness: 1px;
+    color: currentColor;
+    text-decoration-skip-ink: auto;
+    text-decoration-skip: edges;
+    text-decoration-style: underline;
+    text-decoration-thickness: var(--mesure-xxxxx-small);
+}
+
+a:not([class]) {
+    text-decoration-skip-ink: auto;
+}
+
+figcaption {
+    font-size: var(--mesure-medium);
+    font-style: italic;
+    margin-top: 1rem;
+}
+
+blockquote {
+    padding-left: var(--mesure-medium);
+    border-left: 5px solid;
+    font-style: italic;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+dialog {
+    z-index: 999999;
+}
+
+img,
+picture {
+    /*In the case of text being placed on top of an image, makes sure there is a color backgroung inncase thenimage wouldn't load. This trick avoids a white text on a white background for example */
+    background-color: var(--color-medium);
+    display: block;
+    max-inline-size: 100%;
+    object-fit: cover;
+}
+
+/* Easier on the eyes for dark theme but can be used anyway. */
+img {
+    opacity: .75;
+    transition: opacity 0.5s ease-in-out;
+}
+
+img:hover {
+    opacity: 1;
+    transform: scale(1.05);
+    transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+    filter: invert();
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+ul[role='list'],
+ol[role='list'],
+ol,
+ul {
+    list-style-type: none;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+th {
+    text-align: left;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* Allow only vertical resizing of textareas. */
+textarea {
+    resize: vertical;
+}
+
+/* Clearfix: contain floats
+ * For modern browsers:
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    "contenteditable" attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the "clearfix" class.
+ * 2. The use of "table" rather than "block" is only necessary if using
+ *    ":before" to contain the top-margins of child elements. */
+.clearfix::before,
+.clearfix::after {
+    content: " ";
+    display: table;
+}
+
+.clearfix::after {
+    clear: both;
+}
+
+/*Resets align-self property to avoid sticky items "tonstretch" in a grid context*/
+.grid .sticky {
+    align-self: start;
+    position: sticky;
+    top: 1rem;
+}
+
+/*Avoids Scroll Chaining, that is: the fact that the  content under a modal (the rest of the website) is scrollable after scrolling to the end of the modal*/
+.modal__content {
+    overscroll-behavior-y: contain;
+    overflow-y: auto;
+}
+
+/*Avoids the layout to shift to the left when a scrollbar is present*/
+* {
+    scrollbar-gutter: stable;
+}
+
+/*Avoids hover on mobiles*/
+@media (hover: hover) {
+        /* Add hover styles.. */
+}
+
+/*Avoids default zoomwhile selecting inputs in Safari by defining a font size*/
+input {
+    font-size: var(--mesure-medium);
+}

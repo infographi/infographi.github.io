@@ -1,0 +1,37 @@
+---
+import '../styles/global.css';
+import type { HTMLAttributes } from "astro/types";
+
+interface FrameProps extends HTMLAttributes<"div"> {
+    borderColor?: string;
+    borderStyle?: string;
+    borderWidth?: string;
+    boxPadding?: string;
+    classes?: string;
+    denominator?: string;
+    numerator?: string;
+    outlineColor?: string;
+    outlineOffset?: string;
+    outlineWidth?: string;
+    textColor?: string;
+}
+
+const {
+    borderColor,
+    borderStyle,
+    borderWidth,
+    boxPadding,
+    classes,
+    denominator,
+    numerator,
+    outlineColor,
+    outlineOffset,
+    outlineWidth, 
+    textColor,
+    ...rest
+} = Astro.props as FrameProps;
+---
+
+<the-frame classList?:{classes} {...rest}>
+    <slot />
+</the-frame>
