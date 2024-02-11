@@ -42,10 +42,14 @@ header .frame #logo:hover {
 		gap: var(--mesure-x-small);
 	}
 
-	header:not(.cover-header) > * {
+	/*header:not(.cover-header) > * {
+		flex-grow: 1;
+	}*/
+
+	header:not(.cover-header) > the-frame {
 		flex-grow: 1;
 	}
-
+	
 	h1 span,
 	h1::before {
 		font-size: var(--mesure-small) !important;
