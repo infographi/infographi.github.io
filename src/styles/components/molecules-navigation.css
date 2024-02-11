@@ -120,6 +120,11 @@
 	#menuToggle input:checked ~ ul {
 		transform: none;
 	}
+
+	#menu-back-to-top,
+	#menu-back-to-top::before {
+		color: green !important;
+	}
 }
 
 @media only screen and (min-width: 130ch) {
@@ -127,12 +132,15 @@
         display: none !important;
     }
 
-	nav {
-        position: sticky;
-        top: var(--mesure-large);
+	header nav {
+		block-size: auto !important;
+		display: block !important;
+		position: sticky !important;
+		z-index: 2 !important;
+        top: var(--mesure-large) !important;
     }
 
-	nav ul li a {
+	header nav ul li a {
 		font-size: var(--base-mesure) !important;
 	}
 }
