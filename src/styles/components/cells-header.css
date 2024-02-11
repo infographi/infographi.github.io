@@ -31,6 +31,7 @@ header .frame #logo:hover {
 
 	#let-me-solo-her {
 		font-size: var(--mesure-x-large);
+		color: var(--accent-color-shade);
 	}
 
 	header:not(.cover-header) {
@@ -39,15 +40,15 @@ header .frame #logo:hover {
 		flex-wrap: nowrap;
 		align-items: stretch;
 		justify-content: space-between;
-		gap: var(--mesure-x-small);
+		gap: var(--mesure-xx-small);
 	}
 
-	/*header:not(.cover-header) > * {
+	header:not(.cover-header) > * {
 		flex-grow: 1;
-	}*/
+	}
 
-	header:not(.cover-header) > the-frame {
-		flex-grow: 1;
+	header:not(.cover-header) #home-link {
+		min-inline-size: var(--mesure-x-large);
 	}
 	
 	h1 span,

@@ -42,7 +42,7 @@ const {
 
         <section class="box stack">
 
-            <h4 class="center">
+            <h3 class="center">
 
                 <span class="sentence">Welcome</span>
                 
@@ -62,7 +62,7 @@ const {
                     <span>H</span>
                     <span>I</span>
                 </span>
-            </h4>
+            </h3>
             
             <ul class="switcher">
                 <li>
@@ -91,11 +91,16 @@ const {
     
 .title {
     gap: var(--mesure-xxxx-small);
-    text-decoration:wavy;
 }
 
-h4::before {
+h3::before {
     content: "";
+}
+
+@media only screen and (max-width: 75ch) {
+    h3 {
+        font-size: var(--mesure-large) !important;
+    }
 }
 
 .diese {
