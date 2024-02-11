@@ -42,7 +42,7 @@ footer,
 header > *,
 main,
 nav {
-    border: var(--mesure-xx-small) dashed var(--border-color);
+    border: var(--mesure-x-small) dashed var(--border-color);
 }
 
 a:hover,
