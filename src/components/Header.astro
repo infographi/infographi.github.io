@@ -10,10 +10,11 @@ import Navigation from "./Navigation.astro";
 import Box from "./Box.astro";
 
 const aboutURL = getRelativeLocaleUrl("en", "about");
+const homeURL = getRelativeLocaleUrl("en", "/");
 ---
 
 <header role="banner">
-	<a id="home-link" class="frame" href="/">
+	<a id="home-link" class="frame" href={homeURL}>
 		<Image id="logo" src={logo} alt="INFOGRAPHI logo." />
 	</a>
 
