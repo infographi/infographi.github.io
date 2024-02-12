@@ -32,10 +32,6 @@ nav ul {
     color: var(--color-before-after);
 }
 
-body {
-	overflow-x: hidden !important;
-}
-
 article,
 footer,
 header > *,
@@ -100,6 +96,10 @@ section dfn {
 }
 
 @media only screen and (max-width: 130ch) {
+
+		body {
+			overflow-x: hidden !important;
+		}
 
     #let-me-solo-her:hover {
         color: var(--accent-color);
