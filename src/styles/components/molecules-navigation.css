@@ -123,7 +123,7 @@
 
 	#menu-back-to-top,
 	#menu-back-to-top::before {
-		color: green !important;
+		display: none !important;
 	}
 }
 
