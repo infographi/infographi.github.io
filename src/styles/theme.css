@@ -52,7 +52,7 @@ a:hover:not(#menu-button),
     color: var(--accent-color) !important;
     cursor: help;
     outline-offset: var(--mesure-xx-small);
-    outline: var(--mesure-xxx-small) var(--accent-color) dashed;
+    outline: var(--mesure-x-small) var(--accent-color) dashed;
 }
 
 h1::before,
