@@ -8,18 +8,6 @@
     --color: var(--color-glare);
 }
 
-/* @media screen and (prefers-color-scheme:light) {
-    :root {
-        --background-color-inverted: var(--color-void);
-        --background-color: var(--color-glare);
-        --border-color-inverted: var(--color-dark);
-        --border-color: var(--color-clear-light);
-        --color-before-after: var(--color-clear-light);
-        --color-inverted: var(--color-glare);
-        --color: var(--color-void);
-    }
-} */
-
 html,
 body,
 nav ul {
