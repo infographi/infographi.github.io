@@ -83,6 +83,7 @@ header .frame #logo:hover {
 @media only screen and (min-width: 130ch) {
 
 	header:not(.cover-header) {
+		min-block-size: 80ch !important;
 		display: flex;
 		flex-direction: column;
 		justify-content: flex-start;

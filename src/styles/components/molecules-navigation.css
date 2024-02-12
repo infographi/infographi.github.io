@@ -132,12 +132,15 @@
         display: none !important;
     }
 
-	header nav {
-		block-size: auto !important;
+	#navigo {
+		/* block-size: 50ch !important; */
 		display: block !important;
 		position: sticky !important;
 		z-index: 2 !important;
+		left: auto !important;
+		right: auto !important;
         top: var(--mesure-large) !important;
+		/* align-self: flex-start !important; */
     }
 
 	header nav ul li a {
