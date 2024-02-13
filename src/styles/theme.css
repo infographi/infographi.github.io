@@ -152,3 +152,7 @@ footer * {
     font-size: var(--mesure-large) !important;
     gap: var(--mesure-x-small);
 }
+
+.title-explanation li:before {
+    display: none;
+}
