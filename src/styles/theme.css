@@ -85,10 +85,10 @@ section dfn {
 
 @media only screen and (max-width: 130ch) {
 
-		html,
-		body {
-			overflow-x: hidden !important;
-		}
+    html,
+    body {
+        overflow-x: hidden !important;
+    }
 
     #let-me-solo-her:hover {
         color: var(--accent-color);
