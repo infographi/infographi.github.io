@@ -22,44 +22,41 @@
 	#menuToggle input {
 		-webkit-touch-callout: none;
 		display: block;
-		height: 100%;
+		block-size: 100%;
 		left: 0;
     	opacity: 0;
 		position: absolute;
 		top: 0;
-		width: 100%;
+		inline-size: 100%;
 		z-index: 2;
 	}
 
 	#menuToggle span {
 		background: var(--color);
+		block-size: 0.5ch;
 		display: block;
-		height: 0.5ch;
-		margin-bottom: 5px;
-        margin-top: ch;
+		inline-size: 3.5ch;
+		margin-bottom: 0.5ch;
+        margin-top: 0.25ch;
 		position: relative;
-		transform-origin: 1.5ch 0.25ch;
+		transform-origin: 0.5ch 0.20ch;
 		transition:
 			transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1),
 			background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1),
 			opacity 0.55s ease;
-		width: 5ch;
 		z-index: 1;
 	}
 
-	#menuToggle:hover > span {
-		background-color: var(--accent-color);
-	}
-
-	#menuToggle:hover > span::after {
-		color: var(--accent-color) !important;
-	}
-
-	#menuToggle span:nth-last-child(2):after {
-        content:"menu";
+	#menuToggle:after {
+		content:"menu";
         color: var(--color);
         font-size: var(--mesure-small);
     }
+
+	#menuToggle:focus > span,
+	#menuToggle:hover > span {
+		background-color: var(--accent-color) !important;
+	}
 
 	#menuToggle span:first-child {
 		transform-origin: 0% 0%;
@@ -75,18 +72,7 @@
 		background: var(--accent-color);
 	}
 
-    #menuToggle input:checked ~ span:nth-last-child(2)::after {
-        content: "";
-        color: var(--color);
-    }
-
-	#menuToggle input:checked ~ span:nth-last-child(2)::before {
-        content: "close";
-        color: var(--color);
-		font-weight: 500;
-    }
-
-	#menuToggle input:checked ~ span:nth-last-child(3) {
+ 	#menuToggle input:checked ~ span:nth-last-child(3) {
 		opacity: 0;
 		transform: rotate(0deg) scale(0.2, 0.2);
 	}
