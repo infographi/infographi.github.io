@@ -15,8 +15,8 @@ nav ul {
     color: var(--color);
 }
 
-*::after,
-*::before {
+*:after,
+*:before {
     color: var(--color-before-after);
 }
 
@@ -38,22 +38,22 @@ a:hover:not(#menu-button),
     outline: var(--mesure-x-small) var(--accent-color) dashed;
 }
 
-h1::before,
-h2::before,
-h3::before,
-h4::before,
-h5::before,
-h6::before,
-ul li:not(footer ul li):not(.no-before):not(nav a)::before {
+h1:before,
+h2:before,
+h3:before,
+h4:before,
+h5:before,
+h6:before,
+ul li:not(footer ul li):not(.no-before):not(nav a):before {
     content: "#";
 }
 
-h1::before,
-h2::before,
-h3::before,
-h4::before,
-h5::before,
-h6::before {
+h1:before,
+h2:before,
+h3:before,
+h4:before,
+h5:before,
+h6:before {
     color: var(--accent-color-shade);
 }
 
@@ -91,7 +91,7 @@ section dfn {
     }
 
     #let-me-solo-her:hover {
-        color: var(--accent-color);
+        color: var(--color);
     }
 
     nav #menu {
@@ -125,7 +125,7 @@ header nav h5 {
     text-align: right;
 }
 
-header nav h5::before {
+header nav h5:before {
     color: var(--color-dark-shade);
 }
 
@@ -134,7 +134,7 @@ ul li:not(nav ul li):before {
     margin-inline-end: 1ch;
 }
 
-article h3::before {
+article h3:before {
     color: var(--color-medium);
 }
 
