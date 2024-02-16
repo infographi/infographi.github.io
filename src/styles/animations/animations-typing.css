@@ -39,7 +39,7 @@
     animation-timing-function: steps(15, end);
     
     background: var(--monochrome-dark);
-    border-left: 1ch solid var(--accent-color);
+    border-left: 1ch solid var(--accent-color-shade);
     bottom: 0;
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
@@ -53,22 +53,22 @@
 
 @-webkit-keyframes blink {
     from, to {border-color: transparent;}
-    50% {border-color: var(--accent-color);}
+    50% {border-color: var(--accent-color-shade);}
 }
 
 @-moz-keyframes blink {
     from, to {border-color: transparent;}
-    50% {border-color: var(--accent-color);}
+    50% {border-color: var(--accent-color-shade);}
 }
 
 @-o-keyframes blink {
     from, to {border-color: transparent;}
-    50% {border-color: var(--accent-color);}
+    50% {border-color: var(--accent-color-shade);}
 }
 
 @keyframes blink {
     from, to {border-color: transparent;}
-    50% {border-color: var(--accent-color);}
+    50% {border-color: var(--accent-color-shade);}
 }
 
 @-webkit-keyframes typing {

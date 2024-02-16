@@ -60,6 +60,10 @@ a:not([class]) {
     text-decoration-skip-ink: auto;
 }
 
+a:hover {
+    z-index: 999999999;
+}
+
 figcaption {
     font-size: var(--mesure-medium);
     font-style: italic;

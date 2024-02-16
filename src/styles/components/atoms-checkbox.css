@@ -10,8 +10,8 @@
 
 .custom-checkbox:hover {
     font-weight: 900 ;
-    
 }
+
 /* Hide the browser's default checkbox */
 .custom-checkbox input {
 	position: absolute;
@@ -28,11 +28,11 @@
 
 /* Create a custom checkbox */
 .checkmark {
-	/* position: absolute;
+	position: absolute;
     top: 0;
-    left: 0; */
-	/* height: 100%;
-    width: 50%; */
+    left: 0;
+	height: 100%;
+    width: 50%;
 	border: var(--mesure-xxxx-small) solid var(--color);
 	background-color: var(--color-inverted);
 }
@@ -50,8 +50,8 @@
 
 /* When the checkbox is checked, add a blue background */
 .custom-checkbox input:checked ~ .checkmark {
-	/* background-color: var(--accent-color);
-    border-color: var(--accent-color); */
+	background-color: var(--accent-color);
+    border-color: var(--accent-color);
 }
 
 
