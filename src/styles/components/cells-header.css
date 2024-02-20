@@ -31,7 +31,6 @@ header .frame #logo:hover {
 
 	#let-me-solo-her {
 		font-size: var(--mesure-x-large);
-		color: var(--accent-color-shade);
 	}
 
 	header:not(.cover-header) {
@@ -52,7 +51,7 @@ header .frame #logo:hover {
 	}
 	
 	h1 span,
-	h1::before {
+	h1:before {
 		font-size: var(--mesure-small) !important;
 	}
 

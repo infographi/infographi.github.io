@@ -99,7 +99,7 @@
 		right: -5ch;
 		transform-origin: 0% 0%;
 		transform: translate(1000%, 0);
-		transition: transform 0.25s cubic-bezier(0.77, 0.2, 0.05, 1);
+		transition: transform 0.05s cubic-bezier(0.77, 0.2, 0.05, 1);
         top: 5ch;
 	}
 
@@ -108,7 +108,7 @@
 	}
 
 	#menu-back-to-top,
-	#menu-back-to-top::before {
+	#menu-back-to-top:before {
 		display: none !important;
 	}
 }
@@ -119,14 +119,12 @@
     }
 
 	#navigo {
-		/* block-size: 50ch !important; */
 		display: block !important;
 		position: sticky !important;
 		z-index: 2 !important;
 		left: auto !important;
 		right: auto !important;
         top: var(--mesure-large) !important;
-		/* align-self: flex-start !important; */
     }
 
 	header nav ul li a {

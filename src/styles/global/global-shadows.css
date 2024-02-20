@@ -8,7 +8,7 @@
 }
 
 *,
-*::before,
-*::after {
+*:before,
+*:after {
     box-shadow: none;
 }
