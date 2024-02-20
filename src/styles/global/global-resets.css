@@ -1,6 +1,6 @@
 *,
-*::before,
-*::after {
+*:before,
+*:after {
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     border-width: 0;
@@ -156,13 +156,13 @@ textarea {
  *    that receive the "clearfix" class.
  * 2. The use of "table" rather than "block" is only necessary if using
  *    ":before" to contain the top-margins of child elements. */
-.clearfix::before,
-.clearfix::after {
+.clearfix:before,
+.clearfix:after {
     content: " ";
     display: table;
 }
 
-.clearfix::after {
+.clearfix:after {
     clear: both;
 }
 

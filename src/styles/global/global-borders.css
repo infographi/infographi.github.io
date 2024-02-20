@@ -8,8 +8,8 @@
 }
 
 *,
-*::before,
-*::after {
+*:before,
+*:after {
     border: none;
 }
 

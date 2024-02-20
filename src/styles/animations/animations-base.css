@@ -119,16 +119,14 @@ html:focus-within {
     animation-duration: calc(var(--animate-duration) * 3);
 }
 
-/* Remove all animations, transitions and smooth scroll
-for people that prefer not to see them */
-/* @media (prefers-reduced-motion: reduce) {
+@media (prefers-reduced-motion: reduce) {
     html:focus-within {
         scroll-behavior: auto;
     }
     
     *,
-    *::before,
-    *::after {
+    *:before,
+    *:after {
         animation-duration: 0.01ms !important;
         animation-iteration-count: 1 !important;
         transition-duration: 0.01ms !important;
@@ -136,7 +134,7 @@ for people that prefer not to see them */
     }
 } */
 
-/* @media print, (prefers-reduced-motion: reduce) {
+@media print, (prefers-reduced-motion: reduce) {
     .animated {
         -webkit-animation-duration: 1ms !important;
         -moz-animation-duration: 1ms !important;
@@ -155,4 +153,4 @@ for people that prefer not to see them */
     .animated[class*='Out'] {
         opacity: 0;
     }
-} */
+}

@@ -709,7 +709,7 @@
     width: auto;
 }
 
-.glitch::after {
+.glitch:after {
     -webkit-animation: Glitch 2s infinite linear alternate-reverse;
     animation: Glitch 2s infinite linear alternate-reverse;
     background: black;
@@ -722,7 +722,7 @@
     top: 0;
 }
 
-.glitch::before {
+.glitch:before {
     -webkit-animation: GlitchDos 15s infinite linear alternate-reverse;
     animation: GlitchDos 15s infinite linear alternate-reverse;
     background: black;

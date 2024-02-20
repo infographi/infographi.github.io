@@ -11,18 +11,18 @@ the-reel {
     scrollbar-color: var(--thumbColor) var(--trackColor);
 }
 
-.reel::-webkit-scrollbar,
-the-reel::-webkit-scrollbar {
+.reel:-webkit-scrollbar,
+the-reel:-webkit-scrollbar {
     height: 1rem;
 }
 
-.reel::-webkit-scrollbar-track,
-the-reel::-webkit-scrollbar-track {
+.reel:-webkit-scrollbar-track,
+the-reel:-webkit-scrollbar-track {
     background-color: var(--trackColor);
 }
 
-.reel::-webkit-scrollbar-thumb,
-the-reel::-webkit-scrollbar-thumb {
+.reel:-webkit-scrollbar-thumb,
+the-reel:-webkit-scrollbar-thumb {
     background-color: var(--trackColor);
     background-image: linear-gradient(var(--trackColor) 0,
             var(--trackColor) 0.25rem,
