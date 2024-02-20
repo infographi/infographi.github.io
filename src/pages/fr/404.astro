@@ -1,0 +1,15 @@
+---
+import BaseHead from '../../components/BaseHead.astro';
+import SkipContent from '../../components/SkipContent.astro';
+import { SITE_TITLE, SITE_DESCRIPTION } from '../../consts';
+import NothingHereLayout from '../../layouts/NothingHereLayout-fr.astro';
+---
+
+<!doctype html>
+<html lang="fr">
+	<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+    <body class="nothing-page">
+        <SkipContent />
+        <NothingHereLayout />
+    </body>
+</html>
