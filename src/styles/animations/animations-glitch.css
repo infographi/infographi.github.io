@@ -1,11 +1,4 @@
-/*
-* Prefixed by https://autoprefixer.github.io
-* PostCSS: v8.3.6,
-* Autoprefixer: v10.3.1
-* Browsers: last 1000 version
-*/
 /* Text glitch effect thanks to Chris Coyier (https://codepen.io/chriscoyier/pen/xxKRQRm) */
-
 @-webkit-keyframes Glitch {
     0% {
         -webkit-clip-path: inset(40% 0 16% 0);
