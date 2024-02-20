@@ -1,0 +1,20 @@
+---
+import "../../styles/global.css";
+import { SITE_TITLE, SITE_DESCRIPTION } from '../../consts';
+import AboutLayout from "../../layouts/AboutLayout-fr.astro";
+import BaseHead from '../../components/BaseHead.astro';
+import Footer from "../../components/Footer.astro";
+import Header from "../../components/Header-fr.astro";
+import SkipContent from "../../components/SkipContent.astro";
+---
+
+<!doctype html>
+<html lang="fr">
+	<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+    <body>
+        <SkipContent />
+        <Header title={SITE_TITLE} />
+       	<AboutLayout />
+        <Footer />
+    </body>
+</html>

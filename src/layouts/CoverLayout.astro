@@ -5,6 +5,7 @@ import HeaderLink from "../components/Link.astro";
 import type { HTMLAttributes } from "astro/types";
 
 const itURL = getRelativeLocaleUrl("en", "it");
+const itURLFR = getRelativeLocaleUrl("fr", "fr");
 const itURLIT = getRelativeLocaleUrl("it", "it");
 
 interface CoverProps extends HTMLAttributes<"div"> {
@@ -77,6 +78,13 @@ const {
                         <span>Ita</span>
                         <span>lia</span>
                         <span>no</span>
+                    </HeaderLink>
+                </li>
+                <li>
+                    <HeaderLink class="cover-link french cluster" href={itURLFR}>
+                        <span>Fr</span>
+                        <span>en</span>
+                        <span>ch</span>
                     </HeaderLink>
                 </li>
             </ul>
