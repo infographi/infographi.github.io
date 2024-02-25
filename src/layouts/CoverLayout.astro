@@ -5,7 +5,7 @@ import HeaderLink from "../components/Link.astro";
 import type { HTMLAttributes } from "astro/types";
 
 const itURL = getRelativeLocaleUrl("en", "it");
-const itURLFR = getRelativeLocaleUrl("fr", "fr");
+const itURLFR = getRelativeLocaleUrl("fr", "it");
 const itURLIT = getRelativeLocaleUrl("it", "it");
 
 interface CoverProps extends HTMLAttributes<"div"> {
@@ -45,10 +45,6 @@ const {
 
             <h3 class="center">
 
-                <span class="sentence">Welcome</span>
-                
-                <span class="sentence">da</span>
-
                 <span class="sentence cluster title">
 
                     <span class="diese">#</span>
@@ -67,21 +63,21 @@ const {
             
             <ul class="switcher">
                 <li>
-                    <HeaderLink class="cover-link english cluster" href={itURL}>
+                    <HeaderLink class="cover-link english" href={itURL}>
                         <span>En</span>
                         <span>gli</span>
                         <span>sh</span>
                     </HeaderLink>
                 </li>
                 <li>
-                    <HeaderLink class="cover-link italian cluster" href={itURLIT}>
+                    <HeaderLink class="cover-link italian" href={itURLIT}>
                         <span>Ita</span>
                         <span>lia</span>
                         <span>no</span>
                     </HeaderLink>
                 </li>
                 <li>
-                    <HeaderLink class="cover-link french cluster" href={itURLFR}>
+                    <HeaderLink class="cover-link french" href={itURLFR}>
                         <span>Fr</span>
                         <span>en</span>
                         <span>ch</span>
@@ -96,128 +92,106 @@ const {
 </the-cover>
 
 <style>
-main {
-    border-color: transparent !important;
-}
-.title {
-    gap: var(--mesure-xxxx-small);
-}
 
-h3:before {
-    content: "";
-}
-
-@media only screen and (max-width: 75ch) {
-    h3 {
-        font-size: var(--mesure-large) !important;
+    body {
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        max-inline-size: 100%;
     }
-}
 
-.diese {
-    animation: diese-entrance;
-}
-
-.sentence {
-    animation: entrance;
-}
-
-.diese,
-.sentence {
-    animation-direction: alternate;
-    animation-duration: 2s;
-    animation-fill-mode: forwards;
-    animation-timing-function: ease-in-out;
-    background-color: transparent;
-    color: var(--color-void);
-    line-height: var(--mesure-xx-large) !important;
-    overflow-wrap: break-word;
-    text-align: center;
-}
-.sentence:nth-child(2) {
-    animation-delay: 0.5s;
-}
-.diese,
-.sentence:nth-child(3) {
-    animation-delay: 1s;
-    flex-shrink: 1;
-    gap: var(--mesure-xxxx-small);
-}
-.sentence:nth-child(4) {
-    animation-delay: 1.5s;
-}
-.sentence:nth-child(5) {
-    animation-delay: 2s;
-}
-
-@keyframes entrance {
-    from {
-        color: var(--color-void);
+    main {
+        border-color: transparent !important;
     }
-    to {
-        color: var(--color);
-    }
-}
 
-@keyframes diese-entrance {
-    from {
-        color: var(--color-void);
+    .title {
+        gap: var(--mesure-xxxx-small);
     }
-    to {
+
+    h3:before {
+        content: "";
+    }
+
+    @media only screen and (max-width: 75ch) {
+        h3 {
+            font-size: var(--mesure-large) !important;
+        }
+
+        /* span:not(.diese) {
+            display: none;
+        } */
+    }
+
+    .diese,
+    .sentence {
+        background-color: transparent;
+        line-height: var(--mesure-xx-large) !important;
+        text-align: center;
+
+    }
+
+    .diese {
         color: var(--accent-color-shade);
+        flex-shrink: 1;
+        gap: var(--mesure-xxxx-small);
     }
-}
 
-ul {
-    gap: var(--mesure-xxxx-small);
-}
+    ul {
+        gap: var(--mesure-medium);
+    }
 
-section ul li:before {
-    color: var(--color-medium);
-}
+    ul li:before,
+    .cover-link:before {
+        content: "";
+    }
 
-.cover-link {
-    border: var(--mesure-x-small) dashed var(--color-dark);
-    padding: var(--mesure-large);
-    gap: var(--mesure-xxx-small) !important;
-    justify-content: center;
-    text-decoration: none;
+    .cover-link {
+        display: flex !important;
+        flex-wrap: nowrap;
+        border: var(--mesure-x-small) dashed var(--color-dark);
+        padding: var(--mesure-medium);
+        justify-content: center;
+        text-decoration: none;
+    }
 
-}
+    .cover-link:hover,
+    .cover-link:focus {
+        border-color:var(--color-void) !important;
+        font-weight: 700 !important;
+        color: var(--color) !important;
+        outline-width: var(--mesure-x-small) !important;
+        outline-color: var(--accent-color) !important;
+    }
 
-ul li:before,
-.cover-link:before {
-    content: "";
-}
-.cover-link:hover,
-.cover-link:focus {
-    border-color:var(--color-void) !important;
-    font-weight: 700 !important;
+    .cover-link span {
+        font-size: var(--mesure-large);
+    }
 
-    color: var(--color) !important;
-    outline-width: var(--mesure-x-small) !important;
-    outline-color: var(--accent-color) !important;
-}
-
-.cover-link span {
-    font-size: var(--mesure-large);
-}
-
-.english span:first-child {
-    color: red;
-}
-.english span:nth-child(2) {
-    color: white;
-}
-.english span:nth-child(3) {
-    color: blue;
-}
-.italian span:first-child {
-    color: green;
-}
-.italian span:nth-child(2) {
-    color: white;
-}
-.italian span:nth-child(3) {
-    color: red;
-}
+    .english span:first-child {
+        color: red;
+    }
+    .english span:nth-child(2) {
+        color: white;
+    }
+    .english span:nth-child(3) {
+        color: blue;
+    }
+    .french span:first-child {
+        color: blue;
+    }
+    .french span:nth-child(2) {
+        color: white;
+    }
+    .french span:nth-child(3) {
+        color: red;
+    }
+    .italian span:first-child {
+        color: green;
+    }
+    .italian span:nth-child(2) {
+        color: white;
+    }
+    .italian span:nth-child(3) {
+        color: red;
+    }
 </style>

@@ -11,5 +11,5 @@
 }
 
 .with-icon .icon {
-	margin-inline-end: var(--space, 0.5em) !important;
+	margin-inline-end: var(--space, 1em) !important;
 }
