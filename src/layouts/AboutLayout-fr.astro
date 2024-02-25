@@ -1,108 +1,81 @@
 ---
 import "../styles/global.css";
 import { SITE_TITLE } from "../consts";
+import Contact from "../components/Contact-fr.astro";
 ---
 
-<main class="box fluid-container stack-xx-large">
+<main class="box stack-xxx-large">
 
-	<section class="stack-large">
-		<h2>?</h2>
-		<dfn>À PROPOS</dfn>
-		<ul class="box stack-small">
-			<li>
-				<strong>INFO<span class="separator-span"> =</span></strong>
-				<span class="color-accent">Info</span>rmatique
-			</li>
-			<li>
-				<strong>GRAPHI<span class="separator-span"> = </span></strong>
-				Design <span class="color-accent">Graphi</span>que
-			</li>
-			<li>
-				<strong>PHI<span class="separator-span"> =</span></strong>
-				<span class="color-accent"><a href="https://en.wikipedia.org/wiki/Golden_ratio">Phi</a></span>
-			</li>
-		</ul>
-		<p>Chez {SITE_TITLE}, nous offrons des solutions complètes dans les domaines de l'informatique, du Web Design et
-			du Branding. Nos services sont conçus pour répondre aux exigences des particuliers, freelances et petites
-			entreprises. Nous valorisons l'efficacité, la fiabilité et l'expertise, nous positionnant ainsi comme votre
-			partenaire de confiance dans le monde technologique. Notre savoir-faire nous permet de relever divers défis
-			techniques, assurant des opérations informatiques fluides pour nos clients. Notre objectif est d'atteindre
-			votre satisfaction à long terme en incarnant l'excellence dans chaque projet que nous entreprenons.
-	</section>
+    <section class="stack-x-large">
 
-	<section class="stack-large">
-		<h3>Notre Mission</h3>
-		<p>Notre mission est de vous doter des dernières technologies et/ou d'un identité visuelle mémorables et
-			captivants, simplifiant ainsi votre parcours numérique. Nous nous engageons à rester à l'avant-garde des
-			évolutions technologiques, en mettant constamment à jour nos compétences et en adoptant une pensée
-			innovante. Nous sommes dédiés à votre succès, et notre engagement à concrétiser votre vision est au cœur de
-			notre mission.</p>
-	</section>
+        <h2>?</h2>
 
-	<section class="stack-large">
-		<h3>Nos Valeurs</h3>
-		<p>Chez {SITE_TITLE}, nos valeurs constituent les principes directeurs qui définissent notre identité et notre
-			manière de travailler. Nous croyons fermement en :</p>
-		<ul class="box stack">
-			<li><strong>L’Expertise :</strong> Notre équipe, composée de professionnels chevronnés, apporte une richesse
-				d'expérience dans le domaine des technologies de l'information et du design graphique. Cette expertise
-				nous permet de vous offrir des solutions sur mesure, parfaitement adaptées à vos besoins spécifiques.
-			</li>
-			<li><strong>la Compréhension :</strong> La force de l'écoute est au cœur de notre approche. Nous prenons le
-				temps de cerner vos exigences, vos objectifs et les défis qui vous sont propres. Votre vision devient
-				notre mission, et nous collaborons étroitement avec vous pour la transformer en réalité concrète.</li>
-			<li><strong>La Satisfaction à Long Terme :</strong> Chez nous, votre satisfaction n'est pas simplement un
-				objectif, mais un engagement profond. Nous visons à établir des relations durables avec nos clients,
-				faisant de votre succès notre priorité absolue. Notre dévouement à votre satisfaction sur le long terme
-				est sans faille.</li>
-		</ul>
-		<p>Ces valeurs nous guident dans toutes nos interactions et projets. Elles sont le socle sur lequel {SITE_TITLE}
-			s'est construit et la raison fondamentale de la confiance que nos clients nous accordent.</p>
-	</section>
+        <dfn>À PROPOS</dfn>
 
+        <ul class="box title-explanation stack-large">
+            <li class="cluster">
+                <strong>INFO</strong>
+                <span class="separator-span">=</span>
+                <span class="accent-color-shade">Information</span>
 
-	<section class="stack-large">
-		<h3>Pourquoi Nous Choisir ?</h3>
-		<p>Choisir le partenaire adéquat pour vos besoins en technologies de l'information et en design graphique est
-			essentiel. En optant pour {SITE_TITLE}, vous faites un choix ancré dans la confiance, la fiabilité et un
-			engagement profond envers l'excellence.</p>
-		<p>Voici les raisons de choisir notre équipe :</p>
-		<ul class="box stack">
-			<li><strong>Fiabilité :</strong> Nous accordons une grande importance à la tenue de nos promesses. Notre
-				équipe est déterminée à respecter scrupuleusement les délais et à surpasser vos attentes. Vous pouvez
-				vous fier à nous pour être présents dans les moments cruciaux.</li>
-			<li><strong>Créativité :</strong> Chaque projet que nous entreprenons est imprégné de créativité, que ce
-				soit pour développer un site web spectaculaire, forger une identité de marque inoubliable, ou relever
-				des défis informatiques complexes. Nous garantissons que votre marque brillera dans un univers numérique
-				saturé.</li>
-			<li><strong>Efficacité :</strong> L'efficacité est la pierre angulaire de notre approche. Nous optimisons
-				les opérations informatiques pour booster les performances et réduire au minimum les perturbations.
-				Notre but est de faire en sorte que la technologie vous soit bénéfique.</li>
-			<li><strong>Expertise :</strong> Le monde des technologies de l'information et du design graphique peut
-				sembler intimidant, mais notre équipe d'experts est là pour vous guider. Nous rendons la technologie
-				accessible et facile à comprendre, vous aidant à prendre des décisions avisées pour garantir votre
-				succès.</li>
-		</ul>
-	</section>
+            </li>
+            <li class="cluster">
+                <strong>GRAPHI</strong>
+                <span class="separator-span">=</span>
+                <span class="accent-color-shade">Graphisme</span>
+            </li>
 
+            <li class="cluster">
+                <strong>PHI</strong>
+                <span class="separator-span">=</span>
+                <span class="accent-color-shade">Proportions Parfaites</span>
+            </li>
+        </ul>
 
-	<section class="stack-large">
-		<h3>Notre Engagement</h3>
-		<p>Notre engagement envers vous se manifeste bien au-delà des paroles ; il est concrétisé par nos actions. Nous
-			œuvrons inlassablement pour assurer votre satisfaction et votre réussite. En vous associant avec
-			{SITE_TITLE}, vous optez pour une équipe entièrement dévouée à la concrétisation de votre vision.</p>
-		<p>Nous tirons une grande fierté de notre travail, et votre satisfaction complète est notre ultime objectif.
-			Notre engagement en faveur de l'excellence nous pousse à aller au-delà des normes habituelles, en vous
-			proposant des solutions qui surpassent vos attentes.</p>
-	</section>
+        <p>Chez <span class="accent-color-shade">{SITE_TITLE}</span>, nous nous spécialisons dans l'offre de solutions informatiques, web et de branding et éducatives de bout en bout qui répondent aux besoins des particuliers, des travailleurs indépendants et des petites entreprises. Avec un fort accent sur l'efficacité, la fiabilité et l'expertise, nous visons à devenir votre partenaire de confiance dans la navigation du monde complexe de la technologie. Notre expertise s'étend à une gamme de défis techniques, garantissant des opérations numériques fluides et efficaces pour nos clients.</p>
+    </section>
 
+    <section class="stack-large">
+        
+        <h3 class="cluster">
+            <span>Info</span>
+            <span class="separator-span">:</span>
+        </h3>
 
-	<section class="stack-large">
-		<h3>Contactez-Nous</h3>
-		<p>Si vous avez des questions ou souhaitez discuter de votre projet, n'hésitez pas à <a href="/contact"
-				class="color-accent">nous contacter</a>. Nous sommes ici pour fournir les solutions dont vous avez
-			besoin pour prospérer dans le
-			monde numérique. Votre succès est notre succès, et nous sommes impatients d'être votre partenaire de
-			confiance.</p>
-	</section>
+        <p>Info représente la <span class="accent-color-shade">Technologie de l'Information</span>. Nous apportons une richesse d'expérience et une passion véritable pour les technologies. De plus, l'<span class="accent-color-shade">Information</span> est le savoir. Nous croyons en le partage de l'<span class="accent-color-shade">Information</span> et en l'autonomisation de nos clients grâce à l'éducation. Nous ne nous contentons pas de résoudre les défis informatiques immédiats; nous vous équipons de la compréhension nécessaire pour naviguer en toute confiance dans le paysage technologique en constante évolution.</p>
+
+        <p>Mais l'<span class="accent-color-shade">Information</span> incarne notre engagement envers une communication claire et transparente. Dans chaque interaction, nous donnons la priorité à vous tenir informé et impliqué. Nous comprenons que la communication efficace est la clé d'un partenariat réussi, et nous nous efforçons de créer un environnement où l'<span class="accent-color-shade">Information</span> circule de manière transparente.</p>
+
+        <p>Enfin, l'<span class="accent-color-shade">Information</span> est aujourd'hui synonyme d'<span class="accent-color-shade">Information</span> personnelle. Nous prenons la sécurité et la confidentialité des données au sérieux, vous aidant ou prenant en charge la mise en œuvre de mesures robustes pour garantir que vos données soient toujours protégées.</p>
+    </section>
+
+    <section class="stack-large">
+
+        <h3 class="cluster">
+            <span>Graphi</span>
+            <span class="separator-span">:</span>
+        </h3>
+
+        <p>Le <span class="accent-color-shade">Graphisme</span> est une toile pour le récit créatif. De l'étincelle initiale d'une idée au dernier coup de pinceau, notre équipe tisse des récits qui incarnent l'essence de votre marque. À travers un mélange réfléchi d'images, de typographie et d'éléments de design, nous visons à créer des visuels qui racontent des histoires captivantes, en veillant à ce qu'ils restent frais, percutants et distinctifs.</p>
+
+        <p>Notre philosophie du <span class="accent-color-shade">Graphisme</span> va au-delà des apparences, se concentrant sur la fusion intentionnelle de la forme et de la fonction. Chaque élément de conception joue un rôle, garantissant non seulement un attrait visuel mais aussi une utilisabilité pratique. Cet équilibre intentionnel garantit que vos expériences visuelles non seulement sont esthétiques mais servent également leur objectif prévu de manière efficace.</p>
+
+        <p>Créer des <span class="accent-color-shade">Expériences Visuelles</span> nécessite de comprendre votre public. Notre approche de conception est centrée sur la création pour l'utilisateur final, garantissant que les conceptions résonnent et captivent. Qu'il s'agisse d'une interface utilisateur élégante ou d'une pièce marketing frappante, nous donnons la priorité à la fourniture d'expériences qui captivent et laissent une impression durable.</p>
+    </section>
+
+    <section class="stack-large">
+
+        <h3 class="cluster">
+            <span>Phi</span>
+            <span class="separator-span">:</span>
+        </h3>
+
+        <p>Le <span class="accent-color-shade">Phi</span> est un symbole de proportions parfaites et incarne notre engagement envers les normes de qualité les plus élevées. Que ce soit pour des interventions informatiques ou la création de <span class="accent-color-shade">Graphisme</span>, la justesse de nos décisions et votre satisfaction sont primordiales pour nous. Nous ne fournissons pas simplement des solutions; nous les personnalisons méticuleusement pour répondre aux normes industrielles élevées et s'aligner avec vos
+
+ besoins uniques.</p>
+        
+        <p>L'<span class="accent-color-shade">Innovation</span> est au cœur du <span class="accent-color-shade">Phi</span>. Nous recherchons activement des solutions créatives et efficaces aux défis numériques, garantissant que nos services ne sont pas seulement à la pointe, mais également adaptés à vos besoins évolutifs. Notre engagement dans des initiatives communautaires et de responsabilité sociale reflète notre engagement plus large à avoir un impact positif, créant un monde meilleur au-delà de la technologie.</p>        
+    </section>
+
+    <Contact />
 </main>
