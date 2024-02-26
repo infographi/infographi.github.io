@@ -1,11 +1,16 @@
 :root {
     --background-color-inverted: var(--color-clear-light);
     --background-color: var(--color-void);
+    --background-image:
+        linear-gradient(var(--color-dark) 0.1em, transparent .1em),
+        linear-gradient(90deg, var(--color-dark) 0.1em, transparent .1em);
+    --background-size: 1.5em 1.5em;
     --border-color-inverted: var(--color-glare);
     --border-color: var(--color-dark);
     --color-before-after: var(--color-dark);
     --color-inverted: var(--color-void);
     --color: var(--color-glare);
+
 }
 
 html,
@@ -18,6 +23,32 @@ nav ul {
 *:after,
 *:before {
     color: var(--color-before-after);
+}
+
+html,
+.cover-body {
+        background: var(--background-color);
+        background-image: var(--background-image);
+        background-size: var(--background-size);
+}
+
+@media only screen and (min-width: 130ch) {
+    #the-body,
+    .grid-background {
+        background: var(--background-color);
+        background-image: var(--background-image);
+        background-size: var(--background-size);
+    }
+}
+
+header > a,
+.contact-ul,
+nav,
+main,
+article,
+footer {
+    background: var(--color-void);
+    background-image: none !important;
 }
 
 article,
@@ -144,23 +175,4 @@ footer * {
 
 .title-explanation li:before {
     display: none;
-}
-
-#the-body,
-.grid-background {
-        background: var(--color-void) !important;
-        background-image: 
-            linear-gradient(var(--color-dark) 0.1em, transparent .1em),
-            linear-gradient(90deg, var(--color-dark) 0.1em, transparent .1em) !important;
-        background-size: 1.5em 1.5em !important;
-}
-
-header > a,
-header > .contact-ul,
-nav,
-main,
-article,
-footer {
-    background: var(--color-void);
-    background-image: none !important;
 }
