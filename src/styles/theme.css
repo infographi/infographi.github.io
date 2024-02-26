@@ -145,3 +145,21 @@ footer * {
 .title-explanation li:before {
     display: none;
 }
+
+#the-body,
+.grid-background {
+        background: var(--color-void) !important;
+        background-image: 
+            linear-gradient(var(--color-dark) 0.1em, transparent .1em),
+            linear-gradient(90deg, var(--color-dark) 0.1em, transparent .1em) !important;
+        background-size: 3em 3em !important;
+}
+
+header > a,
+header > .contact-ul,
+nav,
+main,
+footer {
+    background: var(--color-void);
+    background-image: none !important;
+}
