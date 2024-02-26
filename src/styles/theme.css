@@ -152,13 +152,14 @@ footer * {
         background-image: 
             linear-gradient(var(--color-dark) 0.1em, transparent .1em),
             linear-gradient(90deg, var(--color-dark) 0.1em, transparent .1em) !important;
-        background-size: 3em 3em !important;
+        background-size: 1.5em 1.5em !important;
 }
 
 header > a,
 header > .contact-ul,
 nav,
 main,
+article,
 footer {
     background: var(--color-void);
     background-image: none !important;
