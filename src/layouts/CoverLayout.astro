@@ -41,7 +41,9 @@ const {
 
     <main class="box">
 
-        <section class="stack">
+        <section class="stack box">
+
+            <span class="color-void">#</span>
 
             <h3 class="center">
 
@@ -92,13 +94,19 @@ const {
 </the-cover>
 
 <style>
+    body {
+        background: var(--background-color);
+        background-image: var(--background-image);
+        background-size: var(--background-size);
+    }
+
     the-cover {
         align-items: center;
         flex-grow: 1 !important;
     }
 
     main {
-        border-color: transparent !important;
+        border-width: var(--mesure-xxx-small) !important;
     }
 
     .title {
@@ -113,10 +121,6 @@ const {
         h3 {
             font-size: var(--mesure-large) !important;
         }
-
-        /* span:not(.diese) {
-            display: none;
-        } */
     }
 
     .diese,
@@ -145,7 +149,7 @@ const {
     .cover-link {
         display: flex !important;
         flex-wrap: nowrap;
-        border: var(--mesure-x-small) dashed var(--color-dark);
+        border: var(--mesure-xxx-small) dashed var(--color-dark-shade);
         padding: var(--mesure-medium);
         justify-content: center;
         text-decoration: none;

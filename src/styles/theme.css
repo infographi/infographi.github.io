@@ -4,7 +4,7 @@
     --background-image:
         linear-gradient(var(--color-dark) 0.1em, transparent .1em),
         linear-gradient(90deg, var(--color-dark) 0.1em, transparent .1em);
-    --background-size: 1.5em 1.5em;
+    --background-size: 1em 1em;
     --border-color-inverted: var(--color-glare);
     --border-color: var(--color-dark);
     --color-before-after: var(--color-dark);
