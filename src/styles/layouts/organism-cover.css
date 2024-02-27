@@ -1,6 +1,6 @@
 .cover,
 the-cover {
-    align-items: center !important;
+    align-items: center !important;
     border-color: transparent;
     border-style: solid;
     border-width: var(--mesure-small);
@@ -37,7 +37,7 @@ the-cover> :last-child:not(h1) {
 
 .cover>h1,
 the-cover>h1 {
-    margin-block: auto, 0;
+    margin-block: 0;
 }
 
 .cover> :first-child,
