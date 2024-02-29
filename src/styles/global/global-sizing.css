@@ -3,7 +3,7 @@
   --ratio: 1.5;
 
   --base-max-block-size: 100%;
-  --base-max-inline-size: 75ch;
+  --base-max-inline-size: 60ch;
   --base-mesure: calc(1rem + 0.5vw);
   --base-line-height: calc(var(--base-mesure) * var(--ratio));
 

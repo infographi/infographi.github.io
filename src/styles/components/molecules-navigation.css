@@ -114,7 +114,8 @@
 }
 
 @media only screen and (min-width: 130ch) {
-    header input {
+
+	header input {
         display: none !important;
     }
 
