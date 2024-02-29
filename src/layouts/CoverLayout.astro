@@ -37,7 +37,7 @@ const {
 } = Astro.props as CoverProps;
 ---
 
-<the-cover {classes} {...rest}>
+<the-cover class="" {classes} {...rest}>
 
     <main class="box">
 
@@ -95,18 +95,23 @@ const {
 
 <style>
     body {
+        background-color: var(--background-color);
+        min-block-size: 100vh;
+        min-inline-size: 100%;
+        background-image: var(--background-image) !important;
+        background-size: var(--background-size) !important;
         background: var(--background-color);
-        background-image: var(--background-image);
-        background-size: var(--background-size);
+        color: var(--color);
     }
 
     the-cover {
         align-items: center;
         flex-grow: 1 !important;
+        min-inline-size: 80% !important;
     }
 
     main {
-        border-width: var(--mesure-xxx-small) !important;
+        background-color: var(--color-void);
     }
 
     .title {

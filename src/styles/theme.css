@@ -13,32 +13,52 @@
 
 }
 
-html,
-body,
-nav ul {
+html {
     background-color: var(--background-color);
+    background-image: var(--background-image) !important;
+    background-size: var(--background-size) !important;
+    background: var(--background-color);
     color: var(--color);
 }
+
+/* @media only screen and (min-width: 130ch) {
+    body {
+        background-color: var(--background-color);
+        background-image: var(--background-image) !important;
+        background-size: var(--background-size) !important;
+        background: var(--background-color);
+    }
+} */
+
+@media only screen and (max-width: 130ch) {
+
+    html,
+    body {
+        overflow-x: hidden !important;
+    }
+
+    #let-me-solo-her:hover {
+        color: var(--color);
+    }
+
+    nav #menu {
+        padding: 2.5ch !important;
+        background-color: var(--color-void);
+    }
+
+    nav>*+* {
+        margin-block-start: var(--mesure-xxx-large) !important;
+    }
+
+    nav ul li a {
+        color: var(--color) !important;
+        font-size: var(--mesure-large) !important;
+    }
+}   
 
 *:after,
 *:before {
     color: var(--color-before-after);
-}
-
-html,
-.cover-body {
-        background: var(--background-color);
-        background-image: var(--background-image);
-        background-size: var(--background-size);
-}
-
-@media only screen and (min-width: 130ch) {
-    #the-body,
-    .grid-background {
-        background: var(--background-color);
-        background-image: var(--background-image);
-        background-size: var(--background-size);
-    }
 }
 
 header > a,
@@ -47,7 +67,7 @@ nav,
 main,
 article,
 footer {
-    background: var(--color-void);
+    background-color: var(--color-void);
     background-image: none !important;
 }
 
@@ -113,31 +133,6 @@ section dfn {
     color: var(--accent-color-shade);
     font-size: var(--mesure-small);
 }
-
-@media only screen and (max-width: 130ch) {
-
-    html,
-    body {
-        overflow-x: hidden !important;
-    }
-
-    #let-me-solo-her:hover {
-        color: var(--color);
-    }
-
-    nav #menu {
-        padding: 2.5ch !important;
-    }
-
-    nav>*+* {
-        margin-block-start: var(--mesure-xxx-large) !important;
-    }
-
-    nav ul li a {
-        color: var(--color) !important;
-        font-size: var(--mesure-large) !important;
-    }
-}   
 
 header nav h5 {
     color: var(--accent-color-shade);
