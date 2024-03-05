@@ -12,5 +12,6 @@
 
     --accent-color-glare: hsla(26.03, 97.33%, 55.88%, 0.85);
     --accent-color-shade: hsla(0, 68%, 42%, 1);
+    --accent-color-variant: DodgerBlue;
     --accent-color: hsla(0, 80%, 50%, 1);
 }

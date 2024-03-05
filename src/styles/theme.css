@@ -146,7 +146,7 @@ ul li:not(nav ul li):before {
 }
 
 ul li strong {
-    color: var(--accent-color-glare) !important;
+    color: var(--accent-color-variant) !important;
 }
 
 article h3:before {
