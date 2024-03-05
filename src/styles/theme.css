@@ -21,15 +21,6 @@ html {
     color: var(--color);
 }
 
-/* @media only screen and (min-width: 130ch) {
-    body {
-        background-color: var(--background-color);
-        background-image: var(--background-image) !important;
-        background-size: var(--background-size) !important;
-        background: var(--background-color);
-    }
-} */
-
 @media only screen and (max-width: 130ch) {
 
     html,
@@ -108,6 +99,10 @@ h6:before {
     color: var(--accent-color-shade) !important;
 }
 
+#second-life-h3:before {
+    color: var(--color-dark-shade) !important;
+}
+
 h1 span {
     color: var(--color);
 }
@@ -132,6 +127,7 @@ h3 {
 section dfn {
     color: var(--accent-color-shade);
     font-size: var(--mesure-small);
+    font-weight: 900;
 }
 
 header nav h5 {
@@ -147,6 +143,10 @@ header nav h5:before {
 ul li:not(nav ul li):before {
     color: var(--color-dark-shade);
     margin-inline-end: 1ch;
+}
+
+ul li strong {
+    color: var(--accent-color-glare) !important;
 }
 
 article h3:before {
