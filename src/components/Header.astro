@@ -3,25 +3,25 @@ import "../styles/global.css";
 import { EMAIL_ADDRESS, TELEPHONE_NUMBER } from "../consts";
 import { getRelativeLocaleUrl } from "astro:i18n";
 import { Image } from "astro:assets";
+import Box from "./Box.astro";
 import Center from "./Center.astro";
 import Link from "./Link.astro";
 import logo from "../img/INFOGRAPHI-LOGO.jpg";
 import Navigation from "./Navigation.astro";
-import Box from "./Box.astro";
 
 const aboutURL = getRelativeLocaleUrl("en", "about");
 const homeURL = getRelativeLocaleUrl("en", "/");
 ---
 
 <header role="banner">
+
 	<a id="home-link" class="frame" href={homeURL}>
 		<Image id="logo" src={logo} alt="INFOGRAPHI logo." />
 	</a>
 
 	<a href={aboutURL} class="box">
 		<Center>
-			<span id="let-me-solo-her" class="font-x-large">#</span
-			>
+			<span id="let-me-solo-her" class="font-x-large">#</span>
 
 			<h1 id="title">
 				<span>I</span>

@@ -46,6 +46,14 @@ h2 {
 	line-height: var(--mesure-xxxx-large);
 }
 
+@media only screen and (max-width: 130ch) {
+	h2:before,
+	h2 span {
+		font-size:  var(--mesure-xxxx-large);
+		line-height: var(--mesure-xxxx-large);
+	}
+}
+
 h3 {
 	font-size: var(--mesure-xx-large) ;
 	line-height: var(--mesure-xx-large);}

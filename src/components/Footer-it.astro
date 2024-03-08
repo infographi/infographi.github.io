@@ -8,35 +8,36 @@ import { getRelativeLocaleUrl } from 'astro:i18n';
 const brandingURL=getRelativeLocaleUrl("it", "branding");
 ---
 
-<footer class="box stack" role="contentinfo">
+<footer class:list={["box stack"]} role="contentinfo">
 
-	<ul class="cluster">
+	<ul class:list={["cluster"]}>
 
 		<li>
 			<Link href="https://astro.build">
-				<span>🚀</span>
-				<span>Astro Inside</span>
+				Astro Inside
 			</Link>
 		</li>
+
 		<li>
 			<Link href="https://github.com/PowerShell/PowerShell">
-				<span>🦾</span>
-				<span>PowerShell Inside</span>
+				PowerShell Inside
 			</Link>
 		</li>
 
 		<li>
 			<Link href="https://www.openbsd.org">
-				<span>🐡</span>
-				<span>OpenBSD Squib</span>
+				OpenBSD Squib
 			</Link>
 		</li>
 
 		<li>
 			<Link href="https://blender.org">
-				<span>🐒</span>
-				<span>Blender Inside</span>
+				Blender Inside
 			</Link>
+		</li>
+
+		<li>
+			<span>&#x221E;</span>
 		</li>
 
 		<li>

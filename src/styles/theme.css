@@ -32,6 +32,11 @@ html {
         color: var(--color);
     }
 
+    header {
+        background-color: var(--color-dark);
+        border: var(--mesure-xxx-small) dashed var(--accent-color-shade);
+    }
+
     nav #menu {
         padding: 2.5ch !important;
         background-color: var(--color-void);
@@ -112,7 +117,7 @@ h1 span:hover {
 }
 
 h2 {
-    gap: 0%;
+    gap: 0% !important;
     justify-content: flex-start;
 }
 
