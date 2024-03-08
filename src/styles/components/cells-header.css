@@ -42,8 +42,9 @@ header {
 		margin-block-start: 0;
 	}
 
-	#logo {
-		display: none;
+	the-frame,
+	the-frame #logo {
+		display: none !important;
 	}
 
 	header the-box:nth-child(2) {
@@ -52,6 +53,14 @@ header {
 
 	header the-box:nth-child(3) {
 		display: none !important;
+	}
+
+	nav ul li:before {
+		display: none;
+	}
+
+	.contact-link > span {
+		background: none !important;
 	}
 }
 

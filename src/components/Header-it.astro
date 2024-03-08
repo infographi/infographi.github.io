@@ -2,64 +2,63 @@
 import "../styles/global.css";
 import { EMAIL_ADDRESS, TELEPHONE_NUMBER } from "../consts";
 import { getRelativeLocaleUrl } from "astro:i18n";
-import { Image } from "astro:assets";
+import Box from "./Box.astro";
 import Center from "./Center.astro";
 import Link from "./Link.astro";
-import logo from "../img/INFOGRAPHI-LOGO.jpg";
 import Navigation from "./Navigation-it.astro";
-import Box from "./Box.astro";
+import Stack from "./Stack.astro";
+import Frame from "./Frame.astro";
 
 const aboutURL = getRelativeLocaleUrl("it", "about");
-const homeURL = getRelativeLocaleUrl("en", "/");
+const faviconLink = "../../public/favicon.svg";
+const homeURL = getRelativeLocaleUrl("it", "/");
+const logoLink = "../../public/INFOGRAPHI-LOGO.jpg";
 ---
 
 <header role="banner">
-	<a id="home-link" class="frame" href={homeURL}>
-		<Image id="logo" src={logo} alt="INFOGRAPHI logo." />
-	</a>
 
-	<a href={aboutURL} class="box">
-		<Center>
-			<span id="let-me-solo-her" class="font-x-large">#</span
-			>
+		<Frame>
+			<img  id="logo" src={logoLink} alt="#INFOGRAPHI logo." />
+		</Frame>
 
-			<h1 id="title">
-				<span>I</span>
-				<span>N</span>
-				<span>F</span>
-				<span>O</span>
-				<span>G</span>
-				<span>R</span>
-				<span>A</span>
-				<span>P</span>
-				<span>H</span>
-				<span>I</span>
-			</h1>
-		</Center>
-	</a>
+		<Box>
+			<Center>
+				<Stack>
+					<h1 id="title">
+						<span>I</span>
+						<span>N</span>
+						<span>F</span>
+						<span>O</span>
+						<span>G</span>
+						<span>R</span>
+						<span>A</span>
+						<span>P</span>
+						<span>H</span>
+						<span>I</span>
+					</h1>
+					<dfn class="color-shade">IT, WEB & DESIGN</dfn>
+				</Stack>
+			</Center>
+		</Box>
 
-	<Box class="box contact-ul">
-		<Center>
-			<ul class="stack">
-				<li class="no-before">
-					<Link
-						class="contact-link with-icon"
-						href={TELEPHONE_NUMBER}
-					>
-						<span class="icon-span icon">&#9743;</span>
-						TEL
-					</Link>
-				</li>
+		<Box>
+			<Center>
+				<ul class="cluster">
+					<li class="no-before">
+						<Link class="contact-link with-icon" href={TELEPHONE_NUMBER}>
+							<span class="icon-span icon">&#9743;</span>
+							TEL
+						</Link>
+					</li>
+					<li class="no-before">
+						<Link class="contact-link with-icon" href={EMAIL_ADDRESS}>
+							<span class="icon-span icon">&#9993;</span>
+							EMAIL
+						</Link>
+					</li>
+				</ul>
+			</Center>
+		</Box>
 
-				<li class="no-before">
-					<Link class="contact-link with-icon" href={EMAIL_ADDRESS}>
-						<span class="icon-span icon">&#9993;</span>
-						MAIL
-					</Link>
-				</li>
-			</ul>
-		</Center>
-	</Box>
-
-	<Navigation />
+		<Navigation class:list={"sticky"} />
 </header>
