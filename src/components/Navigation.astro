@@ -2,6 +2,7 @@
 import "../styles/global.css";
 import { getRelativeLocaleUrl } from 'astro:i18n';
 import Link from "./Link.astro";
+import { TELEPHONE_NUMBER, EMAIL_ADDRESS } from "../consts";
 
 const aboutURL = getRelativeLocaleUrl("en", "about");
 const brandingURL = getRelativeLocaleUrl("en", "branding");
@@ -41,6 +42,19 @@ const nothingURL = getRelativeLocaleUrl("en", "404");
 			<li id="menu-back-to-top">
 				<Link href="#skip-content">
 					&#8593;&#8593;&#8593;
+				</Link>
+			</li>
+
+			<li class="no-before">
+				<Link class="contact-link with-icon" href={TELEPHONE_NUMBER}>
+					<span class="icon-span icon">&#9743;</span>
+					CALL
+				</Link>
+			</li>
+			<li class="no-before">
+				<Link class="contact-link with-icon" href={EMAIL_ADDRESS}>
+					<span class="icon-span icon">&#9993;</span>
+					EMAIL
 				</Link>
 			</li>
 

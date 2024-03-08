@@ -1,24 +1,22 @@
-header:not(.cover-header) {
-	display: flex;
-	flex-direction: column;
-	justify-content: flex-start;
+header {
+	max-inline-size: 45ch;
 }
 
-header:not(.cover-header)>*+* {
-	margin-block-start: var(--mesure-medium);
+#logo {
+	opacity: 100% !important;
 }
 
-header .frame #logo {
-    opacity: 100%;
-    max-inline-size: 100%;
-}
-
-header .frame #logo:hover {
-    opacity: 50%;
+#logo:hover {
+	opacity: 50%;
 }
 
 #let-me-solo-her {
 	display: none;
+}
+
+.contact-link {
+	font-size: var(--mesure-large);
+	text-align: center !important;
 }
 
 #title {
@@ -27,33 +25,13 @@ header .frame #logo:hover {
 	gap: var(--mesure-xxxx-small);
 }
 
-.contact-link {
-    font-size: var(--mesure-large);
-    text-align: center !important;
-}
 
 @media only screen and (max-width: 130ch) {
 
-	header h1:before,
-	header h1 span {
-		display: none;
-	}
-
-	header .center:nth-child(2) {
-		padding: 10% !important;
-	}
-
-	#let-me-solo-her {
-		display: block;
-		font-size: var(--mesure-x-large);
-	}
-
 	header:not(.cover-header) {
+		display: flex;
 		flex-direction: row;
-		flex-wrap: nowrap;
-		align-items: stretch;
-		justify-content: space-between;
-		gap: var(--mesure-xx-small);
+		justify-content: flex-start;
 	}
 
 	header:not(.cover-header) > * {
@@ -64,35 +42,30 @@ header .frame #logo:hover {
 		margin-block-start: 0;
 	}
 
-	header:not(.cover-header) #home-link {
-		min-inline-size: var(--mesure-x-large);
-	}
-	
-	h1 span,
-	h1:before {
-		font-size: var(--mesure-small) !important;
+	#logo {
+		display: none;
 	}
 
-	.contact-ul {
-        padding: var(--mesure-xxx-small) !important;
-    }
-
-	.contact-ul the-center {
-		padding: auto;
-	}
-    .contact-link {
-        font-size: var(--mesure-medium) !important;
-    }
-
-	header ul {
-		padding: var(--mesure-xxxx-small) !important;
+	header the-box:nth-child(2) {
+		padding: 0 !important;
 	}
 
-	header ul the-center the-cluster {
-		gap: var(--mesure-xx-small) !important;
+	header the-box:nth-child(3) {
+		display: none !important;
+	}
+}
+
+@media only screen and (min-width: 130ch) {
+
+	header:not(.cover-header)>*+* {
+		margin-block-start: var(--mesure-medium);
 	}
 
-	h2 {
-		margin-top: var(--mesure-xxx-large);
+	#let-me-solo-her {
+		display: none;
+	}
+
+	nav div ul > .no-before {
+		display: none;
 	}
 }
