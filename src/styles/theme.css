@@ -21,6 +21,19 @@ html {
     color: var(--color);
 }
 
+body {
+    overflow-x: hidden !important;
+}
+
+nav ul li a {
+    color: var(--color-medium) !important;
+    font-size: var(--mesure-large) !important;
+}
+
+#back-up-arrow {
+    display: none;
+}
+
 @media only screen and (max-width: 130ch) {
 
     html,
@@ -29,8 +42,9 @@ html {
     }
 
     header {
-        /* background-color: var(--color-dark);
-        border: var(--mesure-x-small) dashed var(--color-dark); */
+        /* background-color: var(--color-void);
+        border: var(--mesure-xx-small) dashed var(--color);
+        border-radius: 3ch; */
     }
 
     nav #menu {
@@ -46,6 +60,18 @@ html {
         color: var(--color) !important;
         font-size: var(--mesure-large) !important;
     }
+
+    #back-up-arrow {
+        background-color: var(--color-void);
+        color: var(--accent-color-shade);
+        display: block;
+        font-size: var(--mesure-x-large);
+        font-weight: 900;
+        position: fixed;
+        right: 2.5vw;
+        text-align: right;
+        bottom: 2ch;
+    }
 }   
 
 *:after,
@@ -56,7 +82,7 @@ html {
 }
 
 #logo {
-    border: var(--mesure-xx-small) solid var(--color-dark);
+    border: var(--mesure-xxxx-small) solid var(--color);
     border-radius: 3ch;
 }
 
@@ -65,16 +91,6 @@ section {
     background-image: none !important;
     border: var(--mesure-xxx-small) solid var(--color-dark-shade);
     border-radius: 3ch;
-}
-
-article,
-footer,
-header > *,
-main,
-nav {
-    /* border: var(--mesure-xxxx-small) solid var(--border-color);
-    background-image: var(--background-image) !important;
-    background-size: var(--background-size) !important; */
 }
 
 article the-box,
@@ -88,7 +104,10 @@ section {
 section:nth-child(odd){
     border-color: var(--color-dark-shade);
     border-width: var(--mesure-xx-small);
-   
+}
+
+section:nth-child(even){
+    border-style: solid;
 }
 
 article the-box {
@@ -99,14 +118,14 @@ footer the-box {
     border-color: var(--color-dark-shade);
 }
 
+a:focus,
 a:hover,
-a:focus:not(#menu-button),
-a:hover:not(#menu-button),
-:focus:not(#menu-button) {
+:focus {
     color: var(--accent-color-shade) !important;
     cursor: help;
-    outline-offset: var(--mesure-xx-small);
-    outline: var(--mesure-x-small) var(--accent-color-shade) dashed;
+    transform: scale(1.25);
+    /* outline-offset: var(--mesure-xx-small);
+    outline: var(--mesure-x-small) var(--accent-color-shade) dashed; */
 }
 
 h1:before,
@@ -132,6 +151,10 @@ h6:before {
     color: var(--color-dark-shade) !important;
 }
 
+h1:before {
+    color: var(--accent-color-shade) !important;
+}
+
 h1 span {
     color: var(--color);
 }
@@ -153,6 +176,10 @@ h3 {
     color: var(--color-dark-shade) !important;
 }
 
+header dfn {
+    font-weight: 900;
+}
+
 section dfn {
     color: var(--accent-color-shade);
     font-size: var(--mesure-small);
@@ -169,14 +196,18 @@ header nav h5:before {
     color: var(--color-dark-shade);
 }
 
+nav ul li {
+    font-weight: 900;
+}
+
 ul li:not(nav ul li):before {
     color: var(--color-dark-shade);
     margin-inline-end: 1ch;
 }
 
-ul li strong {
+/* ul li strong {
     color: var(--accent-color-variant) !important;
-}
+} */
 
 article h3:before {
     color: var(--color-medium);

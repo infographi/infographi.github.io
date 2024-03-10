@@ -10,19 +10,10 @@ header {
 	opacity: 50%;
 }
 
-#let-me-solo-her {
-	display: none;
-}
-
-.contact-link {
-	font-size: var(--mesure-large);
-	text-align: center !important;
-}
-
 #title {
 	display: flex;
 	flex-wrap: nowrap;
-	gap: var(--mesure-xxxx-small);
+	gap: var(--mesure-xxxxx-small);
 }
 
 @media only screen and (max-width: 130ch) {
@@ -31,10 +22,7 @@ header {
 		display: flex;
 		flex-direction: row;
 		justify-content: flex-start;
-	}
-
-	header:not(.cover-header) > * {
-		flex-grow: 1;
+		padding: 0;
 	}
 
 	header:not(.cover-header)>*+* {
@@ -46,19 +34,11 @@ header {
 		display: none !important;
 	}
 
-	header the-box:nth-child(2) {
-		padding: 0 !important;
-	}
-
-	header the-box:nth-child(3) {
-		display: none !important;
-	}
-
 	nav ul li:before {
 		display: none;
 	}
 
-	.contact-link > span {
+		.contact-link > span {
 		background: none !important;
 	}
 }
