@@ -1,6 +1,6 @@
 ---
 import "../styles/global.css";
-import { EMAIL_ADDRESS, TELEPHONE_NUMBER } from "../consts";
+import { EMAIL_ADDRESS, SITE_DESCRIPTION, TELEPHONE_NUMBER } from "../consts";
 import { getRelativeLocaleUrl } from "astro:i18n";
 import Box from "./Box.astro";
 import Center from "./Center.astro";
@@ -15,15 +15,14 @@ const homeURL = getRelativeLocaleUrl("en", "/");
 const logoLink = "../../public/INFOGRAPHI-LOGO.jpg";
 ---
 
-<header role="banner">
+<header class="box" role="banner">
 
 		<Frame>
 			<img  id="logo" src={logoLink} alt="#INFOGRAPHI logo." />
 		</Frame>
 
-		<Box>
 			<Center>
-				<Stack>
+				<Stack class:list={"stack-x-small"}>
 					<h1 id="title">
 						<span>I</span>
 						<span>N</span>
@@ -36,29 +35,9 @@ const logoLink = "../../public/INFOGRAPHI-LOGO.jpg";
 						<span>H</span>
 						<span>I</span>
 					</h1>
-					<dfn class="color-shade">IT, WEB & DESIGN</dfn>
+					<dfn class="color-shade">{SITE_DESCRIPTION}</dfn>
 				</Stack>
 			</Center>
-		</Box>
-
-		<Box>
-			<Center>
-				<ul class="cluster">
-					<li class="no-before">
-						<Link class="contact-link with-icon" href={TELEPHONE_NUMBER}>
-							<span class="icon-span icon">&#9743;</span>
-							CALL
-						</Link>
-					</li>
-					<li class="no-before">
-						<Link class="contact-link with-icon" href={EMAIL_ADDRESS}>
-							<span class="icon-span icon">&#9993;</span>
-							EMAIL
-						</Link>
-					</li>
-				</ul>
-			</Center>
-		</Box>
 
 		<Navigation class:list={"sticky"} />
 </header>

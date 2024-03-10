@@ -4,55 +4,50 @@ import "../styles/global.css";
 import { SITE_TITLE } from "../consts";
 import Link from "./Link.astro";
 import { getRelativeLocaleUrl } from 'astro:i18n';
+import Box from "./Box.astro";
 
 const brandingURL=getRelativeLocaleUrl("en", "branding");
 ---
 
 <footer class:list={["box stack"]} role="contentinfo">
 
-	<ul class:list={["cluster"]}>
-
-		<li>
-			<Link href="https://astro.build">
-				Astro Inside
-			</Link>
-		</li>
-
-		<li>
-			<Link href="https://github.com/PowerShell/PowerShell">
-				PowerShell Inside
-			</Link>
-		</li>
-
-		<li>
-			<Link href="https://www.openbsd.org">
-				OpenBSD Squib
-			</Link>
-		</li>
-
-		<li>
-			<Link href="https://blender.org">
-				Blender Inside
-			</Link>
-		</li>
-
-		<li>
-			<span>&#x221E;</span>
-		</li>
-
-		<li>
-			Visual identity, website and all visuals created by <Link href={brandingURL}>#{SITE_TITLE}</Link>.
-		</li>
-
-		<li>
-			&copy; 2009-{today.getFullYear()} #{SITE_TITLE}. All rights reserved.
-		</li>
-	</ul>
-
-	<Link
-		id="footer-back-to-top"
-		href="#skip-content"
-	>
-		&#8593;&#8593;&#8593; Back to the top &#8593;&#8593;&#8593;
-	</Link>
+	<Box>
+		<ul class:list={["cluster"]}>
+			<li>
+				<Link href="https://astro.build">
+					Astro Inside
+				</Link>
+			</li>
+			<li>
+				<Link href="https://github.com/PowerShell/PowerShell">
+					PowerShell Inside
+				</Link>
+			</li>
+			<li>
+				<Link href="https://www.openbsd.org">
+					OpenBSD Squib
+				</Link>
+			</li>
+			<li>
+				<Link href="https://blender.org">
+					Blender Inside
+				</Link>
+			</li>
+			<li>
+				<span>&#x221E;</span>
+			</li>
+			<li>
+				Visual identity, website and all visuals created by <Link href={brandingURL}>#{SITE_TITLE}</Link>.
+			</li>
+			<li>
+				&copy; 2009-{today.getFullYear()} #{SITE_TITLE}. All rights reserved.
+			</li>
+		</ul>
+		<Link
+			id="footer-back-to-top"
+			href="#skip-content"
+		>
+			&#8593;&#8593;&#8593; Back to the top &#8593;&#8593;&#8593;
+		</Link>
+	</Box>
 </footer>

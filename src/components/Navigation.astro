@@ -21,7 +21,7 @@ const nothingURL = getRelativeLocaleUrl("en", "404");
 		<span class="color-void">.</span>
 		<span class="color-void">.</span>
 
-		<ul id="menu" class="box stack">
+		<ul id="menu" class="stack">
 
 			<li>
 				<Link href={itURLit}>IT SERVICES</Link>
@@ -39,31 +39,27 @@ const nothingURL = getRelativeLocaleUrl("en", "404");
 				<Link href={aboutURL}>ABOUT</Link>
 			</li>
 
-			<li id="menu-back-to-top">
-				<Link href="#skip-content">
-					&#8593;&#8593;&#8593;
-				</Link>
-			</li>
-
-			<li class="no-before">
+			<li class="">
 				<Link class="contact-link with-icon" href={TELEPHONE_NUMBER}>
 					<span class="icon-span icon">&#9743;</span>
 					CALL
 				</Link>
 			</li>
-			<li class="no-before">
+			<li class="">
 				<Link class="contact-link with-icon" href={EMAIL_ADDRESS}>
 					<span class="icon-span icon">&#9993;</span>
 					EMAIL
 				</Link>
 			</li>
 
-			<li id="nothing" style="visibility: hidden;">
-				<Link class="glitch" href={nothingURL} data-text="&#8713;">&#8713;</Link>
+			<li id="menu-back-to-top">
+				<Link href="#skip-content">
+					&#8593;&#8593;&#8593;
+				</Link>
 			</li>
 
-			<li class="no-before">
-				<h5>Menu</h5>
+			<li id="nothing" style="visibility: hidden;">
+				<Link class="glitch" href={nothingURL} data-text="&#8713;">&#8713;</Link>
 			</li>
 		</ul>
 	</div>

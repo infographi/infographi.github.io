@@ -14,7 +14,7 @@
         max-inline-size: 130ch;
         max-inline-size: var(--max-inline-size-xxx-large);
         padding: var(--mesure-medium);
-        padding-block-start: var(--mesure-medium);
+        padding-block-start: var(--mesure-large);
     }
 
     body:not(.cover-body)>*+*,

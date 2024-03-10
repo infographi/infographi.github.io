@@ -2,9 +2,9 @@
     --background-color-inverted: var(--color-clear-light);
     --background-color: var(--color-void);
     --background-image:
-        linear-gradient(var(--color-dark) 0.1em, transparent .1em),
-        linear-gradient(90deg, var(--color-dark) 0.1em, transparent .1em);
-    --background-size: 1em 1em;
+        linear-gradient(var(--color-dark) 5%, transparent 5%),
+        linear-gradient(90deg, var(--color-dark) 5%, transparent 5%);
+    --background-size: 3vw 3vw;
     --border-color-inverted: var(--color-glare);
     --border-color: var(--color-dark);
     --color-before-after: var(--color-dark);
@@ -29,8 +29,8 @@ html {
     }
 
     header {
-        background-color: var(--color-dark);
-        border: var(--mesure-x-small) dashed var(--color-dark);
+        /* background-color: var(--color-dark);
+        border: var(--mesure-x-small) dashed var(--color-dark); */
     }
 
     nav #menu {
@@ -51,20 +51,20 @@ html {
 *:after,
 *:before {
     color: var(--color-before-after);
+    background-color: transparent;
+    background: transparent;
 }
 
-header > a,
-.contact-ul,
-nav,
-main,
-article,
-footer {
+#logo {
+    border: var(--mesure-xx-small) solid var(--color-dark);
+    border-radius: 3ch;
+}
+
+section {
     background-color: var(--color-void);
     background-image: none !important;
-}
-
-header > * {
-    background-color: var(--color-void);
+    border: var(--mesure-xxx-small) solid var(--color-dark-shade);
+    border-radius: 3ch;
 }
 
 article,
@@ -72,7 +72,31 @@ footer,
 header > *,
 main,
 nav {
-    border: var(--mesure-x-small) dashed var(--border-color);
+    /* border: var(--mesure-xxxx-small) solid var(--border-color);
+    background-image: var(--background-image) !important;
+    background-size: var(--background-size) !important; */
+}
+
+article the-box,
+footer the-box,
+section {
+    border: var(--mesure-xxx-small) dashed var(--color);
+    border-radius: 3ch;
+    padding: 5%;
+}
+
+section:nth-child(odd){
+    border-color: var(--color-dark-shade);
+    border-width: var(--mesure-xx-small);
+   
+}
+
+article the-box {
+    border-color: var(--accent-color-shade);
+}
+
+footer the-box {
+    border-color: var(--color-dark-shade);
 }
 
 a:hover,
@@ -101,7 +125,7 @@ h3:before,
 h4:before,
 h5:before,
 h6:before {
-    color: var(--accent-color-shade) !important;
+    color: var(--color-dark-shade) !important;
 }
 
 #second-life-h3:before {
@@ -126,7 +150,7 @@ h3 {
 }
 
 .separator-span {
-    color: var(--color-dark) !important;
+    color: var(--color-dark-shade) !important;
 }
 
 section dfn {

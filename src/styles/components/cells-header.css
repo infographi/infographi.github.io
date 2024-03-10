@@ -25,7 +25,6 @@ header {
 	gap: var(--mesure-xxxx-small);
 }
 
-
 @media only screen and (max-width: 130ch) {
 
 	header:not(.cover-header) {
@@ -68,13 +67,5 @@ header {
 
 	header:not(.cover-header)>*+* {
 		margin-block-start: var(--mesure-medium);
-	}
-
-	#let-me-solo-her {
-		display: none;
-	}
-
-	nav div ul > .no-before {
-		display: none;
 	}
 }
