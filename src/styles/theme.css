@@ -117,12 +117,12 @@ section:nth-child(7) {
 section:nth-child(2),
 section:nth-child(6),
 section:nth-child(10) {
-    border-color: var(--color);
+    border-color: var(--color-dark-shade);
     border-style: dashed;
 }
  
 section:nth-child(3n+4) {
-    border-color: var(--color-dark-shade);
+    border-color: var(--color);
     border-style: dashed;
 }
 
@@ -135,7 +135,7 @@ article the-box {
 }
 
 footer the-box {
-    border: var(--mesure-xxx-small) dashed var(--accent-shade) !important;
+    border: var(--mesure-xxx-small) dashed var(--color-shade) !important;
 }
 
 a:focus,
