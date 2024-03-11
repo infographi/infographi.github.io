@@ -1,17 +1,11 @@
 ---
+import { SITE_DESCRIPTION } from "../consts";
 import "../styles/global.css";
-import { EMAIL_ADDRESS, SITE_DESCRIPTION, TELEPHONE_NUMBER } from "../consts";
-import { getRelativeLocaleUrl } from "astro:i18n";
-import Box from "./Box.astro";
 import Center from "./Center.astro";
-import Link from "./Link.astro";
+import Frame from "./Frame.astro";
 import Navigation from "./Navigation.astro";
 import Stack from "./Stack.astro";
-import Frame from "./Frame.astro";
 
-const aboutURL = getRelativeLocaleUrl("en", "about");
-const faviconLink = "../../public/favicon.svg";
-const homeURL = getRelativeLocaleUrl("en", "/");
 const logoLink = "../../public/INFOGRAPHI-LOGO.jpg";
 ---
 

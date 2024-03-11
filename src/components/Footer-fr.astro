@@ -4,48 +4,49 @@ import "../styles/global.css";
 import { getRelativeLocaleUrl } from 'astro:i18n';
 import { SITE_TITLE } from "../consts";
 import Link from "./Link.astro";
+import Box from "./Box.astro";
 
 const brandingURL=getRelativeLocaleUrl("fr", "branding");
 ---
 
 <footer class:list={["box stack"]} role="contentinfo">
+	<Box>
+		<ul class:list={["cluster"]}>
+			<li>
+				<Link href="https://astro.build">
+					Astro Inside
+				</Link>
+			</li>
 
-	<ul class:list={["cluster"]}>
+			<li>
+				<Link href="https://github.com/PowerShell/PowerShell">
+					PowerShell Inside
+				</Link>
+			</li>
 
-		<li>
-			<Link href="https://astro.build">
-				Astro Inside
-			</Link>
-		</li>
+			<li>
+				<Link href="https://www.openbsd.org">
+					OpenBSD Squib
+				</Link>
+			</li>
 
-		<li>
-			<Link href="https://github.com/PowerShell/PowerShell">
-				PowerShell Inside
-			</Link>
-		</li>
+			<li>
+				<Link href="https://blender.org">
+					Blender Inside
+				</Link>
+			</li>
 
-		<li>
-			<Link href="https://www.openbsd.org">
-				OpenBSD Squib
-			</Link>
-		</li>
+			<li>
+				<span>&#x221E;</span>
+			</li>
 
-		<li>
-			<Link href="https://blender.org">
-				Blender Inside
-			</Link>
-		</li>
+			<li>
+				Identité Visuelle, Site Ineternet ainsi que tous les visuels créés par <Link href={brandingURL}>#{SITE_TITLE}</Link>.
+			</li>
 
-		<li>
-			<span>&#x221E;</span>
-		</li>
-
-		<li>
-			Identité Visuelle, Site Ineternet ainsi que tous les visuels créés par <Link href={brandingURL}>#{SITE_TITLE}</Link>.
-		</li>
-
-		<li>
-			&copy; 2009-{today.getFullYear()} #{SITE_TITLE}. Tous droits réservés.
-		</li>
-	</ul>
+			<li>
+				&copy; 2009-{today.getFullYear()} #{SITE_TITLE}. Tous droits réservés.
+			</li>
+		</ul>
+	</Box>
 </footer>

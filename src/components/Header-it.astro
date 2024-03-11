@@ -1,64 +1,38 @@
 ---
+import { SITE_DESCRIPTION } from "../consts";
 import "../styles/global.css";
-import { EMAIL_ADDRESS, TELEPHONE_NUMBER } from "../consts";
-import { getRelativeLocaleUrl } from "astro:i18n";
-import Box from "./Box.astro";
 import Center from "./Center.astro";
-import Link from "./Link.astro";
-import Navigation from "./Navigation-it.astro";
-import Stack from "./Stack.astro";
 import Frame from "./Frame.astro";
+import Navigation from "./Navigation.astro";
+import Stack from "./Stack.astro";
 
-const aboutURL = getRelativeLocaleUrl("it", "about");
-const faviconLink = "../../public/favicon.svg";
-const homeURL = getRelativeLocaleUrl("it", "/");
 const logoLink = "../../public/INFOGRAPHI-LOGO.jpg";
 ---
 
-<header role="banner">
+<header class="box" role="banner">
 
 		<Frame>
 			<img  id="logo" src={logoLink} alt="#INFOGRAPHI logo." />
 		</Frame>
 
-		<Box>
-			<Center>
-				<Stack>
-					<h1 id="title">
-						<span>I</span>
-						<span>N</span>
-						<span>F</span>
-						<span>O</span>
-						<span>G</span>
-						<span>R</span>
-						<span>A</span>
-						<span>P</span>
-						<span>H</span>
-						<span>I</span>
-					</h1>
-					<dfn class="color-shade">IT, WEB & DESIGN</dfn>
-				</Stack>
-			</Center>
-		</Box>
+		<Center>
+			<Stack class:list={"stack-x-small"}>
+				<h1 id="title">
+					<span>I</span>
+					<span>N</span>
+					<span>F</span>
+					<span>O</span>
+					<span>G</span>
+					<span>R</span>
+					<span>A</span>
+					<span>P</span>
+					<span>H</span>
+					<span>I</span>
+				</h1>
 
-		<Box>
-			<Center>
-				<ul class="cluster">
-					<li class="no-before">
-						<Link class="contact-link with-icon" href={TELEPHONE_NUMBER}>
-							<span class="icon-span icon">&#9743;</span>
-							TEL
-						</Link>
-					</li>
-					<li class="no-before">
-						<Link class="contact-link with-icon" href={EMAIL_ADDRESS}>
-							<span class="icon-span icon">&#9993;</span>
-							EMAIL
-						</Link>
-					</li>
-				</ul>
-			</Center>
-		</Box>
+				<dfn class="color-medium font-weight-black">{SITE_DESCRIPTION}</dfn>
+			</Stack>
+		</Center>
 
 		<Navigation class:list={"sticky"} />
 </header>

@@ -2,12 +2,12 @@
 import "../styles/global.css";
 import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
 import AttentionArticle from "../components/AttentionArticle.astro";
+import BackToTopArrow from "../components/BackToTopArrow.astro";
 import BaseHead from "../components/BaseHead.astro";
 import Footer from "../components/Footer.astro";
 import Header from "../components/Header.astro";
 import ITLayout from "../layouts/ITLayout.astro";
 import SkipContent from "../components/SkipContent.astro";
-import Link from "../components/Link.astro";
 ---
 
 <!doctype html>
@@ -19,6 +19,6 @@ import Link from "../components/Link.astro";
 		<ITLayout />
 		<AttentionArticle />
 		<Footer />
-		<Link id="back-up-arrow" href="#skip-content">&#8593;</Link>
+		<BackToTopArrow />
 	</body>
 </html>

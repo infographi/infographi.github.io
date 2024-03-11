@@ -86,36 +86,56 @@ nav ul li a {
     border-radius: 3ch;
 }
 
-section {
-    background-color: var(--color-void);
-    background-image: none !important;
-    border: var(--mesure-xxx-small) solid var(--color-dark-shade);
-    border-radius: 3ch;
+@media screen and (min-width: 130ch){
+    header  {
+        background-color: var(--color-void);
+        border-radius: 3ch;
+    }
 }
-
 article the-box,
 footer the-box,
 section {
-    border: var(--mesure-xxx-small) dashed var(--color);
+    background-color: var(--color-void);
+    background-image: none !important;
+    border: var(--mesure-xxx-small) var(--color-void);
+    border-color: green;
     border-radius: 3ch;
+    border-size: var(--mesure-xxx-small);
     padding: 5%;
 }
 
-section:nth-child(odd){
-    border-color: var(--color-dark-shade);
-    border-width: var(--mesure-xx-small);
+section:nth-child(odd) {
+    border-color: transparent;
 }
 
-section:nth-child(even){
+section:nth-child(3),
+section:nth-child(5),
+section:nth-child(7) {
+    background-color: var(--color-dark);
+}
+
+section:nth-child(2),
+section:nth-child(6),
+section:nth-child(10) {
+    border-color: var(--color);
+    border-style: dashed;
+}
+ 
+section:nth-child(3n+4) {
+    border-color: var(--color-dark-shade);
+    border-style: dashed;
+}
+
+#contact {
     border-style: solid;
 }
 
 article the-box {
-    border-color: var(--accent-color-shade);
+    border: var(--mesure-xxx-small) dashed var(--accent-color-shade);
 }
 
 footer the-box {
-    border-color: var(--color-dark-shade);
+    border: var(--mesure-xxx-small) dashed var(--accent-shade) !important;
 }
 
 a:focus,

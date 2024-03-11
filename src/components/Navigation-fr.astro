@@ -4,11 +4,11 @@ import { getRelativeLocaleUrl } from 'astro:i18n';
 import Link from "./Link.astro";
 import { TELEPHONE_NUMBER, EMAIL_ADDRESS } from "../consts";
 
-const aboutURL=getRelativeLocaleUrl("fr", "about");
-const brandingURL=getRelativeLocaleUrl("fr", "branding");
-const educationURL=getRelativeLocaleUrl("fr", "education");
-const homeURL=getRelativeLocaleUrl("fr", "it");
-const nothingURL=getRelativeLocaleUrl("fr","404");
+const aboutURL = getRelativeLocaleUrl("fr", "about");
+const brandingURL = getRelativeLocaleUrl("fr", "branding");
+const educationURL = getRelativeLocaleUrl("fr", "education");
+const itURLit = getRelativeLocaleUrl("fr", "it");
+const nothingURL = getRelativeLocaleUrl("fr", "404");
 ---
 
 <nav id="navigo" class="box" role="navigation" aria-label="menu">
@@ -17,52 +17,49 @@ const nothingURL=getRelativeLocaleUrl("fr","404");
 
 		<input type="checkbox" />
 
-		<span></span>
-		<span></span>
-		<span></span>
+		<span class="color-void">.</span>
+		<span class="color-void">.</span>
+		<span class="color-void">.</span>
 
-		<ul id="menu" class="box stack">
+		<ul id="menu" class="stack">
 
 			<li>
-				<Link href={homeURL}>INFORMATIQUE</Link>
+				<Link href={itURLit}>IT SERVICES</Link>
 			</li>
-	
+
 			<li>
 				<Link href={brandingURL}>WEB & BRANDING</Link>
 			</li>
-	
+
 			<li>
-				<Link href={educationURL}>FORMATION</Link>
-			</li>
-	
-			<li>
-				<Link href={aboutURL}>À PROPOS</Link>
+				<Link href={educationURL}>EDUCATION</Link>
 			</li>
 
-			<li class="no-before">
+			<li>
+				<Link href={aboutURL}>ABOUT</Link>
+			</li>
+
+			<li class="">
 				<Link class="contact-link with-icon" href={TELEPHONE_NUMBER}>
 					<span class="icon-span icon">&#9743;</span>
-					TEL
+					CALL
 				</Link>
 			</li>
-
-			<li class="no-before">
+			<li class="">
 				<Link class="contact-link with-icon" href={EMAIL_ADDRESS}>
 					<span class="icon-span icon">&#9993;</span>
 					EMAIL
 				</Link>
 			</li>
-	
-			<li>
-				<Link id="menu-back-to-top" href="#skip-content">&#8593;&#8593;&#8593;</Link>
+
+			<li id="menu-back-to-top">
+				<Link href="#skip-content">
+					&#8593;&#8593;&#8593;
+				</Link>
 			</li>
-	
-			<li id="nothing"  style="visibility: hidden;">
+
+			<li id="nothing" style="visibility: hidden;">
 				<Link class="glitch" href={nothingURL} data-text="&#8713;">&#8713;</Link>
-			</li>
-	
-			<li class="no-before">
-				<h5>Menu</h5>
 			</li>
 		</ul>
 	</div>

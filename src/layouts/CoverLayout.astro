@@ -3,6 +3,7 @@ import "../styles/global.css";
 import { getRelativeLocaleUrl } from "astro:i18n";
 import HeaderLink from "../components/Link.astro";
 import type { HTMLAttributes } from "astro/types";
+import { SITE_DESCRIPTION } from "../consts";
 
 const itURL = getRelativeLocaleUrl("en", "it");
 const itURLFR = getRelativeLocaleUrl("fr", "it");
@@ -61,6 +62,8 @@ const {
                     <span>H</span>
                     <span>I</span>
                 </span>
+
+                <dfn class:list="color-medium">{SITE_DESCRIPTION}</dfn>
             </h3>
             
             <ul class="switcher">
