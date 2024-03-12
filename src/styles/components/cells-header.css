@@ -21,7 +21,7 @@ header {
 	header:not(.cover-header) {
 		display: flex;
 		flex-direction: row;
-		justify-content: flex-start;
+		justify-content: space-between;
 		padding: 0;
 	}
 
@@ -34,11 +34,21 @@ header {
 		display: none !important;
 	}
 
-	nav ul li:before {
+	the-stack,
+	#navigo {
+		flex-grow: 0;
+	}
+
+	#navigo {
+		padding: 0 !important;
+		margin: 0 !important;
+	}
+
+	#navigo ul li:before {
 		display: none;
 	}
 
-		.contact-link > span {
+	.contact-link > span {
 		background: none !important;
 	}
 }
@@ -47,5 +57,20 @@ header {
 
 	header:not(.cover-header)>*+* {
 		margin-block-start: var(--mesure-medium);
+	}
+
+	the-stack {
+		box-sizing: content-box !important;
+		align-items: center;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		margin-inline: auto;
+		max-inline-size: var(--max-inline-size-xxx-large);
+		max-inline-size: fit-content;
+		padding-block-end: 5%;
+		padding-block-start: 5%;
+		padding-inline-end: 5%;
+		padding-inline-start: 5%;
 	}
 }
