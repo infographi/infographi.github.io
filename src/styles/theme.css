@@ -61,7 +61,7 @@ nav ul li a:hover {
     }
 
     #back-up-arrow {
-        background-color: var(--color-void);
+        background-color: var(--color-dark-void);
         color: var(--accent-color-shade);
         display: block;
         font-size: var(--mesure-x-large);
@@ -211,12 +211,17 @@ section {
 
 section:nth-child(odd) {
     border-color: transparent;
+    background-color: var(--color-dark-void);
 }
 
 section:nth-child(3),
 section:nth-child(5),
 section:nth-child(7) {
     background-color: var(--color-dark);
+}
+
+section:nth-child(4){
+    background-color: var(--color-dark-void);
 }
 
 section:nth-child(2),

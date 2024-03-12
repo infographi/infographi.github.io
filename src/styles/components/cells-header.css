@@ -35,7 +35,7 @@ header {
 	}
 
 	the-stack {
-		border: var(--mesure-xxxx-small) solid var(--color-shade);
+		border: var(--mesure-xxxx-small) solid var(--color);
 		border-radius: 3ch;
 		padding: var(--mesure-small);
 	}
@@ -46,7 +46,7 @@ header {
 	}
 
 	#navigo {
-		padding: 0 !important;
+		padding: var(--mesure-small) !important;
 		margin: 0 !important;
 	}
 
