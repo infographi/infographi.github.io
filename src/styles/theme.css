@@ -168,11 +168,6 @@ header nav h5:before {
     color: var(--color-dark-shade);
 }
 
-nav ul li {
-    font-weight: 900;
-}
-
-
 ul li:not(nav ul li):before {
     color: var(--color-dark-shade);
     margin-inline-end: 1ch;

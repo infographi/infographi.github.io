@@ -127,8 +127,4 @@
 		right: auto !important;
         top: var(--mesure-large) !important;
     }
-
-	header nav ul li a {
-		font-size: var(--base-mesure) !important;
-	}
 }
