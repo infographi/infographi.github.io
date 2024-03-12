@@ -51,7 +51,7 @@ nav ul li a:hover {
         background-color: var(--color-void);
     }
 
-    nav>*+* {
+    nav > * + * {
         margin-block-start: var(--mesure-xxx-large) !important;
     }
 
@@ -158,20 +158,6 @@ h3 {
     gap: var(--mesure-xxx-small) !important;
 }
 
-#second-life-h3:before {
-    color: var(--color-dark-shade) !important;
-}
-
-.separator-span {
-    color: var(--color-dark-shade) !important;
-}
-
-section dfn {
-    color: var(--accent-color-shade);
-    font-size: var(--mesure-small);
-    font-weight: 900;
-}
-
 header nav h5 {
     color: var(--accent-color-shade);
     margin-top: var(--mesure-large);
@@ -197,44 +183,47 @@ ul li strong {
     font-weight: 900;
 }
 
+#second-life-h3:before {
+    color: var(--color-dark-shade) !important;
+}
+
+.separator-span {
+    color: var(--color-dark-shade) !important;
+}
+
+section dfn {
+    color: var(--accent-color-shade);
+    font-size: var(--mesure-small);
+    font-weight: 900;
+}
+
 article the-box,
 footer the-box,
 section {
-    background-color: var(--color-void);
-    background-image: none !important;
-    border: var(--mesure-xxx-small) var(--color-void);
-    border-color: green;
     border-radius: 3ch;
-    border-size: var(--mesure-xxx-small);
+    border-size: var(--mesure-xx-small) !important;
     padding: 5%;
 }
 
 section:nth-child(odd) {
-    border-color: transparent;
     background-color: var(--color-dark-void);
 }
 
-section:nth-child(3),
-section:nth-child(5),
-section:nth-child(7) {
+section:nth-child(even) {
     background-color: var(--color-dark);
 }
 
-section:nth-child(4){
-    background-color: var(--color-dark-void);
+section:nth-child(3),
+section:nth-child(7) {
+    border: var(--mesure-xx-small) dashed var(--color) !important;
 }
 
-section:nth-child(2),
-section:nth-child(6),
-section:nth-child(10) {
-    border-color: var(--color-dark-shade);
-    border-size: var(--mesure-xx-small) !important;
-    border-style: dashed;
+section:nth-child(5) {
+    border: var(--mesure-xx-small) dashed var(--color-dark-shade);
 }
- 
-section:nth-child(3n+4) {
-    border-color: var(--color);
-    border-style: dashed;
+
+#contact {
+    border: none !important;
 }
 
 article the-box {
@@ -250,10 +239,10 @@ footer the-box {
 }
 
 footer ul {
-    gap: var(--mesure-x-small) !important;
+    gap: var(--mesure-small) !important;
 }
 
 footer * {
     color: var(--color-medium);
-    font-size: var(--mesure-small);
+    font-size: var(--mesure-medium);
 }
