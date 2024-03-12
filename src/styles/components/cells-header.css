@@ -22,7 +22,7 @@ header {
 		display: flex;
 		flex-direction: row;
 		justify-content: space-between;
-		padding: 0;
+		padding: var(--mesure-small);
 	}
 
 	header:not(.cover-header)>*+* {
@@ -32,6 +32,12 @@ header {
 	the-frame,
 	the-frame #logo {
 		display: none !important;
+	}
+
+	the-stack {
+		border: var(--mesure-xxxx-small) solid var(--color-shade);
+		border-radius: 3ch;
+		padding: var(--mesure-small);
 	}
 
 	the-stack,
@@ -72,5 +78,9 @@ header {
 		padding-block-start: 5%;
 		padding-inline-end: 5%;
 		padding-inline-start: 5%;
+	}
+
+	#navigo {
+		margin-block: var(--mesure-xxx-large) !important;
 	}
 }
