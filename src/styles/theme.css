@@ -28,6 +28,7 @@ body {
 nav ul li a {
     color: var(--accent-color-shade) !important;
     font-size: var(--mesure-large) !important;
+    font-weight: 900;
 }
 
 nav ul li a:focus,
@@ -87,7 +88,7 @@ nav ul li a:hover {
 
 @media screen and (min-width: 130ch){
     header  {
-        background-color: var(--color-void);
+        background-color: var(--color-dark-void);
         border-radius: 3ch;
     }
 }
