@@ -1,7 +1,7 @@
 @supports (display: grid) {
 
     body:not(.cover-body),
-    body:not(.nothing-page) {
+    body:not(#nothing-page) {
         justify-content: stretch;
         display: grid;
         grid-gap: var(--mesure-large);
@@ -18,12 +18,12 @@
     }
 
     body:not(.cover-body)>*+*,
-    body:not(.nothing-page)>*+* {
+    body:not(#nothing-page)>*+* {
         margin-block-start: 0;
     }
 
     body:not(.cover-body)>*:not(header, main),
-    body:not(.nothing-page)>*:not(header, main) {
+    body:not(#nothing-page)>*:not(header, main) {
         margin-block-start: var(--mesure-medium);
     }
 
@@ -47,7 +47,7 @@
 @media screen and (max-width: 130ch){
 
     body:not(.cover-body),
-    body:not(.nothing-page) {
+    body:not(#nothing-page) {
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
@@ -59,12 +59,12 @@
     }
 
     body:not(.cover-body)>*,
-    body:not(.nothing-page)>* {
+    body:not(#nothing-page)>* {
         margin-block: 0;
     }
 
     body:not(.cover-body)>*+*,
-    body:not(.nothing-page)>*+* {
+    body:not(#nothing-page)>*+* {
         margin-block-start: var(--mesure-large);
     }
 

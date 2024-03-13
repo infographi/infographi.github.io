@@ -1,15 +1,119 @@
 ---
-import BaseHead from '../components/BaseHead.astro';
-import SkipContent from '../components/SkipContent.astro';
-import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
-import NothingHereLayout from '../layouts/NothingHereLayout.astro';
+import "../styles/global.css";
+import { EMAIL_ADDRESS, TELEPHONE_NUMBER } from "../consts";
+import { getRelativeLocaleUrl } from "astro:i18n";
+import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
+import BaseHead from "../components/BaseHead.astro";
+import Link from "../components/Link.astro";
+import SkipContent from "../components/SkipContent.astro";
+
+const homeURL = getRelativeLocaleUrl("en", "/");
 ---
 
 <!doctype html>
 <html lang="en">
-	<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-    <body id="the-body" class:list="grid-background nothing-page">
+    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+    <body id="nothing-page">
         <SkipContent />
-        <NothingHereLayout />
+        <main id="content">
+            <section>
+                <h2>404</h2>
+
+                <dfn>Oups, something went wrong.</dfn>
+
+                <p>
+                    The page your are trying to access does not exists. This
+                    page doesn't contain anything useful. <span
+                        id="does-it"
+                        class="glitch"
+                        data-text="Or does it ?"
+                        style="visibility: hidden;">Or does it ?</span
+                    >
+                </p>
+
+                <p>
+                    Follow the link to return to the website: <Link
+                        id="home-link" href={homeURL}>home</Link
+                    >
+                </p>
+
+                <p id="bon">
+                    Congratulations !!! You just won a free audit for a device
+                    of your choice. <Link href={TELEPHONE_NUMBER}>Call us</Link>
+                    or <Link href={EMAIL_ADDRESS}>email us</Link> and claim your
+                    prize ! The password to communicate is: <span class="pass"
+                        >"MACHINE"</span
+                    >.
+                </p>
+            </section>
+        </main>
     </body>
 </html>
+
+<style>
+
+    #nothing-page,
+    #bon {
+        display: block;
+        outline-color: transparent;
+        outline-offset: calc(var(--mesure-small) * -1);
+        outline-width: var(--mesure-small);
+        padding: var(--mesure-small);
+    }
+
+    main {
+        max-inline-size: 100ch;
+    }
+
+    h2 {
+        font-size: var(--mesure-xxxx-large);
+    }
+
+    h2:before {
+        content: "#";
+    }
+    section {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+
+    section>*+* {
+        margin-block-start: var(--mesure-medium);
+    }
+
+    #bon {
+        color: var(--color-dark-void);
+    }
+
+    #bon:hover {
+        animation-duration: 0.5s;
+        animation-timing-function: ease-in-out;
+        animation-fill-mode: forwards;
+        animation-name: Stay-Visible;
+        border: var(--mesure-xxx-small) dashed var(--accent-color-shade);
+        border-radius: 1ch;
+    }
+
+    #home-link {
+        color: var(--accent-color);
+    }
+
+    #home-link:hover,
+    #home-link:focus {
+        color: var(--color) !important;
+    }
+
+    @keyframes Stay-Visible {
+        from {
+            color: var(--color-void);
+        }
+        to {
+            color: var(--color-color);
+        }
+    }
+
+    #pass {
+        font-weight: 900 !important;
+    }
+</style>

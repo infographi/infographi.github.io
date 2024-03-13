@@ -116,7 +116,7 @@ html:focus-within {
     -o-animation-duration: calc(var(--animate-duration) * 3);
     animation-duration: calc(var(--animate-duration) * 3);
 }
-
+/* 
 @media (prefers-reduced-motion: reduce) {
     html:focus-within {
         scroll-behavior: auto;
@@ -151,4 +151,4 @@ html:focus-within {
     .animated[class*='Out'] {
         opacity: 0;
     }
-}
+} */
