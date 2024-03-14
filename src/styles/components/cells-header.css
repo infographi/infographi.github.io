@@ -34,12 +34,6 @@ header {
 		display: none !important;
 	}
 
-	the-stack {
-		border: var(--mesure-xxxx-small) solid var(--color);
-		border-radius: 3ch;
-		padding: var(--mesure-small);
-	}
-
 	the-stack,
 	#navigo {
 		flex-grow: 0;

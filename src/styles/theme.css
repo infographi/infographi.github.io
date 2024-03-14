@@ -31,6 +31,10 @@ nav ul li a {
     font-weight: 900;
 }
 
+#menu ul li a:before {
+    display: none !important;
+}
+
 nav ul li a:focus,
 nav ul li a:hover {
     color: var(--color) !important;
@@ -47,9 +51,19 @@ nav ul li a:hover {
         overflow-x: hidden !important;
     }
 
+    header > the-stack {
+        border: var(--mesure-xxx-small) dashed var(--color-dark-shade);
+        border-radius: 3ch;
+        padding: var(--mesure-small);
+    }
+
+    nav ul {
+        background-color: var(--color-dark-void);
+        border: var(--mesure-small) solid var(--color-dark-void) !important;
+    }
+
     nav #menu {
         padding: 2.5ch !important;
-        background-color: var(--color-void);
     }
 
     nav > * + * {
@@ -93,7 +107,6 @@ nav ul li a:hover {
     }
 }
 
-
 #contact {
     border-style: solid !important;
 }
@@ -116,7 +129,7 @@ h3:before,
 h4:before,
 h5:before,
 h6:before,
-ul li:not(footer ul li):not(.no-before):not(nav a):before {
+ul li:not(footer ul li):not(.no-before) {
     content: "#";
 }
 
@@ -157,16 +170,6 @@ h2 {
 
 h3 {
     gap: var(--mesure-xxx-small) !important;
-}
-
-header nav h5 {
-    color: var(--accent-color-shade);
-    margin-top: var(--mesure-large);
-    text-align: right;
-}
-
-header nav h5:before {
-    color: var(--color-dark-shade);
 }
 
 ul li:not(nav ul li):before {
@@ -215,7 +218,7 @@ section:nth-child(7) {
 }
 
 section:nth-child(5) {
-    border: var(--mesure-xx-small) dashed var(--color-dark-shade);
+    border: var(--mesure-x-small) dashed var(--color-dark-shade);
 }
 
 #contact {

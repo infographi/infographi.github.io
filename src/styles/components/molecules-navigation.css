@@ -87,11 +87,11 @@
 	}
 
 	#menu {
-		border: var(--mesure-large) solid var(--color-void) !important;
+		border: var(--mesure-large) solid var(--color-dark-void) !important;
 		display: flex;
 		flex-direction: column;
 		justify-content: flex-start;
-		max-inline-size: 45ch;
+		max-inline-size: 55ch;
 		min-block-size: 25vh;
 		min-inline-size: 40ch;
 		outline: var(--mesure-x-small) dashed var(--color-dark-shade) !important;
@@ -100,7 +100,7 @@
 		transform-origin: 0% 0%;
 		transform: translate(1000%, 0);
 		transition: transform 0.05s cubic-bezier(0.77, 0.2, 0.05, 1);
-        top: 5ch;
+        top: 7ch;
 	}
 
 	#menuToggle input:checked ~ ul {
