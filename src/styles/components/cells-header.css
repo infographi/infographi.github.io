@@ -31,7 +31,7 @@ header {
 
 	the-frame,
 	the-frame #logo {
-		display: none !important;
+		/* display: none !important; */
 	}
 
 	the-stack,

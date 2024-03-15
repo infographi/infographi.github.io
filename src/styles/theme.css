@@ -44,50 +44,6 @@ nav ul li a:hover {
     display: none;
 }
 
-@media only screen and (max-width: 130ch) {
-
-    html,
-    body {
-        overflow-x: hidden !important;
-    }
-
-    header > the-stack {
-        border: var(--mesure-xxx-small) dashed var(--color-dark-shade);
-        border-radius: 3ch;
-        padding: var(--mesure-small);
-    }
-
-    nav ul {
-        background-color: var(--color-dark-void);
-        border: var(--mesure-small) solid var(--color-dark-void) !important;
-    }
-
-    nav #menu {
-        padding: 2.5ch !important;
-    }
-
-    nav > * + * {
-        margin-block-start: var(--mesure-xxx-large) !important;
-    }
-
-    nav ul li a {
-        color: var(--color) !important;
-        font-size: var(--mesure-large) !important;
-    }
-
-    #back-up-arrow {
-        background-color: var(--color-dark-void);
-        color: var(--accent-color-shade);
-        display: block;
-        font-size: var(--mesure-x-large);
-        font-weight: 900;
-        position: fixed;
-        right: 2.5vw;
-        text-align: right;
-        bottom: 2ch;
-    }
-}   
-
 *:after,
 *:before {
     color: var(--color-before-after);
@@ -100,12 +56,6 @@ nav ul li a:hover {
     border-radius: 3ch;
 }
 
-@media screen and (min-width: 130ch){
-    header  {
-        background-color: var(--color-dark-void);
-        border-radius: 3ch;
-    }
-}
 
 #contact {
     border-style: solid !important;
@@ -244,4 +194,74 @@ footer ul {
 footer * {
     color: var(--color-medium);
     font-size: var(--mesure-medium);
+}
+
+@media only screen and (max-width: 130ch) {
+
+    :root {
+        --background-size: 1.5ch 1.5ch !important;
+    }
+
+    html,
+    body {
+        overflow-x: hidden !important;
+        padding: 0 !important;
+    }
+
+    main {
+        padding: var(--mesure-medium) !important;
+    }
+
+    header {
+        inline-size: 100vw;
+        background-color: var(--color-dark-void) !important;
+    }
+
+    #logo {
+        border: var(--mesure-xxxx-small) solid var(--color);
+        border-radius: 1ch;
+    }
+
+    header > the-stack {
+        /* border: var(--mesure-xxx-small) dashed var(--color-dark-shade); */
+        border-radius: 3ch;
+        padding: var(--mesure-small);
+    }
+
+    nav ul {
+        background-color: var(--color-dark-void);
+        border: var(--mesure-small) solid var(--color-dark-void) !important;
+    }
+
+    nav #menu {
+        padding: 2.5ch !important;
+    }
+
+    nav > * + * {
+        margin-block-start: var(--mesure-xxx-large) !important;
+    }
+
+    nav ul li a {
+        color: var(--color) !important;
+        font-size: var(--mesure-large) !important;
+    }
+
+    #back-up-arrow {
+        background-color: var(--color-dark-void);
+        color: var(--accent-color-shade);
+        display: block;
+        font-size: var(--mesure-x-large);
+        font-weight: 900;
+        position: fixed;
+        right: 2.5vw;
+        text-align: right;
+        bottom: 2ch;
+    }
+}
+
+@media screen and (min-width: 130ch){
+    header  {
+        background-color: var(--color-dark-void);
+        border-radius: 3ch;
+    }
 }
