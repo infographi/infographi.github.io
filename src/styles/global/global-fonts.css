@@ -35,12 +35,12 @@ p {
 	line-height: var(--base-line-height);
 }
 
-@media screen and (prefers-color-scheme:light) {
+/* @media screen and (prefers-color-scheme:light) {
 	li,
 	p {
 		font-weight: 600;
 	}
-}
+} */
 
 h1:before,
 h1 span {
