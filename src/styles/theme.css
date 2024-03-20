@@ -4,13 +4,121 @@
     --background-image:
         linear-gradient(var(--color-dark) 5%, transparent 5%),
         linear-gradient(90deg, var(--color-dark) 5%, transparent 5%);
-    --background-size: 5ch 5ch;
+    --background-size: 2.5ch 2.5ch;
     --border-color-inverted: var(--color-glare);
     --border-color: var(--color-dark);
     --color-before-after: var(--color-dark);
     --color-inverted: var(--color-void);
     --color: var(--color-glare);
+}
 
+@media screen and (min-width: 130ch){
+    header  {
+        background-color: var(--color-dark-void);
+        border-radius: 3ch;
+    }
+}
+
+h1:before,
+h2:before,
+h3:before,
+h4:before,
+h5:before,
+h6:before {
+    color: var(--color-dark-shade);
+}
+
+.separator-span {
+    color: var(--color-dark-shade);
+}
+
+#second-life-h3:before {
+    color: var(--color-dark-shade);
+}
+
+section:nth-child(odd) {
+    background-color: var(--color-dark-void);
+}
+
+section:nth-child(even) {
+    background-color: var(--color-dark);
+}
+
+section:nth-child(3),
+section:nth-child(7) {
+    border: var(--mesure-xx-small) dashed var(--color) !important;
+}
+
+section:nth-child(5) {
+    border: var(--mesure-x-small) dashed var(--color-dark-shade);
+}
+
+footer * {
+    color: var(--color-medium);
+    font-size: var(--mesure-medium);
+}
+
+@media screen and (prefers-color-scheme:light) {
+    :root {
+        --background-color-inverted: var(--color-void);
+        --background-color: var(--color-glare);
+        --border-color-inverted: var(--color-dark);
+        --border-color: var(--color-clear-light);
+        --background-image:
+            linear-gradient(var(--color-light) 5%, transparent 5%),
+            linear-gradient(90deg, var(--color-light) 5%, transparent 5%);
+        --background-size: 2.5ch 2.5ch;
+        --color-before-after: var(--color-clear-light);
+        --color-inverted: var(--color-glare);
+        --color: var(--color-void);
+    }
+
+    header {
+        border-radius: 3ch;
+ 
+    }
+
+    @media screen and (min-width: 130ch){
+        header  {
+            border-radius: 3ch;
+        }
+    }
+
+    header,
+    nav {
+        background-color: var(--color-glare) !important;
+    }
+
+    h1:before,
+    h2:before,
+    h3:before,
+    h4:before,
+    h5:before,
+    h6:before,
+    .separator-span {
+        color: var(--color-clear-light);
+    }
+
+    section:nth-child(odd) {
+        background-color: var(--color-glare);
+    }
+
+    section:nth-child(even) {
+        background-color: var(--color-medium);
+    }
+
+    section:nth-child(3),
+    section:nth-child(7) {
+        border: var(--mesure-xx-small) dashed var(--color) !important;
+    }
+
+    section:nth-child(5) {
+        border: var(--mesure-x-small) dashed var(--color-dark-shade);
+    }
+
+    footer * {
+        color: var(--color-dark-shade);
+    }
 }
 
 html {
@@ -83,15 +191,6 @@ ul li:not(footer ul li):not(.no-before) {
     content: "#";
 }
 
-h1:before,
-h2:before,
-h3:before,
-h4:before,
-h5:before,
-h6:before {
-    color: var(--color-dark-shade) !important;
-}
-
 h1:before {
     color: var(--accent-color-shade) !important;
 }
@@ -132,14 +231,6 @@ ul li strong {
     font-weight: 900;
 }
 
-#second-life-h3:before {
-    color: var(--color-dark-shade) !important;
-}
-
-.separator-span {
-    color: var(--color-dark-shade) !important;
-}
-
 section dfn {
     color: var(--accent-color-shade);
     font-size: var(--mesure-small);
@@ -152,23 +243,6 @@ section {
     border-radius: 3ch;
     border-size: var(--mesure-xx-small) !important;
     padding: 5%;
-}
-
-section:nth-child(odd) {
-    background-color: var(--color-dark-void);
-}
-
-section:nth-child(even) {
-    background-color: var(--color-dark);
-}
-
-section:nth-child(3),
-section:nth-child(7) {
-    border: var(--mesure-xx-small) dashed var(--color) !important;
-}
-
-section:nth-child(5) {
-    border: var(--mesure-x-small) dashed var(--color-dark-shade);
 }
 
 #contact {
@@ -191,16 +265,14 @@ footer ul {
     gap: var(--mesure-small) !important;
 }
 
-footer * {
-    color: var(--color-medium);
-    font-size: var(--mesure-medium);
-}
-
 @media only screen and (max-width: 130ch) {
-
-    :root {
+    /* :root {
         --background-size: 1.5ch 1.5ch !important;
-    }
+    } */
+
+    /* html {
+        background-image: none !important;
+    } */
 
     html,
     body {
@@ -214,7 +286,6 @@ footer * {
 
     header {
         inline-size: 100vw;
-        background-color: var(--color-dark-void) !important;
     }
 
     #logo {
@@ -256,12 +327,5 @@ footer * {
         right: 2.5vw;
         text-align: right;
         bottom: 2ch;
-    }
-}
-
-@media screen and (min-width: 130ch){
-    header  {
-        background-color: var(--color-dark-void);
-        border-radius: 3ch;
     }
 }

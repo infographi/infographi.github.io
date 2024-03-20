@@ -15,10 +15,10 @@ html {
 	text-rendering: optimizeLegibility;
 }
 
-h1, h2, h3, h4 {
+/* h1, h2, h3, h4 {
 	word-break: break-all;
 	hyphens: auto;
-}
+} */
 
 small {
 	font-size: var(--mesure-x-small);
@@ -35,6 +35,13 @@ p {
 	line-height: var(--base-line-height);
 }
 
+@media screen and (prefers-color-scheme:light) {
+	li,
+	p {
+		font-weight: 600;
+	}
+}
+
 h1:before,
 h1 span {
 	font-size:  var(--mesure-large);
@@ -46,14 +53,6 @@ h2 {
 	line-height: var(--mesure-xxxx-large);
 }
 
-@media only screen and (max-width: 130ch) {
-	h2:before,
-	h2 span {
-		font-size:  var(--mesure-xxxx-large);
-		line-height: var(--mesure-xxxx-large);
-	}
-}
-
 h3 {
 	font-size: var(--mesure-xx-large) ;
 	line-height: var(--mesure-xx-large);}
@@ -61,4 +60,23 @@ h3 {
 h4 {
 	font-size: var(--mesure-large) ;
 	line-height: var(--mesure-small);
+}
+
+@media only screen and (max-width: 130ch) {
+	h2:before,
+	h2 span {
+		font-size:  var(--mesure-xxx-large);
+		line-height: var(--mesure-xxx-large);
+	}
+
+	h3 {
+		font-size: var(--mesure-x-large) ;
+		line-height: var(--mesure-x-large);
+	}
+
+	h4 {
+		font-size: var(--mesure-large) ;
+		line-height: var(--mesure-small);
+	}
+	
 }
