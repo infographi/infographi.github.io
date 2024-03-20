@@ -19,6 +19,10 @@
     }
 }
 
+header {
+    border-radius: 3ch;
+}
+
 h1:before,
 h2:before,
 h3:before,
@@ -58,7 +62,7 @@ footer * {
     font-size: var(--mesure-medium);
 }
 
-@media screen and (prefers-color-scheme:light) {
+/* @media screen and (prefers-color-scheme:light) {
     :root {
         --background-color-inverted: var(--color-void);
         --background-color: var(--color-glare);
@@ -71,17 +75,6 @@ footer * {
         --color-before-after: var(--color-clear-light);
         --color-inverted: var(--color-glare);
         --color: var(--color-void);
-    }
-
-    header {
-        border-radius: 3ch;
- 
-    }
-
-    @media screen and (min-width: 130ch){
-        header  {
-            border-radius: 3ch;
-        }
     }
 
     header,
@@ -119,7 +112,7 @@ footer * {
     footer * {
         color: var(--color-dark-shade);
     }
-}
+} */
 
 html {
     background-color: var(--background-color);
