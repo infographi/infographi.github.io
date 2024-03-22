@@ -5,6 +5,7 @@ the-frame {
     align-items: center;
     aspect-ratio: var(--numerator) / var(--denominator);
     display: flex;
+    
     justify-content: center;
     position: relative;
 }
