@@ -1,0 +1,33 @@
+---
+import '../styles/global.css';
+import type { HTMLAttributes } from "astro/types";
+
+export interface PillProps extends HTMLAttributes<"div"> {
+    borderColor?: string;
+    borderStyle?: string;
+    borderWidth?: string;
+    pillPadding?: string;
+    outlineColor?: string;
+    outlineOffset?: string;
+    outlineWidth?: string;
+    textColor?: string;
+    classes?: string;
+}
+
+const {
+    borderColor,
+    borderStyle,
+    borderWidth,
+    pillPadding,
+    classes,
+    outlineColor,
+    outlineOffset,
+    outlineWidth, 
+    textColor,
+    ...rest
+} = Astro.props as PillProps;
+---
+
+<the-pill classList?:{classes} {...rest}>
+	<slot />
+</the-pill>

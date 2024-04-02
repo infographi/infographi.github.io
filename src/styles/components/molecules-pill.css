@@ -1,0 +1,22 @@
+the-pill,
+.pill {
+	display: inline-block;
+	padding: 0.3rem 0.35rem;
+	font-size: get-size('400');
+	text-decoration: none;
+	line-height: 1;
+	white-space: nowrap;
+	text-align: center;
+}
+
+/*Apply a default background colour if no token set*/
+the-pill:not([class*='bg-']),
+.pill:not([class*='bg-']) {
+	background: get-color('grey');
+}
+
+/*Capitalize only in english*/
+[lang*='en'] the-pill,
+[lang*='en'] .pill {
+	text-transform: capitalize;
+}

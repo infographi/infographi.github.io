@@ -1,0 +1,43 @@
+.max-inline-size-large {
+    max-inline-size: var(--max-inline-size-large);
+}
+
+.max-inline-size-medium {
+    max-inline-size: var(--max-inline-size-medium);
+}
+
+.max-inline-size-small {
+    max-inline-size: var(--max-inline-size-small);
+}
+
+.max-inline-size-x-large {
+    max-inline-size: var(--max-inline-size-x-large);
+}
+
+.max-inline-size-x-small {
+    max-inline-size: var(----max-inline-size-x-small);
+}
+
+.max-inline-size-xx-large {
+    max-inline-size: var(--max-inline-size-xx-large);
+}
+
+.max-inline-size-xx-small {
+    max-inline-size: var(--max-inline-size-xx-small);
+}
+
+.max-inline-size-xxx-large {
+    max-inline-size: var(----max-inline-size-xxx-large);
+}
+
+.max-inline-size-xxx-small {
+    max-inline-size: var(----max-inline-size-xxx-small);
+}
+
+.max-inline-size-xxxx-large {
+    max-inline-size: var(----max-inline-size-xxxx-large);
+}
+
+.max-inline-size-xxxx-small {
+    max-inline-size: var(----max-inline-size-xxxx-small);
+}

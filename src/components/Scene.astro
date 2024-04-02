@@ -1,0 +1,72 @@
+---
+import '../styles/global.css';
+import type { HTMLAttributes } from "astro/types";
+
+interface SceneProps extends HTMLAttributes<"div"> {
+    classes?: string;
+    }
+
+const {
+classes,
+...rest
+} = Astro.props as SceneProps;
+---
+
+<div class="parallax">
+    <div class="parallax__group">
+        <div class="parallax__layer parallax__layer--back">
+            <p>this is a parallax layer</p>
+        </div>
+        <div class="parallax__layer parallax__layer--base">
+            <p>this is a parallax layer</p>
+        </div>
+    </div>
+    <div class="parallax__group">
+        <p>this is a parallax layer</p>
+    </div>
+</div>
+
+<style is:global>
+    .parallax__group {
+        position: relative;
+        height: 100vh;
+        transform-style: preserve-3d;
+        transform: translate3d(700px, 0, -800px) rotateY(30deg);
+    }
+
+    .parallax {
+        perspective-origin: 100%;
+        scroll-behavior: smooth;
+    }
+
+    .parallax__layer {
+        transform-origin-x: 100%;
+    }
+
+    .parallax {
+        perspective: 1px;
+        height: 100vh;
+        overflow-x: hidden;
+        overflow-y: auto;
+    }
+
+    .parallax__layer {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+    }
+
+    .parallax__layer--base {
+        transform: translateZ(0);
+    }
+
+    .parallax__layer--back {
+        transform: translateZ(-1px) scale(2);
+    }
+
+    .parallax__layer--deep {
+        transform: translateZ(-2px) scale(3);
+    }
+</style>

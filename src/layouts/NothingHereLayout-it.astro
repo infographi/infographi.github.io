@@ -1,0 +1,63 @@
+---
+const homeURL = getRelativeLocaleUrl("en", "/");
+import "../styles/global.css";
+import { getRelativeLocaleUrl } from "astro:i18n";
+import { EMAIL_ADDRESS, TELEPHONE_NUMBER } from "../consts";
+import Link from "../components/Link.astro";
+---
+
+<main id="content" class="box">
+
+	<section class="stack">
+
+		<span class="color-medium">#</span>
+
+		<h2 class="cluster">
+			<span>404</span>
+		</h2>
+
+		<dfn>Ops, qualcosa è andato storto.</dfn>
+
+		<p>
+			La pagina a cui si sta tentando di accedere non esiste. Questa pagina non contiene nulla di utile. <span
+				id="does-it"
+				class="glitch"
+				data-text="O forse?"
+				style="visibility: hidden;">O forse?</span>
+		</p>
+
+		<p>
+			Segui il link per tornare al sito: <Link href={homeURL}>
+				Home
+			</Link>
+		</p>
+
+		<p id="bon">
+			Felicitazioni!!! Hai appena vinto un audit gratuito per un tuo dispositivo scelta. <Link  href={TELEPHONE_NUMBER}>Chiamateci</Link> o <Link href={EMAIL_ADDRESS}>Inviateci un'email</Link> e richiedete il vostro premio! La password da comunicare è "MACHINE".
+		</p>
+
+		<span class="color-medium">#</span>
+	</section>
+</main>
+
+<style>
+	#bon {
+		color: var(--color-void);
+	}
+
+	#bon:hover  {
+		animation-name: Stay-Visible;
+		animation-duration: 0.5s;
+		animation-timing-function: ease-in-out;
+		animation-fill-mode: forwards;
+	}
+
+	@keyframes Stay-Visible {
+		from {
+			color: var(--color-void);
+		}
+		to {
+			color: var(--color-color);
+		}
+	}
+</style>

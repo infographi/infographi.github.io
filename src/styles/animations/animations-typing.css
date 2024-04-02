@@ -1,0 +1,96 @@
+/* Type effect thanks to Raúl Barrera (https://codepen.io/raubaca/pen/rxLwPq) and Rudy Jahchan (https://blog.carbonfive.com/vintage-terminal-effect-in-css3/) */
+
+.cursor {
+    /*animation: blink 1s ease 0s infinite normal none running, typing 2s steps(15, end) 0.5s 1 normal forwards running;*/
+    -moz-animation-delay: 0s, 0.5s;
+    -moz-animation-direction: normal, normal;
+    -moz-animation-duration: 1s, 2s;
+    -moz-animation-fill-mode: none, forwards ;
+    -moz-animation-iteration-count: infinite, 1;
+    -moz-animation-name: blink, typing;
+    -moz-animation-play-state: running, running;
+    -moz-animation-timing-function: ease, steps(15, end);
+    
+    -o-animation-delay: 0s, 0.5s;
+    -o-animation-direction: normal, normal;
+    -o-animation-duration: 1s, 2s;
+    -o-animation-fill-mode: none, forwards ;
+    -o-animation-iteration-count: infinite, 1;
+    -o-animation-name: blink, typing;
+    -o-animation-play-state: running, running;
+    -o-animation-timing-function: ease, steps(15, end);
+    
+    -webkit-animation-delay: 0s, 0.5s;
+    -webkit-animation-direction: normal, normal;
+    -webkit-animation-duration: 1s, 2s;
+    -webkit-animation-fill-mode: none, forwards ;
+    -webkit-animation-iteration-count: infinite, 1;
+    -webkit-animation-name: blink, typing;
+    -webkit-animation-play-state: running, running;
+    -webkit-animation-timing-function: steps(15, end);
+    
+    animation-name: blink, typing;
+    animation-delay: 0s, 0.5s;
+    animation-direction: normal, normal;
+    animation-duration: 1s, 2s;
+    animation-fill-mode: none, forwards ;
+    animation-iteration-count: infinite, 1;
+    animation-play-state: running, running;
+    animation-timing-function: steps(15, end);
+    
+    background: var(--monochrome-dark);
+    border-left: 1ch solid var(--accent-color);
+    bottom: 0;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100%;
+}
+
+@-webkit-keyframes blink {
+    from, to {border-color: transparent;}
+    50% {border-color: var(--accent-color);}
+}
+
+@-moz-keyframes blink {
+    from, to {border-color: transparent;}
+    50% {border-color: var(--accent-color);}
+}
+
+@-o-keyframes blink {
+    from, to {border-color: transparent;}
+    50% {border-color: var(--accent-color);}
+}
+
+@keyframes blink {
+    from, to {border-color: transparent;}
+    50% {border-color: var(--accent-color);}
+}
+
+@-webkit-keyframes typing {
+    from {width: 100%;}
+    to {width: 0;}
+}
+
+@-moz-keyframes typing {
+    from {width: 100%;}
+    to {width: 0;}
+}
+
+@-o-keyframes typing {
+    from {width: 100%;}
+    to {width: 0;}
+}
+
+@keyframes typing {
+    from {width: 100%;}
+    to {width: 0;}
+}
+
+.typed {
+    position: relative;
+}

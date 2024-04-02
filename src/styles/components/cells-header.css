@@ -24,7 +24,6 @@ header {
 		display: flex;
 		flex-direction: row;
 		flex-grow: 1 !important;
-		/* gap: var(--mesure-small); */
 		justify-content: space-between !important;
 		padding: var(--mesure-x-small);
 	}

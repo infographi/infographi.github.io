@@ -1,0 +1,164 @@
+body {
+	font-weight: 600;
+}
+
+footer,
+header,
+main h2 {
+	color: var(--monochrome-accent);
+	z-index: 3;
+	/* width: max-content; */
+	background: var(--monochrome-illumination);
+	padding: 0 0.15em;
+}
+
+header h1 {
+	grid-area: hh1;
+	text-align: center;
+	word-break: break-word;
+}
+
+img {
+	border-color: var(--monochrome-dark);
+	border-style: var(--border-style-dashed);
+	border-width: var(--mesure-small);
+}
+
+/* Others */
+a:hover {
+	cursor: help;
+}
+
+#color p,
+.border {
+	padding: 1rem;
+}
+
+.font-italic {
+	color: grey;
+}
+
+:focus {
+	outline: 2px dotted;
+	outline-offset: 0.25rem;
+}
+
+.index dfn {
+	color: #E6D3B8;
+	color: hsl(35, 48, 81);
+}
+
+/* .index .title a {
+	text-decoration: none;
+  } */
+
+[href="#main"] {
+	position: absolute;
+	bottom: calc(100% + 1rem);
+}
+
+/* :lang(en) {
+	color: red;
+  }
+  
+  :lang(fr) {
+	color: blue;
+  }
+  
+  :lang(it) {
+	color: green;
+  } */
+
+small {
+	line-height: 1.6em;
+}
+
+#skip {
+	background: black;
+	padding: 0.5rem 1.5rem;
+	border-radius: 0 0 0.25rem 0, 25rem;
+	position: absolute;
+	left: 0.5rem;
+	text-align: center;
+	transform: translateY(-120%);
+	transform: translateY(calc(-100% + -1rem));
+	transition: transform 325ms ease-in;
+}
+
+.skip-nav-link:focus {
+	transform: translateY(0);
+}
+
+.style-guide nav,
+.style-guide nav * {
+	list-style-type: none;
+	padding-left: 0 !important;
+}
+
+strong {
+	color: var(--monochrome-accent);
+}
+
+ul {
+	list-style-type: '-';
+}
+
+ul,
+li {
+	padding-left: 0.5em
+}
+
+/* TERMINAL THEME
+------------------------------------------------------------*/
+.curriculum header h1::before {
+	content: 'cat';
+}
+
+.index *::after,
+.index *::before {
+	color: #1A1A1A;
+	color: hsl(0, 0, 10);
+}
+
+.index header h1 a::before {
+	content: '#';
+}
+
+.index h2::before,
+.style-guide h2::before {
+	content: '.\\';
+}
+
+.curriculum *::after,
+.curriculum *::before,
+.style-guide *::after,
+.style-guide *::before {
+	color: #CCCCCC;
+	color: hsl(0, 0, 80);
+}
+
+.style-guide header h1::before {
+	content: 'cat ';
+}
+
+.style-guide header h1::after {
+	content: '.pdf';
+}
+
+.curriculum header h1::after {
+	content: '.doc';
+}
+
+.style-guide h2::before {
+	content: '';
+}
+
+.curriculum nav p::before,
+.style-guide nav p::before {
+	content: '#ls\00a0';
+}
+
+.curriculum nav ul li::before,
+.style-guide nav ul li::before {
+	content: '#cd\00a0';
+}

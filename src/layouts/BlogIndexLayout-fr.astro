@@ -1,0 +1,44 @@
+---
+import "../styles/global.css";
+import { getCollection } from "astro:content";
+import FormattedDate from "../components/FormattedDate.astro";
+import Frame from "../components/Frame.astro";
+import Sidebar from "../components/Sidebar.astro";
+import Switcher from "../components/Switcher.astro";
+
+const posts = (await getCollection("blog")).sort(
+	(a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf(),
+);
+---
+
+<main id="content">
+	<section class="box border-style-hidden stack-xxx-large">
+		<h2 class="cluster">
+			<span>B</span>
+		</h2>
+		<dfn>BLOG</dfn>
+		<ul class="stack-xxx-large">
+			{
+				posts.map((post) => (
+					<li>
+						<a href={`/blog/${post.slug}/`}>
+							<Sidebar>
+								<Frame class="box frame11">
+									<img src={post.data.heroImage} alt="" />
+								</Frame>
+								<Switcher>
+									<h4 class="title">{post.data.title}</h4>
+									<p class="date">
+										<FormattedDate
+											date={post.data.pubDate}
+										/>
+									</p>
+								</Switcher>
+							</Sidebar>
+						</a>
+					</li>
+				))
+			}
+		</ul>
+	</section>
+</main>

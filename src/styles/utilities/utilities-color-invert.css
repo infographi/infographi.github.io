@@ -1,0 +1,32 @@
+.box {
+	/* ↓ Padding set to the first point on the modular scale */
+	padding: var(--s1);
+	/* ↓ Assumes you have a --border-thin var */
+	border: var(--border-thin) solid;
+	/* ↓ Always apply the transparent outline, for high contrast mode */
+	outline: var(--border-thin) transparent;
+	outline-offset: calc(var(--border-thin) * -1);
+	/* ↓ The light and dark color vars */
+	--color-light: hsl(0, 0%, 80%);
+	--color-dark: hsl(0, 0%, 20%);
+	color: var(--color-dark);
+	background-color: var(--color-light);
+}
+
+.box * {
+	/* ↓ Force colors to inherit from the parent
+	and honor inversion (below) */
+	color: inherit;
+}
+
+.box.invert {
+	/* ↓ The color vars inverted. Dark becomes light, and light becomes dark */
+	color: var(--color-light);
+	background-color: var(--color-dark);
+}
+
+or
+
+.box.invert {
+	filter: invert(100%);
+}

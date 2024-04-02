@@ -32,9 +32,7 @@ header {
 h1:before,
 h2:before,
 h3:before,
-h4:before,
-h5:before,
-h6:before {
+h4:before {
     color: var(--color-dark-shade);
 }
 
@@ -66,6 +64,7 @@ section:nth-child(5) {
 footer * {
     color: var(--color-medium);
     font-size: var(--mesure-medium);
+    font-weight: 600;
 }
 
 /* @media screen and (prefers-color-scheme:light) {
@@ -92,8 +91,6 @@ footer * {
     h2:before,
     h3:before,
     h4:before,
-    h5:before,
-    h6:before,
     .separator-span {
         color: var(--color-clear-light);
     }
@@ -184,8 +181,6 @@ h1:before,
 h2:before,
 h3:before,
 h4:before,
-h5:before,
-h6:before,
 ul li:not(footer ul li):not(.no-before) {
     content: "#";
 }
@@ -265,13 +260,6 @@ footer ul {
 }
 
 @media only screen and (max-width: 130ch) {
-    /* :root {
-        --background-size: 1.5ch 1.5ch !important;
-    } */
-
-    /* html {
-        background-image: none !important;
-    } */
 
     html,
     body {
@@ -293,7 +281,6 @@ footer ul {
     }
 
     header > the-stack {
-        /* border: var(--mesure-xxx-small) dashed var(--color-dark-shade); */
         border-radius: 3ch;
         padding: var(--mesure-small);
     }

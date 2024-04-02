@@ -1,0 +1,42 @@
+---
+import { SITE_DESCRIPTION, SITE_TITLE } from "../consts";
+import "../styles/global.css";
+import type { HTMLAttributes } from "astro/types";
+import Frame from "./Frame.astro";
+import Box from "./Box.astro";
+
+export interface LogoProps extends HTMLAttributes<"div"> {
+	borderColor?: string;
+	borderStyle?: string;
+	borderWidth?: string;
+	logoPadding?: string;
+	outlineColor?: string;
+	outlineOffset?: string;
+	outlineWidth?: string;
+	textColor?: string;
+	classes?: string;
+}
+
+const {
+	borderColor,
+	borderStyle,
+	borderWidth,
+	logoPadding,
+	classes,
+	outlineColor,
+	outlineOffset,
+	outlineWidth,
+	textColor,
+	...rest
+} = Astro.props as LogoProps;
+---
+
+<the-logo {classes} {...rest}>
+	<Frame>
+		<img id="logo" src="./../../public/IMG_0995.png" />
+	</Frame>
+
+	<Box class:list={"fluid-container"}>
+		<h1 class="fluid-type">Le&nbsp;Technicien</h1>
+	</Box>
+</the-logo>

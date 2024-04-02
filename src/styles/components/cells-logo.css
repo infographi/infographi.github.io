@@ -1,0 +1,18 @@
+the-logo {
+	max-inline-size: 100%;
+}
+
+the-logo the-frame #logo {
+	opacity: 100% !important;
+}
+
+the-logo the-frame #logo:hover,
+the-logo the-box h1:hover {
+	opacity: 50% !important;
+	cursor: help;
+}
+
+the-logo the-box {
+	container-type: inline-size;
+	max-inline-size: 100%;
+}

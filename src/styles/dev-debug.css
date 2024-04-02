@@ -1,0 +1,50 @@
+::before {
+    color: darkred;
+    position: absolute;
+    border: 2px dotted darkred;
+    width: auto;
+    background: white;
+	z-index: 666;
+}
+::before {
+	transform: translateY(-100%) translateX(100%) rotate(45deg);
+}
+.box::before {
+    content: "box";
+}
+.cluster::before {
+    content: "cluster";
+}
+.new-cluster::before {
+	content: "new-cluster";
+}
+.cover::before {
+    content: "cover";
+}
+.frame::before {
+	content: "frame";
+}
+.grid::before {
+	content:"grid";
+}
+.imposter::before {
+    content: "imposter";
+}
+.reel::before {
+	content: "reel";
+}
+.sidebar::before {
+	content:"sidebar";
+}
+.with-sidebar::before {
+	content:"new-sidebar";
+}
+.stack::before {
+    content: "stack";
+}
+.switcher::before {
+	content:"switcher";
+}
+.new-switcher::before {
+	content:"new-switcher";
+}

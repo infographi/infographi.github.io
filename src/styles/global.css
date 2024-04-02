@@ -53,4 +53,4 @@
 @import "theme.css";
 
 /* LAZY CSS */
-@import "global-lazy.css";
+@import "./global/global-lazy.css";

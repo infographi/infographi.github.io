@@ -1,0 +1,62 @@
+---
+import "../css/global-styles.css"
+---
+<the-cover>
+	<slot />
+</the-cover>
+
+<style>
+	.cover,
+    the-cover {
+		border-color: var(--color);
+		border-width: var(--mesure-small);
+		border-style: solid;
+		/* ↓ Establish a columnal flex context */
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		/* ↓ Set a minimum height to match the viewport height (any minimum would be fine) */
+		min-block-size: 80vh;
+		/* Set a padding value */
+		padding: var(--mesure-medium);
+		text-align: center;
+	}
+
+	.cover>*,
+    the-cover>* {
+		/* ↓ Give each child a top and bottom margin */
+		margin-block: var(--mesure-medium);
+	}
+
+	.cover> :first-child:not(h1),
+    the-cover> :first-child:not(h1) {
+		/* ↓ Remove the top margin from the first-child if it _doesn't_ match the centered element */
+		margin-block-start: 0;
+	}
+
+	.cover> :last-child:not(h1),
+    the-cover> :last-child:not(h1) {
+		/* ↓ Remove the bottom margin from the last-child if it _doesn't_ match the centered element */
+		margin-block-end: 0;
+	}
+
+	.cover>h1,
+    the-cover>h1 {
+		/* ↓ Center the centered element (h1 here)
+    in the available vertical space */
+		margin-block: auto, 0;
+	}
+
+	.cover> :first-child,
+    the-cover> :first-child {
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	.cover ol,
+    the-cover ol {
+		align-items: center;
+		justify-content: center;
+		gap: var(--mesure-x-small);
+	}
+</style>

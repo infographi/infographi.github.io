@@ -1,0 +1,149 @@
+---
+import '../styles/global.css';
+import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+import BaseHead from '../components/Head.astro';
+import Footer from '../components/Footer.astro';
+import FormattedDate from '../components/FormattedDate.astro';
+import Frame from '../components/Frame.astro';
+import Header from '../components/Header.astro';
+import SkipContent from '../components/SkipContent.astro';
+import type { CollectionEntry } from 'astro:content';
+
+type Props = CollectionEntry<'blog'>['data'];
+const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
+---
+
+<html lang="en">
+<BaseHead title={title} description={description} />
+<body>
+	<SkipContent />
+	<Header title={SITE_TITLE} />
+	<main class="stack-recurse-large">
+		<article class="stack box">
+			<!-- <div class="hero-image">
+				{heroImage && <img width={1020} height={510} src={heroImage} alt="" />}
+			</div> -->
+			<Frame class="box frame11">
+                <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+                <svg width="1250px" height="1250px" viewBox="0 0 66.145832 66.145833" version="1.1" id="svg5"
+                    xmlns="http://www.w3.org/2000/svg" <g id="layer1">
+                    <path style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1.465;stroke-dasharray:none"
+                        id="path1135"
+                        d="M 38.861794,8.6359539 C 39.20622,9.4822584 37.89092,9.5177706 37.45518,9.2084132 36.274351,8.3700738 36.768243,6.6131522 37.716875,5.8227264 c 1.69688,-1.4138864 4.213791,-0.6024636 5.36476,1.0958496 1.689093,2.4923429 0.525002,5.857716 -1.930004,7.343833 -3.272137,1.98076 -7.511108,0.451099 -9.322906,-2.764159 C 29.548761,7.4521764 31.449571,2.329131 35.427038,0.19627137 40.244283,-2.3869074 46.256794,-0.11209086 48.70809,4.6287387 51.596857,10.215642 48.946389,17.120773 43.441468,19.888864 37.085819,23.084735 29.286062,20.057586 26.20227,13.788088 22.698269,6.6642858 26.102787,-2.0314577 33.1372,-5.4301837 c 7.891549,-3.8128568 17.484245,-0.030489 21.197345,7.7690852 4.122245,8.6590055 -0.03832,19.1493635 -8.60324,23.1764175"
+                        transform="matrix(1.8395589,0.06384831,0,1.7673442,-41.143266,14.142401)" />
+                    </g>
+                </svg>
+            </Frame>
+			<div class="prose">
+				<div class="title">
+					<div class="date">
+						<FormattedDate date={pubDate} />
+						{
+						updatedDate && (
+						<div class="last-updated-on">
+							Last updated on
+							<FormattedDate date={updatedDate} />
+						</div>
+						)
+						}
+					</div>
+					<h1>{title}</h1>
+					<hr />
+				</div>
+				<slot />
+			</div>
+		</article>
+	</main>
+	<Footer />
+</body>
+</html>
+
+<style is:global>
+	*:not(body, html) {
+		/* ↓ Now literally all elements, at the exeption of the html and body elements, display a default max-inline-size */
+		max-inline-size: var(--max-inline-size-medium);
+	}
+
+	/* Body is a Stack on smaller screens */
+	body {
+		background-color: var(--background-color);
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+		margin: 0 auto;
+		max-inline-size: var(--max-inline-size-medium);
+		overflow-x: hidden;
+		padding: var(--mesure-medium);
+		padding-block-start: 0;
+	}
+
+	body>* {
+		/* ↓ Any extant vertical margins are removed */
+		margin-block: 0;
+	}
+
+	body>*+* {
+		margin-block-start: var(--mesure-small);
+	}
+
+	/* And turns into sidebar grid model when sufficient space is present */
+	@supports (display: grid) {
+		@media only screen and (min-width: 130ch) {
+			body {
+				display: grid;
+				grid-gap: var(--mesure-medium);
+				grid-template-areas:
+					"header main main"
+					"header footer footer";
+				grid-template-columns: 1fr 2fr;
+				grid-template-rows: auto;
+				max-inline-size: 130ch;
+				max-inline-size: var(--max-inline-size-large);
+				padding: var(--mesure-medium);
+				padding-block-start: var(--mesure-medium);
+			}
+
+			body>*+* {
+				margin-block-start: 0;
+			}
+
+			body>*:not(header, main) {
+				margin-block-start: var(--mesure-medium);
+			}
+
+            Header, 
+			header {
+				grid-area: header;
+				/* max-inline-size: 30ch; */
+				justify-content: center;
+				align-items: center;
+				align-content: flex-start;
+			}
+            
+            Header h1,
+			header h1 {
+				grid-area: hh1;
+			}
+
+            Main,
+			main {
+				grid-area: main;
+			}
+
+            Footer,
+			footer {
+				grid-area: footer;
+				margin-block-start: var(--mesure-small);
+			}
+		}
+	}
+	
+	.date {
+		/* margin-bottom: 0.5em;
+		color: rgb(var(--gray)); */
+	}
+
+	.last-updated-on {
+		/* font-style: italic; */
+	}
+</style>

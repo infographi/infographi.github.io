@@ -1,0 +1,28 @@
+the-splitter > :last-child,
+.splitter > :last-child {
+    margin-top: get-size('500');
+}
+
+@media(min-width: 48em) {
+    the-splitter > :last-child,
+    .splitter > :last-child {
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -moz-flex;
+        display: -webkit-flex;
+        display: flex;
+    }
+    
+    the-splitter > *,
+    .splitter > * {
+        flex-grow: 1;
+    }
+    
+    the-splitter > :last-child,
+    .splitter > :last-child {
+        margin-top: 0;
+        margin-left: get-size('500');
+        min-width: 22rem;
+    }
+}

@@ -1,0 +1,20 @@
+.oddly-clipped > * {
+	background-color: var(--background-color);
+	border-color: var(--color);
+	clip-path: polygon(10% 2%, 92% 0%, 100% 92%, 2% 100%);
+	color: var(--color);
+	text-align: center;
+}
+
+.oddly-clipped span {
+	margin: 0;
+	padding: 0;
+}
+
+.oddly-clipped > :nth-child(2n) {
+	clip-path: polygon(0% 0%, 92% 2%, 90% 98%, 8% 92%);
+}
+
+.oddly-clipped > :nth-child(3n) {
+	clip-path: polygon(0% 8%, 100% 2%, 92% 100%, 0% 92%);
+}
