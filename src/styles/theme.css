@@ -259,6 +259,10 @@ footer ul {
     gap: var(--mesure-small) !important;
 }
 
+#back-up-arrow {
+    padding: var(--mesure-small);
+}
+
 @media only screen and (max-width: 130ch) {
 
     html,
